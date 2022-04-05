@@ -1,0 +1,64 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>Title</title>
+</head>
+<body>
+<table cellpadding="10px">
+    <tr>
+        <th for="a">Amoutn</th>
+        <th></th>
+        <th for="b">From Currency</th>
+        <th></th>
+        <th for="c">To Currency</th>
+    </tr>
+    <tr>
+        <th>
+            <input type="number" id="a">
+        </th>
+        <th></th>
+        <th>
+            <select id="b">
+                <option value="vnd">VietNam</option>
+                <option value="usd">American</option>
+            </select>
+        </th>
+        <th></th>
+        <th>
+            <select id="c">
+                <option value="vnd">VND</option>
+                <option value="usd">USD</option>
+            </select>
+        </th>
+        <th></th>
+        <th>
+            <input type="button" name="btConvert" value="Convert" onclick="convert()">
+        </th>
+    </tr>
+    </form>
+</table>
+<span>Result :</span><span id="kq"></span>
+<script>
+    function convert() {
+        let d = document.getElementById('a').value;
+        let e = document.getElementById('b').value;
+        let f = document.getElementById('c').value;
+
+        if (e == f)  {
+            document.getElementById('kq').innerHTML =d ;
+        }  if (e == 'vnd' && f == 'usd') {
+            let Result = d / 23000;
+            document.getElementById('kq').innerHTML=' ' + Result + ' ' + 'usd';
+        }
+        if (e == 'usd' && f == 'vnd') {
+            let Result = d * 23000;
+            document.getElementById('kq').innerHTML=' ' + Result + ' ' + 'vnd';
+        }
+
+
+    }
+
+</script>
+</body>
+</html>
