@@ -1,5 +1,5 @@
 
-let phy = parseInt( prompt("Nhập điểm Lý chế ơi") );
+let phy =  parseInt( prompt("Nhập điểm Lý chế ơi") );
 let che = parseInt( prompt("Nhập tiếp điểm Hóa nè chế"));
 let bio = parseInt( prompt("Điểm Sinh nữa là hết "));
 

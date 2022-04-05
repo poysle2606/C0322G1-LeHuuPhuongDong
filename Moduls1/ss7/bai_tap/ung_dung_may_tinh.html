@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .a {margin:10px;
+        padding:5px}
+    </style>
+</head>
+<body>
+<h3> CACULATOR</h3>
+<table class="a">
+    <tr>
+        <th> <input type="number" id="b"></th>
+        <th> <input type="number" id="c"></th>
+    </tr>
+    <tr>
+        <th> <input type="button" name="Tổng" value="Cộng đây em (+)" class="a" onclick="kich()" ></th>
+        <th>
+            <input type="button" name="Hiệu" value="Trừ bên này chế (-)" class="a" onclick="hieu()">
+        </th>
+    </tr>
+    <tr>
+        <th> <input type="button" name="Tích" value="Nhân bên trái nè (x)" onclick="tich()"></th>
+        <th> <input type="button" name="Thương" value="Chia bên phải ấy (/)" onclick="thuong()"></th>
+</table>
+<span>Resuilt:</span> <span id="kq"> </span>
+<script>
+    function kich() {
+        let e = parseFloat (document.getElementById('b').value);
+        let f = parseFloat (document.getElementById('c').value);
+        document.getElementById('kq').innerHTML= e + f}
+function hieu() {
+    let e = parseFloat (document.getElementById('b').value);
+    let f = parseFloat (document.getElementById('c').value);
+    document.getElementById('kq').innerHTML= e - f;
+    }
+    function tich() {
+        let e =parseFloat(document.getElementById('b').value);
+        let f =parseFloat(document.getElementById('c').value);
+        document.getElementById('kq').innerHTML=e*f;
+    }
+    function thuong() {
+let e = parseFloat(document.getElementById('b').value);
+let f = parseFloat(document.getElementById('c').value);
+document.getElementById('kq').innerHTML= e/f;
+    }
+</script>
+</body>
+</html>
