@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .a {
+            margin: 10px;
+            padding: 5px
+        }
+    </style>
+</head>
+<body>
+<h3> CACULATOR</h3>
+<table class="a">
+    <tr>
+        <th><input type="number" id="b"></th>
+        <th><input type="number" id="c"></th>
+    </tr>
+    <tr>
+        <th><input type="button" name="Tổng" value="Cộng đây em (+)" class="a" onclick="kich('add')"></th>
+        <th>
+            <input type="button" name="Hiệu" value="Trừ bên này chế (-)" class="a" onclick="kich('sub')">
+        </th>
+    </tr>
+    <tr>
+        <th><input type="button" name="Tích" value="Nhân bên trái nè (x)" onclick="kich('sup')"></th>
+        <th><input type="button" name="Thương" value="Chia bên phải ấy (/)" onclick="kich('tab')"> </th>
+</table>
+<span>Resuilt:</span> <span id="kq"> </span>
+<script>
+    function kich(para) {
+        // para === add
+        let e = parseFloat(document.getElementById('b').value);
+        let f = parseFloat(document.getElementById('c').value);
+        if(para === 'add'){
+            document.getElementById('kq').innerHTML = e + f;
+        }else if(para ==='sub'){
+            document.getElementById('kq').innerHTML = e - f;
+        } else if (para ==='sup'){
+            document.getElementById('kq').innerHTML = e * f;
+        } else if (para ==='tab'){
+            document.getElementById('kq').innerHTML = e / f;
+        }
+    }
+
+</script>
+</body>
+</html>
