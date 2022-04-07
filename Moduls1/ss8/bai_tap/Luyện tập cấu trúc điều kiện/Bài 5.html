@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table style="table-layout: auto; text-align: left">
+    <tr>
+        <td>
+            <label style=" padding: 20px">Input the Test Marks :</label>
+            <input type="number" id="a">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <label style="padding: 20px">Input the Midterm Exam score :</label>
+            <input type="number" id="b">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <label style="padding: 20px">Input the Final Exam score :</label>
+            <input type="number" id="c">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <input type="button" value="Average" style="padding:10px;width: 200px" onclick="huh()">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <span>Result:</span> <span id="outPut"></span>
+        </td>
+    </tr>
+</table>
+<script>
+    function huh() {
+        let d = parseFloat(document.getElementById("a").value);
+        let e = parseFloat(document.getElementById("b").value);
+        let f = parseFloat(document.getElementById("c").value);
+        let g = (d + e + f) / 3;
+        if (g>=8 && g <10){
+            document.getElementById("outPut").innerHTML= g + " " + "score"+ " " + "You're Execellent!"
+        } else if (g<8) {
+            document.getElementById("outPut").innerHTML= g + " " + "score" + " " + "Goodjob bro!"
+        } else if (g<6){
+            document.getElementById("outPut").innerHTML= g + " " + "Score" + " " + "You can try!"
+        } else {
+            document.getElementById("outPut").innerHTML="null";
+        }
+
+    }
+</script>
+</body>
+</html>

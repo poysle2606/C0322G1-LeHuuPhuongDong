@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h4>Tính cước điện thoại</h4>
+<label>Số phút đã sử dụng</label>
+<input type="number" id="pi">
+<button onclick="inb()">Xác Nhận</button>
+<h4>Chú ý : Nếu gọi trên 10 phút sẽ tính thêm 100% giá cước.</h4>
+<script>
+    function inb() {
+        let bv = parseFloat(document.getElementById("pi").value);
+        const gia = 2000;
+        if (bv <= 10) {
+            let kq1 = bv * gia;
+            alert("SỐ tiền phải trả là :" + kq1 + "vnd")
+        } else {
+            let kq2 = (bv * 1.000) * gia;
+            alert("Số tiền bạn phải trả là :" + kq2 + "vnd")
+        }
+    }
+
+</script>
+</body>
+</html>

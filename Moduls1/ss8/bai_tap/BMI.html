@@ -2,9 +2,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>BMI for You</title>
 </head>
 <body>
-$END$
+<script>
+    let weight = prompt("Your Weight");
+    let height = prompt("your Height");
+    let BMI = weight/ (height^2);
+    if (BMI < 18.5){
+        alert ("UnderWeight")
+    } else if (BMI >=18.5 && BMI< 25){
+        alert ("Normal")
+    } else if (BMI >= 25 && BMI <30){
+        alert ("OverWeight")
+    } else if ("BMI >=30"){
+        alert ("Obese")
+    }
+</script>
 </body>
 </html>

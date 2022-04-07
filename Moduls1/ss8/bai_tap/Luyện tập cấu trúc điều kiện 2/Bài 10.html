@@ -2,9 +2,32 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<h3> TÍNH GIÁ ĐIỆN </h3>
+<label style="width: 10px"> Nhập chỉ số điện :</label>
+<input type="number" id="soNhap">
+<input type="button" value="Xác nhận" onclick="sd()"> </br>
+<span> Result :</span> <span id="sT"> </span>
+<h3>Chú ý *</h3>
+<p>- Số điện ít hoặc bằng 200 thì: 230đ/KW </p>
+<p>- Số điện nhiều hơn 200 và nhỏ hơn 400 thì : 480đ/KW </p>
+<p>- Số điện nhiều hơn 400 thì : 600đ/KW </p>
+<script>
+function sd() {
+ let soDien = parseInt(document.getElementById("soNhap").value);
+  if (soDien <= 200 ){
+      let soTien = soDien * 230
+      document.getElementById("sT").innerHTML = soTien + "VND."
+  } else if (soDien > 200 && soDien < 400) {
+      let soTien2 = soDien * 480
+      document.getElementById("sT").innerHTML = soTien2 + "VND."
+  } else {
+      let soTien3 = soDien * 600
+      document.getElementById("sT").innerHTML = soTien3 + "VND."
+  }
+}
+</script>
 </body>
 </html>
