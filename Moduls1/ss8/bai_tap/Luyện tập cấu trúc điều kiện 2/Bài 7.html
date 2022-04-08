@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Phương trình Bậc 2</title>
+</head>
+<body>
+<script>
+    let a = parseInt(prompt("Input number A:"));
+    let b = parseInt(prompt("Input number B:"));
+    let c = parseInt(prompt("Input number C:"));
+    let delta = (b*b) - 4 * a * c;
+    if (delta < 0 ){
+        alert("The equation has no solution.")
+    } else if (delta === 0 ){
+        alert ("Equation with double solution.")
+    } else if (delta > 0){
+        alert("The equation has two distinct solution.")
+    }
+</script>
+</body>
+</html>
