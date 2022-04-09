@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lãi ngân hàng</title>
+</head>
+<body>
+<h3>Lãi Ngân Hàng</h3>
+<label>Số tiền ban đầu là:</label>
+<input type="number" id="first"> </br>
+<label>Kỳ hạn cho vay là:</label>
+<input type="number" id="second">
+<button onclick="hmm()">Xác nhận</button>
+</br>
+<span>Lãi ngân hàng:</span> <span id="result"></span>
+<script>
+    function hmm() {
+        let one = parseInt(document.getElementById("first").value);
+        let two = parseInt(document.getElementById("second").value);
+        if (two <=6){
+            let three = (one * two) / 100;
+            document.getElementById("result").innerHTML = three + "vnd.";
+        } else if (two >6 && two <=12){
+            let four = (one * two) / 80;
+            document.getElementById("result").innerHTML = four + "vnd.";
+        } else if (two > 12 && two < 18) {
+            let five = (one * two) / 50;
+            document.getElementById("result").innerHTML = five + "vnd.";
+        } else {
+            let six = (one * two) / 30;
+            document.getElementById("result").innerHTML = six + "vnd."
+        }
+    }
+
+</script>
+</body>
+</html>

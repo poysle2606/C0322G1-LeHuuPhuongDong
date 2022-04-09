@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vòng lặp</title>
+    <style>
+        table {
+            margin: auto;
+        }
+
+        td {
+            background-color: antiquewhite;
+        }
+    </style>
+</head>
+<body>
+<table border="2" ; style="text-align: center" ; cellpadding="12">
+    <tr>
+        <td colspan="4"><input disabled id="inputEnter"></td>
+    </tr>
+    <tr>
+        <td><input type="button" value="1" onclick="bottonInput('1')"></td>
+        <td><input type="button" value="2" onclick="bottonInput('2')"></td>
+        <td><input type="button" value="3" onclick="bottonInput('3')"></td>
+        <td><input type="button" value="+" onclick="bottonInput('+')"></td>
+    </tr>
+    <tr>
+        <td><input type="button" value="4" onclick="bottonInput('4')"></td>
+        <td><input type="button" value="5" onclick="bottonInput('5')"></td>
+        <td><input type="button" value="6" onclick="bottonInput('6')"></td>
+        <td><input type="button" value="-" onclick="bottonInput('-')"></td>
+    </tr>
+    <tr>
+        <td><input type="button" value="7" onclick="bottonInput('7')"></td>
+        <td><input type="button" value="8" onclick="bottonInput('8')"></td>
+        <td><input type="button" value="9" onclick="bottonInput('9')"></td>
+        <td><input type="button" value="x" onclick="bottonInput('*')"></td>
+    </tr>
+    <tr>
+        <td><input type="button" value="0" onclick="bottonInput('0')"></td>
+        <td><input type="button" value="C" onclick="Delete('C')"></td>
+        <td><input type="button" value="=" onclick="Equal('=')"></td>
+        <td><input type="button" value="/" onclick="bottonInput('/')"></td>
+    </tr>
+</table>
+<script>
+    function bottonInput(param) {
+        document.getElementById('inputEnter').value = document.getElementById("inputEnter").value + param;
+    }
+
+    function Delete() {
+        document.getElementById("inputEnter").value = " ";
+    }
+
+    function Equal() {
+        let Resuilt = document.getElementById("inputEnter").value;
+        document.getElementById("inputEnter").value = eval(Resuilt);
+
+    }
+
+
+</script>
+
+
+</body>
+
