@@ -2,9 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<input type="button" value="Play Game" onclick="clickHere()">
+<script>
+    function clickHere() {
+        let fromNumber = prompt("You want to guess from: ")
+        let toNumber = prompt("You want to guess to:")
+
+        let randomNumber = randomNumberInRange(fromNumber, toNumber)
+     document.write(randomNumber)
+    }
+
+    function randomNumberInRange(min, max) {
+        let random = Math.random();
+        let number = random * (max - min);
+        return Math.floor(parseFloat(number.toString()) + parseFloat(min.toString()));
+    }
+</script>
 </body>
 </html>
