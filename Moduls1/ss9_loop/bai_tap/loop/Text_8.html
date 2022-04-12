@@ -3,23 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+        h1, h3 {
+            color: chocolate;
+        }
+
+        .A {
+            padding: 10px;
+            margin-left: 550px;
+        }
+
+        .box {
+            width: 100%;
+            background-color: black;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-<input type="button" value="Play Game" onclick="clickHere()">
+<div class="box"><h1>Wellcome to mini game: "HAY THU DOAN XEM"</h1></div>
+<h3>Do you play with me?</h3> <hr>
+<input type="button" value="Play Game" onclick="clickHere()" class="A">
 <script>
     function clickHere() {
-        let fromNumber = prompt("You want to guess from: ")
-        let toNumber = prompt("You want to guess to:")
+        let fromNumber = parseInt(prompt("You want to guess from - to: "));
+        let random = parseInt(prompt("Limited number of pick:"));
+        let randomNumber = Math.floor(Math.random() * fromNumber);
+        let i = 0;
+        do {
+            let toNumber = parseInt(prompt("You want to number guess:"));
+            if (toNumber > randomNumber) {
+                alert("Your number so big!");
+            } else if (toNumber < randomNumber) {
+                alert("Your number so small!");
+            } else {
+                alert("Congratulations!!!!... You win!");
+                break;
+            }
 
-        let randomNumber = randomNumberInRange(fromNumber, toNumber)
-     document.write(randomNumber)
+            i++;
+        } while (random > i);
+        if (i == random) {
+            alert("Sorry...You fails.")
+        }
     }
 
-    function randomNumberInRange(min, max) {
-        let random = Math.random();
-        let number = random * (max - min);
-        return Math.floor(parseFloat(number.toString()) + parseFloat(min.toString()));
-    }
+
 </script>
 </body>
 </html>
