@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Viết chương trình tính lãi ngân hàng (lãi mẹ đẻ lại con) khi biết số tiền ban đầu,
+ số tháng cho vay và lãi xuất hàng tháng.-->
+
+<script>
+    let money = parseInt(prompt("Enter your money:"));
+    let month = parseInt(prompt("Enter your Month:"))
+    let lai = parseFloat(prompt("Enter bank interest:"));
+    let Total;
+    for (i = 1; i <= month; i++) {
+        Total = money * ((lai/100)/ 12) * month ;
+    }alert("Money interest is:" + " " + Total);
+</script>
+</body>
+</html>
