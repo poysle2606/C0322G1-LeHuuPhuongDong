@@ -2,9 +2,58 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    //in ra chiều cao của tam giác
+    // for (i = 1; i <= 6; i++) {
+    //     //in ra số sao của tam giác
+    //     for (j = 1; j <= i; j++) {
+    //         document.write("*");
+    //     }
+    //     document.write("<br>");
+
+
+    // }
+    //
+
+    // let N = prompt("nhập số:");
+    // for (i = 1; i <= N; i++) {
+    //     for (k=N;k>i;k--){
+    //         document.write(" &nbsp")
+    //     }
+    //     for (j = 1; j <= i * 2 - 1; j++) {
+    //         document.write("*");
+    //     }
+    //     document.write("<br>");
+    // }
+
+    //
+    // let N = prompt("nhập số: ");
+    // for (i = 1; i <= N; i++) {
+    //     for (k = N; k > i; k--) {
+    //         document.write(" &nbsp");
+    //     }
+    //     for (j = 1; j <= i * 2 - 1; j++) {
+    //         if (i == 1 || i == N || j == 1 || j == (i*2-1)) {
+    //             document.write("*");}
+    //         else{
+    //             document.write(" &nbsp")
+    //         }
+    //     }
+    //     document.write("<br>");
+    // }
+
+    let arr = [2,4,6,5,7,3];
+    let max = arr[0]; // saved value of max.
+    let index = 0; // gan value of = 0;
+    for (i=0;i < arr.length;i++){
+        if (arr[i] > max) {
+            max = arr[i];
+             index = i;
+        }
+    }  alert("max is: " + max + " at position " + index )
+</script>
 </body>
 </html>

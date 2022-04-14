@@ -2,9 +2,57 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>SimpleForm</title>
+    <style>
+        .wufoo {font-family: 'Open Sans', sans-serif}
+        td {color:blue}
+        table { height:200px; width: 350px;
+        }
+    </style>
 </head>
 <body>
-$END$
+<form method="post" action="HWSimle_form.html" class="wufoo">
+    <h3 style="background-color: #d61b06;">Sở thích của bạn</h3>
+    <table>
+        <tr>
+            <th>Họ và tên
+            <td><input type="text"></td>
+            </th>
+        </tr>
+        <tr>
+            <th>Email
+            <td><input type="text"></td>
+            </th>
+        </tr>
+        <tr>
+            <th>Hobby
+            <td>
+                <input type="checkbox">thể thao
+                <input type="checkbox">âm nhạc
+                <input type="checkbox">đọc sách
+            </td>
+            </th>
+        </tr>
+        <tr>
+            <th></th>
+            <td>
+                <input type="checkbox"> game
+                <input type="checkbox">web
+                <input type="checkbox">điện ảnh
+            </td>
+        </tr>
+        <tr>
+            <th></th>
+            <td><input type="checkbox">du lịch
+            </td>
+        </tr>
+        <tr>
+            <th>
+            <td>
+                <input type="submit" value="Submit">
+                <input type="reset" value="Reset"></td>
+            </th></tr>
+    </table>
+
+</form>
 </body>
-</html>

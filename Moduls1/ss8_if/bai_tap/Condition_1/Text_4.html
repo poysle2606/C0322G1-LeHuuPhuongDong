@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" id="NumberA"> -
+<input type="number" id="NumberB"> -
+<input type="number" id="NumberC"> =
+<button value=" Confirm" onclick="confirm()">Confirm</button>
+</br>
+<span> Resuilt:</span> <span id="resuilt"></span>
+<script>
+    function confirm() {
+        let Anumber = parseInt(document.getElementById("NumberA").value);
+        let Bnumber = parseInt(document.getElementById("NumberB").value);
+        let Cnumber = parseInt(document.getElementById("NumberC").value);
+        if (Anumber > Bnumber && Anumber > Cnumber) {
+            document.getElementById("resuilt").innerHTML = "Number A bigger";
+        } else if (Bnumber > Anumber && Bnumber > Cnumber) {
+            document.getElementById("resuilt").innerHTML = "Number B  bigger";
+        } else if (Cnumber > Bnumber && Cnumber > Anumber) {
+            document.getElementById("resuilt").innerHTML = "Number C bigger";
+        } else if (Bnumber === Cnumber && Anumber > Bnumber) {
+            document.getElementById("resuilt").innerHTML = "Number A bigger";
+        } else if (Cnumber === Anumber && Bnumber > Anumber) {
+            document.getElementById("resuilt").innerHTML = "Number B bigger";
+        } else
+            document.getElementById("resuilt").innerHTML = "Equal";
+    }
+
+</script>
+</body>
+</html>

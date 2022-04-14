@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Vòng lặp</title>
+    <title>Máy Tính Bỏ Túi</title>
     <style>
         table {
             margin: auto;
@@ -11,12 +11,16 @@
         td {
             background-color: antiquewhite;
         }
+        h1 {
+            color: antiquewhite;
+        }
     </style>
 </head>
-<body>
-<table border="2" ; style="text-align: center" ; cellpadding="12">
+<body style="background-color: cadetblue">
+<h1 style="text-align: center">Máy tính của Đông</h1> <hr>
+<table border="5" ; style="text-align: center" ; cellpadding="12">
     <tr>
-        <td colspan="4"><input disabled id="inputEnter"></td>
+        <td colspan="5"><input disabled id="inputEnter"></td>
     </tr>
     <tr>
         <td><input type="button" value="1" onclick="bottonInput('1')"></td>
@@ -55,7 +59,6 @@
     function Equal() {
         let resuilt = document.getElementById("inputEnter").value;
         document.getElementById("inputEnter").value = eval(resuilt);
-
     }
 
 

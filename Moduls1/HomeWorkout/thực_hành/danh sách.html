@@ -2,9 +2,35 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Danh Sách</title>
 </head>
 <body>
-$END$
+<table>
+    <th> STT </th>
+    <th> tên </th>
+    <th> địa chỉ </th>
+    <tr>
+        <td>1</td>
+        <td>Đông</td>
+        <td>Đà Nẵng</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>hải</td>
+        <td>Đà nnẵng/td>
+    </tr>
+</table>
+ <script>
+     document.write("<table border='2' cellpadding='5'; style='text-align: center'>")
+     for (i=1;i<=10;i++){
+         document.write('<tr>')
+         for (j=1;j <=10; j++){
+             document.write("<td>"+ j * i + "</td>" )
+         }
+         document.write("</tr>")
+     }
+
+
+ </script>
 </body>
 </html>

@@ -6,9 +6,43 @@
 </head>
 <body>
 <script>
-    let numbers = parseInt(prompt("Enter your number:"));
-    let N = 2;
+    // let numbers = parseInt(prompt("Enter your number:"));
+    // let count = 0;
+    // let N = 2;
+    // let interger = true;
+    // while (count < numbers) {
+    //         interger = true;
+    //         for (i = 2; i < N; i++) {
+    //             if (N % i === 0) {
+    //                 interger = false;
+    //                 break;
+    //             }
+    //         }
+    //         if (interger) {
+    //             document.write(N + "<br>");
+    //             count++;
+    //         }
+    //     N++;
+    // }
+    let number = 4;
+    let count = 0;
 
+    document.write("2" + "<br>" + "3" + "<br>");
+    while (count < 18) {
+
+        let flag = true;
+        for (i = 2; i < number; i++) {
+            if (number % i === 0) {
+                flag = false
+                break;
+            }
+        }
+        if (flag=== true) {
+             document.write(number + "<br>")
+            count ++;
+        }
+        number++;
+    }
 </script>
 </body>
 </html>

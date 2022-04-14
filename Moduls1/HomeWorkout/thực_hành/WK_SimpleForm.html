@@ -2,9 +2,40 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Form Đơn giản thôi</title>
+    <style>
+        .wufoo {
+            font-family: "Lucida Grande", "Lucida Sans Unicode", Tahoma, sans-serif
+        }
+    </style>
 </head>
 <body>
-$END$
+<form method="post" action="simpleform.html" class="wufoo">
+    <h1>ODER FORM</h1>
+    <p>What would you like to buy?</p>
+    <select>
+        <option>Trà Đào Cam Sả</option>
+        <option>Sữa tươi nóng</option>
+        <option>Trân Châu Đường Đen</option>
+    </select>
+    <p>How many would you like to oder?</p>
+    <input type="radio" name="money"> Size S-50$ <br>
+    <input type="radio" name="money"> Size L-70$ <br>
+    <input type="radio" name="money"> Size XL-100$
+    <p>Name <span style="color: #d61b06">*</span></p>
+    <input type="text" name="Name" placeholder="Name">
+    <input type="text" name="Name" placeholder="Last Name">
+    <p>Email</p>
+    <input type="text" name="Email" placeholder="Your Email">
+    <p>Phone Number</p>
+    <input type="text" name="phone1" size="5">
+    <input type="text" name="phone2" size="5">
+    <input type="text" name="phone3" size="5">
+    <p>
+        <input type="button" value="Submit"></p>
+
+</form>
+
+
 </body>
 </html>

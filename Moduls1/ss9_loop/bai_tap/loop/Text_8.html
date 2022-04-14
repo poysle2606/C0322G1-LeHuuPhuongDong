@@ -18,6 +18,9 @@
             background-color: black;
             text-align: center;
         }
+        body {
+            background-color: antiquewhite;
+        }
     </style>
 </head>
 <body>
@@ -26,7 +29,7 @@
 <input type="button" value="Play Game" onclick="clickHere()" class="A">
 <script>
     function clickHere() {
-        let fromNumber = parseInt(prompt("You want to guess from - to: "));
+        let fromNumber = parseInt(prompt("You want to guess from 0 - to: "));
         let random = parseInt(prompt("Limited number of pick:"));
         let randomNumber = Math.floor(Math.random() * fromNumber);
         let i = 0;
@@ -40,15 +43,12 @@
                 alert("Congratulations!!!!... You win!");
                 break;
             }
-
             i++;
         } while (random > i);
-        if (i == random) {
+        if (i === random) {
             alert("Sorry...You fails.")
         }
     }
-
-
 </script>
 </body>
 </html>
