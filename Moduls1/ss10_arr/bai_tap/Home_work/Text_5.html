@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Viết chương trình đếm số nguyên âm trong một chuỗi-->
+<script>
+    let arr = [];
+    let arrayLenght = prompt("Enter you Array lenght: ");
+    for (i = 0; i < arrayLenght; i++) {
+        arr[i] = prompt("Element at location: " + i);
+    }
+    document.write("arr = " + "[" + arr + "]" + "<br>");
+    for (j = 0; j < arr.length; j++) {
+        if ( arr[j] <0 ){
+            document.write("Negative integer is: " + arr[j] + "<br>");
+        }
+    }
+
+</script>
+</body>
+</html>

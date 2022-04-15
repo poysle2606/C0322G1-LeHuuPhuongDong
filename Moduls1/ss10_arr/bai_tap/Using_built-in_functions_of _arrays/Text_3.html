@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>chữ thường trong chuỗi vừa nhập sang thành dạng chữ hoa.</title>
+</head>
+<body>
+<script>
+    let arr =   ["T", "h", "e"];
+    let upper = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    let lower = 'abcdefghijklmnopqrstuvwxyz';
+    let result = [];
+    for (let i = 0; i < arr.length; i++) {
+        if (upper.includes(arr[i])) {
+            result.push(arr[i].toLowerCase());
+        } else if (lower.includes(arr[i])) {
+            result.push(arr[i].toUpperCase());
+        } else {
+            result.push(arr[i]);
+        }
+    }
+    document.write(result.join(''));
+
+</script>
+</body>
+</html>

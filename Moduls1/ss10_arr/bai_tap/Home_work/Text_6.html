@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = [];
+    let inputNumber = parseInt(prompt("Enter number Array lenght: "));
+    for ( let i = 0; i < inputNumber; i++) {
+        arr[i] = parseInt(prompt("Element at location: "));
+    }
+    let numberV = parseInt(prompt("Enter number V: "));
+    for ( let i = 0; i < arr.length; i++) {
+        if (arr[i] === numberV) {
+            alert("V is in the array.");
+            break;
+        }
+    }
+    if (!(arr[i] === numberV)) {
+        alert("V is not in the array.");
+    }
+
+
+
+</script>
+</body>
+</html>

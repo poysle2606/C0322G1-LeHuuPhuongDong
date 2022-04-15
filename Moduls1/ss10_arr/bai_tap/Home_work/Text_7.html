@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = [];
+    let numberInArray = parseInt(prompt("Enter you array lenght: "));
+    for (let i = 0; i < numberInArray; i++) {
+        arr[i] = parseInt(prompt("Element at location: "));
+    }
+    let arr2 = parseInt(prompt("Enter your V: "));
+    let long = arr.length - 1;
+    let flag = false;
+    for ( let i = 0; i < long; i++) {
+        if (arr2 === arr[i]) {
+            flag = true;
+            for (; i <= long; i++) {
+                arr[i] = arr[i + 1];
+            }
+            arr[long] = 0;
+        }
+    }
+    if (flag === true) {
+        document.write("Element " + arr2 + " in array " + "<br>");
+        document.write("New array is: " + arr);
+    } else {
+        document.write(arr2 + " Not in array!");
+    }
+</script>
+</body>
+</html>

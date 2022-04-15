@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Từ điển</title>
+</head>
+<body>
+<script>
+    let search = prompt("What are you searching?: ");
+    let english = ["dog", "cat", "bird", "fish", "tiger", "mouse"];
+    let vietnamese = ["chó", "mèo", "chim", "cá", "hổ", "chuột"];
+    let index = -1;
+    for (i = 0; i < english.length; i++) {
+        if (search === english[i]) {
+            alert("You want search: " + search + " vietnamese is: " + vietnamese[i] + " at found " + i);
+            index = i;
+        }
+    }
+    if (index == -1) {
+        alert("We not found!");
+    }
+</script>
+</body>
+</html>

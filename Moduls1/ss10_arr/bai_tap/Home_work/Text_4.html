@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Viết chương trình khởi tạo/nhập vào một mảng số nguyên và đảo ngược các phần tử trong mảng đó.-->
+<script>
+    let arr = [];
+    let numbersInArray = parseInt(prompt("Enter your array lenght: "));
+    for (i = 0; i < numbersInArray; i++) {
+        arr[i] = parseInt(prompt(" Element at location: " + i));
+    }
+    document.write("arr = " + "[" + arr + "]" + "<br>");
+    let first = 0;
+    let last = arr.length - 1;
+    while (first < last) {
+        let hold = arr[first];
+        arr[first] = arr[last];
+        arr[last] = hold;
+        first++;
+        last--;
+    }
+    document.write("Reverse element is:" + "[" + arr + "]");
+
+
+</script>
+</body>
+</html>
