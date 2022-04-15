@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Chương trình này đếm số ký tự số trong mảng. -->
+<script>
+    let arr = [1, 4, 6, "hi", 32, "hello", 76, "egg"];
+    let count = 0;
+    for (i = 0; i < arr.length; i++) {
+        if (!(isNaN(arr[i]))) {    //isNaN là Not A numbet.
+            count++;
+        }
+    }
+    document.write("Array is: " + '"' + arr + '"' + "<br>");
+    document.write("Size of the Array: " + (arr.length - 1) + "<br>");
+    document.write("Number of numeric in the Array is: " + count);
+</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!-- chương trình để in các ký tự trong một mảng theo thứ tự đảo ngược-->
+<script>
+    let arr = ['4','g','e','y','a'];
+    let first = 0;
+    let last = arr.length -1;
+    while (first < last) {
+        let b = arr[first];
+        arr[first] = arr[last];
+        arr[last] = b;
+        first++;
+        last--;
+    }  document.write("Array is: " + '"' + arr + '"');
+</script>
+
+</body>
+</html>
