@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = [];
+    let enterArray = prompt("Enter Array lenght: ");
+    for (let i=0;i<enterArray;i++) {
+        arr[i] = prompt("Enter at location: ");
+    }
+    str = arr.toString();
+    let newArr = str.replace(/-/g, "_");   //chúng ta hoàn toàn có thể thay thế toàn bộ ký tự trong chuỗi JavaScript ban đầu.
+     document.write(newArr);
+</script>
+</body>
+</html>

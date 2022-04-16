@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Viết một chương trình nhập vào 2 chuỗi, sau đó kiểm tra xem hai chuỗi có giống nhau hay không.-->
+
+<script>
+    let arr1 = [];
+    let arr2 = [];
+    let numberInArr1 = prompt("Enter your Array lenght 1: ");
+    for (let i = 0; i < numberInArr1; i++) {
+        arr1[i] = prompt("Enter element Array 1: ");
+    }
+    let numberInArr2 = prompt("Enter your Array lenght 2: ");
+    for (let i = 0; i < numberInArr2; i++) {
+        arr2[i] = prompt("Enter element Array 2: ");
+    }
+    document.write("Array 1 is: " + '"' + arr1 + '"' + "<br>" + "Array 2 is: " + '"' + arr2 + '"');
+    let count = 0;
+    for (let i = 0; i < arr1.length; i++) {
+        for (let j = 0; j < arr2.length; j++) {
+            if (arr1[i] == arr2[j]) {
+                count++;
+            }
+        }
+    }
+    alert("Have " + count + " to be same.");
+</script>
+</body>
+</html>
