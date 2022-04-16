@@ -8,9 +8,18 @@
 <script>
     let arr = [];
     let numberInArray = parseInt(prompt("Enter number array lenght: "));
-    for ( let i = 0; i < numberInArray; i++) {
+    for (let i = 0; i < numberInArray; i++) {
         arr[i] = parseInt(prompt("Element at location: "));
-    }
+    } document.write("Array is: " + '[' + arr + ']' + "<br>");
+    for (let i = 0; i < numberInArray; i++) {
+        for (let j = 0; j < i; j++) {
+            if (arr[i] > arr[j]) {
+                let hold = arr[i];
+                arr[i] = arr[j];
+                arr[j] = hold;
+            }
+        }
+    } document.write("New Array is: " + "[" + arr + "]" );
 </script>
 </body>
 </html>
