@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr1 = [];
+    let arr2 = [];
+    let lengthInArray1 = parseInt(prompt("Enter length Array 1: "));
+    for (let i = 0; i < lengthInArray1; i++) {
+        arr1[i] = parseInt(prompt('Enter number Array 1: '));
+    }
+    let lengthInArray2 = parseInt(prompt("Enter length Array 2: "));
+    for (let i = 0; i < lengthInArray2; i++) {
+        arr2[i] = parseInt(prompt("Enter number Array 2: "));
+    }
+    let arr3 = arr1.concat(arr2);  //nối mảng arr1 va arr2 thành mảng arr3.
+    alert ("New Array is: " + arr3 );
+</script>
+</body>
+</html>
