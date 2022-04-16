@@ -6,12 +6,14 @@
 </head>
 <body>
 <script>
-    let str = "Drunk off that love, my head up. There's no forgetting you. " +
-        "You're awonken me, but you 're choking me. I was so obsessed." +
-        " Gave you all of me and now honestly i got nothing left." +
-        "I love you dangerously.";
-    let sub = prompt("Enter your word: ");
-    alert(+str.split(sub).length - 1);
+    let str = "Lê Hửu Phương Đông C0322G1"
+    document.write(" String is: " + str + "<br>");
+    let count = 0;
+    for (let i = 0; i < str.length; i++) {
+        if (str[i] == " ") {
+            count++;
+        }
+    }  document.write("String have " + (count + 1) + " word.");
 
 
 </script>
