@@ -12,15 +12,18 @@
         arr[i] = parseInt(prompt("Element at location: "));
     }
     let numberV = parseInt(prompt("Enter number V: "));
+    let index = -1;
     for ( let i = 0; i < arr.length; i++) {
-        if (arr[i] === numberV) {
+        if (numberV === arr[i]) {
             alert("V is in the array.");
+            index = i;
             break;
         }
     }
-    if (!(arr[i] === numberV)) {
+    if (index ==-1) {
         alert("V is not in the array.");
     }
+
 
 
 
