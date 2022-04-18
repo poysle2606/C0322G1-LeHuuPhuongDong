@@ -2,9 +2,28 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    let number = 2; //  Do số 1 chỉ có một ước số dương là chính nó, nên số 1 không phải là số nguyên tố.
+    isPrime(number);
+
+    function isPrime(number) {
+        while (number < 10000) {
+            let flag = true;
+            for (let i = 2; i < number; i++) {
+                if (number % 2 === 0) {
+                    flag = false;
+                    break;
+                }
+            }
+            if (flag === true) {
+                document.write(number + "<br>");
+            }
+            number++;
+        }
+    }
+</script>
 </body>
 </html>

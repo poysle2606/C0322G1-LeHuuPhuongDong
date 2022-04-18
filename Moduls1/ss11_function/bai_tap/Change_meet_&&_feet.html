@@ -2,9 +2,26 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<h2>Change Meter to Feet</h2>
+<label>Meters: </label> <input type="number" oninput="changeMeter(this.value)"
+                               onchange="changeMeter(this.value)">
+<label>Feets: </label> <input type="number" oninput="changeFeets(this.value)"
+                              onchange="changeFeets(this.value)"> </br>  </br>
+<span>Meters is: </span> <span id="outPutMeters"></span> </br> </br>
+<span>Feets is: </span> <span id="outPutFeets"></span>
+<script>
+    function changeFeets(meter) {
+        meter = parseFloat(meter);
+        document.getElementById("outPutMeters").innerHTML = 0.305 *meter ;
+    }
+
+    function changeMeter(feet) {
+        feet = parseFloat(feet);
+        document.getElementById("outPutFeets").innerHTML = 3.279 * feet ;
+    }
+</script>
 </body>
 </html>
