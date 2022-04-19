@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--nhận vào 3 số nguyên bất kỳ, trả về số nguyên có giá trị nhỏ nhất.-->
+<script>
+    function findNumber() {
+        let min;
+        if (a < b && a < c) {
+            min = a;
+        } else if (b < a && b < c) {
+            min = b;
+        } else if (c < b && c < a) {
+            min = c;
+        } else if (a === b && b > c) {
+            min = c;
+        } else if (b === c && c > a) {
+            min = a;
+        } else if (c === a && a > b) {
+            min = b;
+        } else {
+           min = ("Be aqual");
+        }  return (min)
+    }
+
+    let a = parseInt(prompt("Enter number 1: "));
+    let b = parseInt(prompt("Enter number 2: "));
+    let c = parseInt(prompt("Enter number 3: "));
+    let minNumber = findNumber();
+    alert(findNumber(minNumber));
+
+</script>
+</body>
+</html>

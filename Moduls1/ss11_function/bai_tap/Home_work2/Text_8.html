@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = [];
+    let lenghtArr = parseInt(prompt("Enter Lenght Array: "));
+    for (let i = 0; i < lenghtArr;i++) {
+        arr[i] = prompt("Enter Array: ");
+    } alert("Array is: " + arr);
+    let first = 0;
+    let last = arr.length -1;
+    function changeArray() {
+        while (first < last) {
+                let hold = arr[first];
+                arr[first] = arr[last];
+                arr[last] = hold;
+                first++;
+                last--
+        }
+        alert("New Array is: " + arr);
+    }   changeArray()
+</script>
+</body>
+</html>

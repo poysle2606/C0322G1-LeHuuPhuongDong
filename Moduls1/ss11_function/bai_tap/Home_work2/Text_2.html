@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!-- tính diện tích, hàm tính chu vi hình tròn-->
+<p>Chu vi hình tròn là: <span id="result"></span></p>
+<br>
+<p>Diện tích hình tròn là: <span id="resultS"></span></p>
+<script>
+    let r = parseInt(prompt("Nhập bán kính hình tròn: "));
+
+    function myfunction() {
+        CV = 2 * r * 3.14;
+        document.getElementById("result").innerHTML = parseInt(CV);
+    }
+
+    myfunction()
+
+    function yourfunction() {
+        S = 3.14 * r * r;
+        document.getElementById("resultS").innerHTML = parseInt(S);
+    }
+
+    yourfunction()
+</script>
+</body>
+</html>
