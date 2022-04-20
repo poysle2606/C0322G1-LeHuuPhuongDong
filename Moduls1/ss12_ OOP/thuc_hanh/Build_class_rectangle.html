@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Rectangle {
+        constructor(number1,number2) {
+            this.number1 = number1;
+            this.number2 = number2;
+        }
+
+        getPerimeter() {
+            return (this.number1 + this.number2) * 2;
+        }
+        getArea () {
+            return this.number1 * this.number2  ;
+        }
+    }
+    let number1 = parseInt(prompt("Lenght is: "))
+    let number2= parseInt(prompt("Width is: "));
+    let ring = new Rectangle (number1,number2);
+    let perimeter = ring.getPerimeter();
+    let area = ring.getArea();
+    alert ("Perimeter " + perimeter + "; Area " + area);
+</script>
+</body>
+</html>

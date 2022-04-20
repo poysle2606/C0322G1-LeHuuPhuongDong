@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Circle {
+        constructor(radius) {
+            this.radius = radius;
+        }
+
+        getRadius() {
+            return this.radius
+        }
+        getArea () {
+            return Math.PI * this.radius * this.radius;
+        }
+    }
+    let input = parseInt(prompt("Radius is : "));
+    let ring = new Circle(input);
+    let radius = ring.getRadius();
+    let area = ring.getArea();
+    alert ("Radius " + radius + "; A    rea " + area);
+</script>
+</body>
+</html>

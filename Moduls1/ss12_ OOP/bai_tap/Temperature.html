@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Temperature {
+        constructor(nhietDo) {
+            this.nhietDo = nhietDo;
+        }
+
+        getCtoF() {
+            return this.nhietDo * (9 / 5) + 32;
+        }
+
+        getCtoK() {
+            return this.nhietDo + 273.15;
+        }
+    }
+    let nhietDo
+    do {
+        nhietDo = parseInt(prompt("Enter Cel: "));
+        let change = new Temperature(nhietDo);
+        let cToF = change.getCtoF();
+        let cToK = change.getCtoK();
+        document.write("C to F: " + cToF +"<br>");
+        document.write("C to K: " + cToK);
+    } while (nhietDo <= -273);
+</script>
+</body>
+</html>
