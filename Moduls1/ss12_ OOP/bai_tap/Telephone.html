@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Điện thoại</title>
+    <style>
+        h3 {
+            text-align: center;
+            font-family: "Colonna MT";
+        }
+
+        .anhDt {
+            width: 170px;
+            height: 300px;
+            position: absolute;
+            transform: translate(320%, 0%);
+        }
+
+        table {
+            border: 2px solid black;
+            text-align: center;
+        }
+
+        button {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+<h3>Điện thoại của Đông</h3>
+<img src="anh%20iphon.png" class="anhDt">
+<h4>Chức năng của điện thoại: </h4>
+<table>
+    <tr>
+        <td>
+            <button type="button" onclick="battery()">Trạng thái pin</button>
+        </td>
+        <td>
+            <button type="button" onclick="lowBattery()">Sạc pin</button>
+        </td>
+        <td>
+            <button type="button" style="color: green" onclick="turnOn()">Bật điện thoại</button>
+        </td>
+        <td>
+            <button type="button" style="color: #d61b06" onclick="turnOff()">Tắt điện thoại</button>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button type="button" onclick="mesSage()">Soạn tin nhắn</button>
+        </td>
+        <td>
+            <button type="button" onclick="mesSageFrom()">Hộp thư đến</button>
+        </td>
+        <td>
+            <button type="button" onclick="mesSageTo()">Hộp thư đi</button>
+        </td>
+        <td>
+            <button type="button" onclick="notFound()">Game</button>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button type="button" onclick="notFound()">Facbook</button>
+        </td>
+        <td>
+            <button type="button" onclick="notFound()">Instagram</button>
+        </td>
+        <td>
+            <button type="button" onclick="notFound()">Zalo</button>
+        </td>
+        <td>
+            <button type="button" onclick="notFound()">Sờ lách</button>
+        </td>
+    </tr>
+</table>
+<script>
+    class Mobile {
+        constructor(battery1) {
+            this.battery1 = battery1;   
+            this.battery = function () {
+                alert("Pin còn tốt");
+            }
+            this.turnOn = function () {
+                alert("Điện thoại đang mở" + " Pin là " + this.battery1);
+            }
+            this.off = function () {
+                alert("Điện thoại đã tắt");
+            }
+            this.lowBattery = function () {
+                alert(" Pin đã sạc " + this.battery1++);
+            }
+            this.mesSage = function () {
+                prompt("Soạn tin nhắn: " + " Pin còn " + this.battery1--);
+            }
+            this.messageFrom = function () {
+                confirm("Làm gì có người yêu mà nhận tin nhắn!" + " Pin còn " + this.battery1--);
+            }
+            this.messageTo = function () {
+                confirm("Làm gì có người yêu mà gửi tin nhắn hỉ?" + " Pin còn " + this.battery1--);
+            }
+            this.notFound = function () {
+                alert("Chương trình đang dang dở chưa viết tiếp được!" + " Pin còn " + this.battery1--);
+            }
+        }
+
+    }
+
+    let smartPhone = new Mobile(100);
+
+    function battery() {
+        smartPhone.battery();
+
+    }
+
+    function lowBattery() {
+        smartPhone.lowBattery();
+    }
+
+    function turnOn() {
+        smartPhone.turnOn();
+    }
+
+    function turnOff() {
+        smartPhone.off();
+    }
+
+    function mesSage() {
+        smartPhone.mesSage();
+    }
+
+    function mesSageFrom() {
+        smartPhone.messageFrom();
+    }
+
+    function mesSageTo() {
+        smartPhone.messageTo();
+    }
+
+    function notFound() {
+        smartPhone.notFound();
+    }
+
+</script>
+</body>
+</html>

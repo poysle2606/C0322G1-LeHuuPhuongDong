@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Apple {
+        constructor(weight) {
+            this.weight = weight;
+        }
+
+        getWeight() {
+            return this.weight;
+        }
+
+        isEmpty() {                     // isEmpty() khi chuỗi trống trả về true, ngược lại trả về false
+            if (this.weight === 0) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        decreaseApple() {
+            if (this.weight > 0) {
+                this.weight--;
+            } else {
+                alert("No apple more!");
+            }
+        }
+    }
+
+    class Human {
+        constructor(name, gender, weight) {
+            this.name = name;
+            this.gender = gender;
+            this.weight = weight;
+        }
+
+        setName() {
+            this.name = name;
+        }
+
+        getName() {
+            return this.name;
+        }
+
+        setGender() {
+            this.gender = gender;
+        }
+
+        getGender() {
+            return this.gender;
+        }
+
+        setWeight() {
+            this.weight = weight;
+        }
+
+        getWeight() {
+            return this.weight;
+        }
+
+        checkApple(apple) {
+            if (apple.getWeight() > 0) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        eatApple(apple) {
+            if (apple.getWeight() > 0) {
+                this.weight++;
+            }
+            apple.decreaseApple()
+        }
+        say () {
+            document.write("ăn lẹ lên em kẻo thượng đế thấy chừ");
+        }
+
+    }
+
+    let apple = new Apple(10);
+    let men = new Human("Adam", "Male", 65);
+    let women = new Human("Eva", "Female", 50);
+    for (let i = 0; i < 5; i++) {
+        men.eatApple(apple);
+        document.write("Adam tăng lên " + men.getWeight() + " Kg " + " số táo còn lại " + apple.weight  + "<br>");
+        men.say()
+        document.write("<br>");
+        women.eatApple(apple);
+        document.write("Eva tăng lên " + women.getWeight() + " Kg " + " số táo còn lại " + apple.weight + "<br>"  + "<hr>");
+
+    }
+
+</script>
+</body>
+</html>
