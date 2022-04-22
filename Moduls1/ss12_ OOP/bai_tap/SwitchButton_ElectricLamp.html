@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>công tắc và bóng đèn</title>
+</head>
+<body>
+<script>
+    class Lamp {
+        constructor(status) {
+
+        }
+
+        status() {
+            this.status = false;  // because Lamp allways Off
+        }
+
+        turnOn() {
+            this.status = true;
+            alert(" Lamp is turn On");
+        }
+
+        turnOff() {
+            this.status = false;
+            alert("Lamp is turn Off");
+        }
+    }
+
+    class SwitchButton {
+        constructor(status, lamp) {
+        }
+
+        status() {
+            this.status = false; // because Button allways Off
+        }
+
+        connectToLamp(lamp) {
+            this.lamp = lamp;
+        }
+
+        setLamp() {
+            this.lamp = lamp;
+        }
+
+        getLamp() {
+            return this.lamp;
+        }
+
+        turnOnLamp() {
+            this.status = true;
+            this.lamp.turnOn();
+        }
+
+        turnOffLamp() {
+            this.status = false;
+            this.lamp.turnOff();
+        }
+    }
+
+    let lamp = new Lamp();                     // ko can truyen doi so vao;
+    let switchButton = new SwitchButton();     // ko can truyen doi so vao;
+    switchButton.connectToLamp(lamp);          // bỏ bóng đèn vào  mới kết nối tới bóng đèn đc.
+
+    for (let i = 0; i < 10; i++) {
+        switchButton.turnOnLamp()             // alert ở phía trên nên tự hiện kết quả 
+        switchButton.turnOffLamp()
+    }
+
+
+</script>
+</body>
+</html>
