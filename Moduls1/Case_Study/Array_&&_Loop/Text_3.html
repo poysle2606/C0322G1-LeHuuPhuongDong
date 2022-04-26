@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr1 = [3, 210, 4, 14, 16, 10];
+    let arr2 = [2, 3, 2, 1, 2, 3];
+    let index = 0;
+    let max = arr1[0] / arr2[0];  // gán max = chỉ số trên chia cho chỉ số dưới;
+    for (let i = 0; i < arr1.length; i++) {
+        if (arr1[i]/arr2[i] > max){     //sau khi chạy vòng lặp nếu chỉ số trên chia cho chỉ số dưới lớn hơn max
+            max = arr1[i] / arr2[i];// gán max bằng thương của ha chỉ số đó;
+            index = i;  //index = vị trí của i trong mảng;
+        }
+    }
+    document.write( arr1[index] + "/" + arr2[index] +  " có max là " + max);
+</script>
+</body>
+</html>

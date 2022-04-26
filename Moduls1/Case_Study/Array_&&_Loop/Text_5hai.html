@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<h1>Menu Đồ uống</h1>
+
+<ul>
+    <li>Danh sách:</li>
+    <ol>
+        <li>Cafe</li>
+        <li>Cam vắt</li>
+        <li>Cà rốt ép</li>
+        <li>Cà chua ép</li>
+        <li>Nước lọc</li>
+        <li>Nước dừa</li>
+        <li>Thoát</li>
+    </ol>
+</ul>
+<input type="number" placeholder="nhập số đồ uống " id="numbers">
+<button onclick="confirm()">Xác nhận</button>
+<span>Thành tiền: </span> <span id="resuil"></span> <br>
+<span>Tổng cần thanh toán là: </span> <span id="total"></span>
+<script>
+    let total;
+    let sum = 0;
+
+    function confirm() {
+        let number = document.getElementById("numbers").value;
+        do {
+            if (number === "1") {
+                let money = prompt("Giá của Cafe là: 15000 vnd. Nhập số lượng cần gọi: ");
+                total = money * 15000;
+                document.getElementById("resuil").innerHTML = total + " VND";
+            } else if (number === "2") {
+                let money = prompt("Giá của cam vắt là 18000 vnd. Nhập số lượng cần gọi: ");
+                total = money * 18000;
+                document.getElementById("resuil").innerHTML = total + " VND";
+            } else if (number === "3") {
+                let money = prompt("Giá của cà rốt ép là 15000 vnd. Nhập số lượng cần gọi: ");
+                total = money * 15000;
+                document.getElementById("resuil").innerHTML = total + " VND";
+            } else if (number === "4") {
+                let money = prompt("Giá của cà chua ép là 20000 vnd. Nhập số lượng cần gọi: ");
+                total = money * 20000
+                document.getElementById("resuil").innerHTML = total + " VND";
+            } else if (number === "5") {
+                let money = prompt("Giá của nước lọc là 6000 vnd. Nhập số lượng cần gọi: ");
+                total = money * 6000;
+                document.getElementById("resuil").innerHTML = total + " VND";
+            } else if (number === "6") {
+                let money = prompt("Giá của nước dừa là 20000 vnd. Nhập số lượng cần gọi: ");
+                total = money * 20000;
+                document.getElementById("resuil").innerHTML = total + " VND";
+            } else if (number === "7") {
+                alert("Tổng tiền phải trả là: " + sum);
+                alert("Bạn đã thoát chương trình!");
+                document.getElementById("total").innerHTML = "";
+                sum = 0;
+                break;
+            } else {
+                alert(number + " không có trong Menu")
+            }
+            sum = sum + total;
+            document.getElementById("total").innerHTML = sum + " VND";
+        } while (false);
+
+
+    }
+
+</script>
+</body>
+</html>

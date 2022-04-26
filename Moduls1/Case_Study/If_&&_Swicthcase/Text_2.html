@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = ['u', 'e', 'o', 'a', 'i', 'U', 'E', 'O', 'A', 'I'];
+    let index = -1;
+    let word = prompt("Enter the Word: ");
+    for (let i = 0; i < arr.length; i++) {
+        if (word === arr[i]) {
+            alert(word + " la 1 nguyen am");
+            index =i;
+        }
+    } if (index === -1) {
+        alert(word + ' la 1 phu am');
+    }
+
+</script>
+</body>
+</html>

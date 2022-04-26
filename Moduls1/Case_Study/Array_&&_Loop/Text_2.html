@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = [5, 6, 8, 3, 5, 7];
+    let arr2 = [5, 6, 8, 3, 5, 7, 1, 2, 4];
+    let arr3 = [];
+    for (let i = 0; i < arr2.length; i++) {
+        if (arr.indexOf(arr2[i]) === -1 && arr3.indexOf(arr2[i]) === -1) {
+            arr3.push(arr2[i]);
+        }
+    }
+   document.write(arr3);
+
+</script>
+</body>
+</html>

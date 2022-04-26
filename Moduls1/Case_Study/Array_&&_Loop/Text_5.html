@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Menu</title>
+    <style>
+        table {
+            border: 1px royalblue solid;
+            border-spacing: unset;
+            border-collapse: collapse;
+            width: 50%;
+            margin: auto;
+        }
+        .sel {
+            width: 97%;
+        }
+        button {
+            margin: auto;
+            display: block;
+            width: 100px;
+            height: 40px;
+        }
+
+    </style>
+</head>
+<body>
+<table border="1px">
+    <tr>
+        <th colspan="4">Danh sách nước uống</th>
+    </tr>
+    <tr>
+        <th>Danh sách nước uống</th>
+        <th>Số lượng</th>
+        <th>Thành tiền</th>
+        <th>Ghi chú</th>
+    </tr>
+    <tr>
+     <td>
+         <select class="sel">
+             <option id="cfm">Caffe Muối</option>
+             <option id="tdcx">Trà đào cam xả</option>
+             <option id="tg">Trà Gừng</option>
+             <option id="tch">Trà chanh</option>
+             <option id="sbh">Soda bạc hà</option>
+         </select>
+     </td>
+        <td> <input type="number" class="sel"> </td>
+        <td> <input type="text" class="sel" disabled></td>
+    </tr>
+</table>
+<div>
+    <button onclick="confirm()">Xác nhận</button>
+    <button>Hủy bỏ</button>
+</div>
+<script>
+    function confirm() {
+    }
+</script>
+</body>
+</html>

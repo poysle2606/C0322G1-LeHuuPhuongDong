@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let money = parseInt(prompt("Nhập lương vô chế ơi: "));
+    let thue = 0;
+    let sum;
+    if (money => 15) {
+        thue = money*0.2;
+        sum = money - thue;
+    } else if (money > 7 && money <15 ) {
+        thue = money * 0.1;
+        sum = money - thue;
+    } else {
+        thue = money *0;
+        sum = money - thue;
+    }
+    alert("Thuế của bạn là: " + thue + " mill vnd" + " lương của bạn là: " + sum + " mill vnd");
+</script>
+</body>
+</html>
