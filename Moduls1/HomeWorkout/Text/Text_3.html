@@ -2,9 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    let numbers = parseInt(prompt("input "));
+    for (let i = 0; i < numbers; i++) {
+        for (let j = 2; j < i; j++) {
+            if (i % j === 0) {
+                document.write(i + "<br>");
+                break;
+            }
+        }
+    }
+</script>
 </body>
 </html>

@@ -2,9 +2,54 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>SỔ XỐ VIỆTLOT </title>
+    <style>
+        div {
+            margin: 5px;
+        }
+        h1 {
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-$END$
+<h1>SỔ XỐ VIỆTLOT</h1>
+<form>
+    <div >
+        <input type="number" placeholder="Number">
+        <input type="number" placeholder="Number">
+        <input type="number" placeholder="Number">
+        <input type="number" placeholder="Number">
+        <input type="number" placeholder="Number">
+        <input type="number" placeholder="Number">
+    </div>
+    <div>
+        <input type="number" placeholder="Number">
+        <input type="number" placeholder="Number">
+        <input type="number" placeholder="Number">
+        <input type="number" placeholder="Number">
+        <input type="number" placeholder="Number">
+        <input type="number" placeholder="Number">
+    </div>
+    <div>
+        <button onclick="bought()">Mua vé</button>
+        <button onclick="resuil()">Xem kết quả</button>
+    </div>
+</form>
+<script>
+    function bought() {
+      let choose = parseInt(prompt("Bạn có hai lựa chọn: \n 1.Bạn muốn tự chọn số: \n 2.Máy sẽ chọn Randoom:"));
+        if (choose === 1) {
+
+
+        } else if (choose === 2) {
+
+        } else {
+            alert("Số" + choose + "bạn chọn không có trong trương trình!");
+        }
+
+    }
+
+</script>
 </body>
 </html>

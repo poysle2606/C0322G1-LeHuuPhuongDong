@@ -6,14 +6,36 @@
 </head>
 <body>
 <script>
-   let str = prompt("Nhập chuỗi: ");
-   let chuoi;
-  for (let i = 0 ; i<str.length;i++) {
-      function change() {
+    let str = prompt("Nhập chuỗi: ");
+    str = str.toLowerCase();  //chuyển toàn bộ chuỗi thành chữ thường;
+    str = str.split(/ +/g).join(" ");   //split xóa hết khoảng trắng giữa các từ.
+    let newArr = [];
+    //join thêm lại khoảng trắng cho chuỗi mới.
+    function changeWord(strg) {      //tạo hàm truyền tham số.
+        let arr = strg.split(" ");   // splice thành một danh sách các chuỗi con có thứ tự,
+        // đặt các chuỗi con này vào một mảng và trả về mảng
 
-          chuoi = str.charAt(0).toUpperCase() + str.slice(1);
-      } change()
-  }alert(chuoi);
+        for (let i = 0; i < arr.length; i++) {
+            newArr.push(arr[i].charAt(0).toUpperCase() + arr[i].slice(1));
+            //charAt sẽ đánh dấu kí tự ở vị trí 0 và viết hoa nó lên. splice sẽ thêm các từ còn lại của chuỗi để tạo nên 1 từ
+
+        }
+        return newArr.join(" ");
+
+    }
+
+    alert(changeWord(str));
+
+    function longest(longStr) {
+        let max = longStr[0];
+        for (let i = 0; i < longStr.length; i++) {
+
+            if (longStr[i] > max) {
+                max = longStr[i];
+            }
+        }  return max;
+    }
+    alert(" Từ dài nhất là: " + longest(newArr));
 
 </script>
 </body>

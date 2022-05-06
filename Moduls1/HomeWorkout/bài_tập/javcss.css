@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+.myImg {
+    width: 250px;
+    padding: 20px;
+}
+h1 {
+    text-align: center;
+    background-color: chocolate;
+    font-family: Algerian;
+}
+ul {
+    /*đẩy phần tử sang phải*/
+    float:right;
+    margin-top: 20px;
+    list-style: none;
+    margin-top: 50px;
+}
+ul li {
+    display: inline-block;
+    padding: 10px;
+/*border solid black ve duong vien*/
+}
+.logo {
+    float: left;
+    width: 270px;
+    height: auto;
+}
+ a {
+    /*khoang cach tu chu ra toi border*/
+     margin: 5px;
+    color: chocolate;
+    border: 1px solid transparent;
+     font-family: Algerian;
+}
+/* phan list Home ben trai*/
+.link:hover {
+    background-color: black;
+     color: white;
+     transition: 1s;
+        margin-bottom: 50px ;
+}
+    ul li:hover {
+        background-color: black;
+        color: white;
+        transition: 1s;
+    /*chinh giay cham lai khi re chuot vao  */
+    }
+.img {
+    text-align: center;
+    position: absolute;
+    transform: translate(330%,25%);
+}
+.address {
+    text-align: center;
+    font-family:arial, sans-serif;
+    position: absolute;
+    transform: translate(240%,650%);
+}
+pre {
+    color: hotpink;
+    position: absolute;
+    transform: translate(140%,520%);
+}
+

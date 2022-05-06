@@ -2,9 +2,26 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    let arrayInt = [];
+    let arrayIntLength = parseInt(prompt("Nhập độ dài của mảng: "));
+    for (let i = 0; i < arrayIntLength; i++) {
+        arrayInt[i] = parseInt(prompt("Nhập số nguyên vào mảng: "));
+    }
+    document.write("Mảng có các số nguyên là: " + "[" + arrayInt + "]" + "<br>");
+    let x = parseInt(prompt("Nhập số nguyên X: "));
+    function tryRemoveFromArray(arr,numberX) {
+        for (let i = 0; i <arr.length ; i++) {
+            if (numberX === arr[i] ) {
+               arr.splice(i,1)
+                i--;
+            }
+        }
+        return arr;
+    } document.write("Mảng mới là: "+"[" + tryRemoveFromArray(arrayInt,x)+ "]");
+</script>
 </body>
 </html>

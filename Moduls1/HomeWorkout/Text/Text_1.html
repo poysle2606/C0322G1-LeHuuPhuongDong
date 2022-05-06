@@ -2,9 +2,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    let str = "Trung sỹ Lê Hửu Phương Đông"
+    let count = 1;
+    let index = 0;
+    for (let i = 0; i < str.length; i++) {
+        if (str[i] === " ") {
+            count++;
+        } else if (isNaN(str)) {
+            index++;
+        }
+    }
+    alert("Array have: " + count + " words " + " and " + index + " characters.")
+
+</script>
 </body>
 </html>

@@ -2,9 +2,117 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<h2>Danh sách nhân viên Vinmart</h2>
+<button onclick="create()">Tạo mới danh sách</button>
+<p id="display"></p>
+<script>
+    class NhanVien {
+        constructor(name, age, position, number) {
+            this.name = name;
+            this.age = age;
+            this.position = position;
+            this.number = number;
+        }
+
+        setName(value) {
+            this.name = value;
+        }
+
+        getName() {
+            return this.name;
+        }
+
+        setAge(value) {
+            this.age = value;
+        }
+
+        getAge() {
+            return this.age;
+        }
+
+        setPosition(value) {
+            this.position = value;
+        }
+
+        getPosition() {
+            return this.position;
+        }
+
+        setNumber(value) {
+            this.number = value;
+        }
+
+        getNumber() {
+            return this.number;
+        }
+
+    }
+
+    let staff = [];
+
+    function display(arr) {
+        let tab = " <table border='1px'>\n" +
+            "    <tr>\n" +
+            "        <th>STT</th>\n" +
+            "        <th>Tên Nhân Viên</th>\n" +
+            "        <th>Tuổi của Nhân Viên</th>\n" +
+            "        <th>Chức vụ</th>\n" +
+            "        <th>Số điện thoại</th>\n" +
+            "        <th>Tùy chọn</th>\n" +
+            "    </tr>\n"
+        for (let i = 0; i < arr.length; i++) {
+            tab += "<tr>" +
+                "    <td>" + (i + 1) + "</td>\n" +
+                "    <td>" + arr[i].getName() + "</td>\n" +
+                "    <td>" + arr[i].getAge() + "</td>\n" +
+                "    <td>" + arr[i].getPosition() + "</td>\n" +
+                "    <td>" + arr[i].getNumber() + "</td>\n" +
+                "    <td>" +
+                "<button onclick='update(" + i + ")'>Cập nhật</button>" +
+                "<button onclick='cancel(" + i + ")'>Xóa</button>"
+                + "</td>\n" +
+                "</tr>"
+        }
+        tab += "</table>"
+        document.getElementById("display").innerHTML = tab;
+    }
+
+    display(staff);
+
+    function create() {
+        let name = prompt("Nhập tên nhân viên: ");
+        let age = parseInt(prompt("Nhập tuổi nhân viên: "));
+        let position = prompt("Nhập chức vụ của nhân viên: ");
+        let number = parseInt(prompt("Nhập số điện thoại liên lạc: "));
+        let pub = new NhanVien(name, age, position, number);
+        staff.push(pub);
+            alert("Thêm nhân viên thành công!");
+        display(staff);
+    }
+
+    function update(upd) {
+        let name = prompt("Nhập lại tên nhân viên: ");
+        let age = parseInt(prompt("Nhập lai độ tuổi nhân viên: "));
+        let position = prompt("Nhập lại chức vụ: ");
+        let number = parseInt(prompt("Nhập lại số điện thoại: "));
+        staff[upd] = new NhanVien(name, age, position, number);
+        alert("Cập nhập thông tin thành công: ");
+        display(staff);
+    }
+
+    function cancel(arr) {
+        let choose = confirm("Bạn có chắc muốn xóa nhân viên này không? ");
+        if (choose ) {
+            staff.splice(arr, 1);
+            alert("Xóa nhân viên thành công!");
+        } else {
+            alert("Bạn nên suy nghĩ lại!");
+        }
+        display(staff);
+    }
+</script>
 </body>
 </html>

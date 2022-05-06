@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="b96dd12e-8f9b-421a-ab8a-d748745a0676" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/C0322G1-LeHuuPhuongDong.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Moduls1/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Moduls1/Case_Study/Double_Array/Text_1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Moduls1/Case_Study/Double_Array/Text_2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Moduls1/Case_Study/Double_Array/Text_3.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Moduls1/Case_Study/OOP/VIETLOT.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Moduls1/Case_Study/String/Text_3.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Moduls1/Case_Study/Task_1/Task_4.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Moduls1/Case_Study/Task_1/Text_1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Moduls1/Case_Study/Task_1/Text_2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Moduls1/Case_Study/Task_1/Text_3.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Moduls1/HomeWorkout/bài_tập/Index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Moduls1/HomeWorkout/bài_tập/index_2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Moduls1/Text_Moduls1/Tex1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Moduls1/Text_Moduls1/Text_2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Moduls1/Text_Moduls1/Text_3.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Moduls1/Text_Moduls1/Text_4.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/untitled/untitled.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Moduls1/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Moduls1/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Moduls1/Case_Study/Array_&amp;&amp;_Loop/Text_5hai.html" beforeDir="false" afterPath="$PROJECT_DIR$/Moduls1/Case_Study/Array_&amp;&amp;_Loop/Text_5hai.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Moduls1/Case_Study/If_&amp;&amp;_Swicthcase/Text_1.html" beforeDir="false" afterPath="$PROJECT_DIR$/Moduls1/Case_Study/If_&amp;&amp;_Swicthcase/Text_1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Moduls1/Case_Study/String/Text_1.html" beforeDir="false" afterPath="$PROJECT_DIR$/Moduls1/Case_Study/String/Text_1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Moduls1/Case_Study/String/Text_2.html" beforeDir="false" afterPath="$PROJECT_DIR$/Moduls1/Case_Study/String/Text_2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Moduls1/HomeWorkout/Text/Text_1.html" beforeDir="false" afterPath="$PROJECT_DIR$/Moduls1/HomeWorkout/Text/Text_1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Moduls1/HomeWorkout/Text/Text_2.html" beforeDir="false" afterPath="$PROJECT_DIR$/Moduls1/HomeWorkout/Text/Text_2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Moduls1/HomeWorkout/Text/Text_3.html" beforeDir="false" afterPath="$PROJECT_DIR$/Moduls1/HomeWorkout/Text/Text_3.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Moduls1/HomeWorkout/Text/Text_4.html" beforeDir="false" afterPath="$PROJECT_DIR$/Moduls1/HomeWorkout/Text/Text_4.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Moduls1/HomeWorkout/bài_tập/CRUD.html" beforeDir="false" afterPath="$PROJECT_DIR$/Moduls1/HomeWorkout/bài_tập/CRUD.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Moduls1/HomeWorkout/bài_tập/doi_tien_te.html" beforeDir="false" afterPath="$PROJECT_DIR$/Moduls1/HomeWorkout/bài_tập/doi_tien_te.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Moduls1/HomeWorkout/bài_tập/javcss.css" beforeDir="false" afterPath="$PROJECT_DIR$/Moduls1/HomeWorkout/bài_tập/javcss.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Moduls1/HomeWorkout/bài_tập/nhap.html" beforeDir="false" afterPath="$PROJECT_DIR$/Moduls1/HomeWorkout/bài_tập/nhap.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Moduls1/HomeWorkout/bài_tập/nhap3.html" beforeDir="false" afterPath="$PROJECT_DIR$/Moduls1/HomeWorkout/bài_tập/nhap3.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Moduls1/HomeWorkout/thực_hành/nhap2.html" beforeDir="false" afterPath="$PROJECT_DIR$/Moduls1/HomeWorkout/thực_hành/nhap2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Moduls1/ss10_arr/bai_tap/Home_work2/Text_1.html" beforeDir="false" afterPath="$PROJECT_DIR$/Moduls1/ss10_arr/bai_tap/Home_work2/Text_1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Moduls1/ss10_arr/bai_tap/Home_work2/Text_5.html" beforeDir="false" afterPath="$PROJECT_DIR$/Moduls1/ss10_arr/bai_tap/Home_work2/Text_5.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Moduls1/ss10_arr/bai_tap/Using_built-in_functions_of _arrays/Text_3.html" beforeDir="false" afterPath="$PROJECT_DIR$/Moduls1/ss10_arr/bai_tap/Using_built-in_functions_of _arrays/Text_3.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Moduls1/ss10_arr/thuc_hanh/Caro_game_simple.html" beforeDir="false" afterPath="$PROJECT_DIR$/Moduls1/ss10_arr/thuc_hanh/Caro_game_simple.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Moduls1/ss10_arr/thuc_hanh/Reverse_element.html" beforeDir="false" afterPath="$PROJECT_DIR$/Moduls1/ss10_arr/thuc_hanh/Reverse_element.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Moduls1/ss11_function/bai_tap/Home_work/Text_5.html" beforeDir="false" afterPath="$PROJECT_DIR$/Moduls1/ss11_function/bai_tap/Home_work/Text_5.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Moduls1/ss11_function/bai_tap/Home_work/Text_6.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Moduls1/ss11_function/bai_tap/Home_work/Text_7.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Moduls1/ss11_function/bai_tap/Home_work/Text_8.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Moduls1/ss12_ OOP/bai_tap/SwitchButton_ElectricLamp.html" beforeDir="false" afterPath="$PROJECT_DIR$/Moduls1/ss12_ OOP/bai_tap/SwitchButton_ElectricLamp.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Moduls1/ss12_ OOP/thuc_hanh/objects" beforeDir="false" afterPath="$PROJECT_DIR$/Moduls1/ss12_ OOP/thuc_hanh/objects" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Moduls1/ss12_ OOP/thuc_hanh/objects/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/Moduls1/ss12_ OOP/thuc_hanh/objects/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Moduls1/ss7/bai_tap/change_money.html" beforeDir="false" afterPath="$PROJECT_DIR$/Moduls1/ss7/bai_tap/change_money.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Moduls1/ss9_loop/bai_tap/loop/Text_8.html" beforeDir="false" afterPath="$PROJECT_DIR$/Moduls1/ss9_loop/bai_tap/loop/Text_8.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Moduls1/ss9_loop/bai_tap/loop2/Text_2.html" beforeDir="false" afterPath="$PROJECT_DIR$/Moduls1/ss9_loop/bai_tap/loop2/Text_2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="28gSKH3BMf919XA178qjcMjPiXE" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b96dd12e-8f9b-421a-ab8a-d748745a0676" name="Changes" comment="" />
+      <created>1651636671945</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1651636671945</updated>
+      <workItem from="1651636673348" duration="932000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

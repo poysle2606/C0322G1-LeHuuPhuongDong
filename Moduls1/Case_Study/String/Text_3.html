@@ -2,9 +2,26 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    let strg1 = "aabcc";
+    let strg2 = "adcaa";
+    let count = 0;
+
+
+    for (let i = 0; i < strg1.length; i++) {
+        for (let j =0 ; j<strg2.length; j++) {
+            if (strg1[i] === strg2[j]) {
+                document.write(strg1[i]);
+                strg2 = strg2.replace(strg2[j]," ")
+                count++;
+                break;
+            }
+        }
+    }   document.write(count);
+
+</script>
 </body>
 </html>

@@ -2,57 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Bank Nè chế</title>
-    <style>
-        th,td  {padding:10px }
-    </style>
+    <title>Title</title>
 </head>
 <body>
-<table>
-    <tr>
-        <th for="a">Amount</th>
-        <th for="b">From Currency</th>
-        <th for="c">To Currency</th>
-    </tr>
-    <tr>
-        <td>
-            <input type="number" id="a">
-        </td>
-        <td>
-            <select id="b">
-                <option value="vnd"> Viêt Nam</option>
-                <option value="usd"> Mỹ </option>
-            </select>
-        </td>
-        <td>
-            <select id="c">
-                <option value="vnd">VND</option>
-                <option value="usd">USD</option>
-            </select>
-        </td>
-        <td>
-            <input type="button" value="Convert" onclick="convert()">
-        </td>
-     </tr>
-</table>
-<span>Resuilt:</span> <span id="kq"></span>
 <script>
- function convert () {
-        let d = document.getElementById('a').value;
-        let e = document.getElementById('b').value;
-        let f = document.getElementById('c').value;
-     if (e == f)  {
-         document.getElementById('kq').innerHTML =d ;
-     }
-     if (e=='vnd' && f=='usd') {
-         let Resuilt= d / 23000 ;
-         document.getElementById('kq').innerHTML=' '+Resuilt + ' '+'usd';
-     }
-     if (e=='usd' && f=='vnd'){
-         let Resuilt= d * 23000;
-         document.getElementById('kq').innerHTML='' + Resuilt + ''+'vnd';
-     }
- }
+  let weight = parseInt(prompt("Nhập độ cao của mảng: "));
+  let height = parseInt(prompt("Nhập độ dài của mảng: "));
+  let arrBig = [];
+  for (let i = 0; i <weight ; i++) {
+      let arrSon = [];
+      for (let j = 0; j <height ; j++) {
+          arrSon[j] = parseInt(prompt('Nhập giá trị vào mảng '));
+      }
+      arrBig[i] = arrSon;
+  }  console.log(arrBig);
 </script>
 </body>
 </html>

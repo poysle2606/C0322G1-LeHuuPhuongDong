@@ -6,54 +6,61 @@
 </head>
 <body>
 <script>
-    //in ra chiều cao của tam giác
-    // for (i = 1; i <= 6; i++) {
-    //     //in ra số sao của tam giác
-    //     for (j = 1; j <= i; j++) {
-    //         document.write("*");
-    //     }
-    //     document.write("<br>");
-
-
-    // }
-    //
-
-    // let N = prompt("nhập số:");
-    // for (i = 1; i <= N; i++) {
-    //     for (k=N;k>i;k--){
-    //         document.write(" &nbsp")
-    //     }
-    //     for (j = 1; j <= i * 2 - 1; j++) {
-    //         document.write("*");
-    //     }
-    //     document.write("<br>");
-    // }
-
-    //
-    // let N = prompt("nhập số: ");
-    // for (i = 1; i <= N; i++) {
-    //     for (k = N; k > i; k--) {
-    //         document.write(" &nbsp");
-    //     }
-    //     for (j = 1; j <= i * 2 - 1; j++) {
-    //         if (i == 1 || i == N || j == 1 || j == (i*2-1)) {
-    //             document.write("*");}
-    //         else{
-    //             document.write(" &nbsp")
-    //         }
-    //     }
-    //     document.write("<br>");
-    // }
-
-    let arr = [2,4,6,5,7,3];
-    let max = arr[0]; // saved value of max.
-    let index = 0; // gan value of = 0;
-    for (i=0;i < arr.length;i++){
-        if (arr[i] > max) {
-            max = arr[i];
-             index = i;
+    let tong=0;
+    let mang1=[];
+    do {
+        let sum;
+        let sl ;
+        function TongTien() {
+            for (let i = 0; i <mang1.length ; i++) {
+                tong=tong+mang1[i]
+            }
         }
-    }  alert("max is: " + max + " at position " + index )
+        let chon = parseInt(prompt("1 cafe \n2 cam vắt \n3 Nước ép cà rốt \n4 Nước ép cà chua \n5 Nước lọc \n6 Nước dừa \n7 thoát" ));
+        if (chon == 1){
+            sl=parseInt(prompt("Nhập số ly càn mua giá 1 ly là: 30k "));
+            sum=sl*30000;
+            mang1.push(sum);
+            TongTien();
+            alert("giá món vừa gọi: "+sum+"  Tổng tiền cần trả: "+tong);
+        }else if (chon==2){
+            sl=parseInt(prompt("Nhập số ly càn mua giá 1 ly là: 28k "));
+            sum=sl*28000;
+            mang1.push(sum);
+            TongTien();
+            alert("giá món vừa gọi: "+sum+"  Tổng tiền cần trả: "+tong);
+        }else if (chon==3){
+            sl=parseInt(prompt("Nhập số ly càn mua giá 1 ly là: 25k "));
+            sum=sl*25000;
+            mang1.push(sum);
+            TongTien();
+            alert("giá món vừa gọi: "+sum+"  Tổng tiền cần trả: "+tong);
+        }else if (chon==4){
+            sl=parseInt(prompt("Nhập số ly càn mua giá 1 ly là: 32k "));
+            sum=sl*32000;
+            mang1.push(sum);
+            TongTien();
+            alert("giá món vừa gọi: "+sum+"  Tổng tiền cần trả: "+tong);
+        }else if (chon==5){
+            sl=parseInt(prompt("Nhập số ly càn mua giá 1 ly là: 39k "));
+            sum=sl*39000;
+            mang1.push(sum);
+            TongTien();
+            alert("giá món vừa gọi: "+sum+"  Tổng tiền cần trả: "+tong);
+        }else if (chon==6){
+            sl=parseInt(prompt("Nhập số ly càn mua giá 1 ly là: 35k "));
+            sum=sl*35000;
+            mang1.push(sum);
+            TongTien();
+            alert("giá món vừa gọi: "+sum+"  Tổng tiền cần trả: "+tong);
+        }else if (chon==7){
+            TongTien();
+            alert("Tổng số tiền các món cần thanh toán: "+tong);
+            break;
+        }else {
+            alert("Hiện tại ko có trường trình này vui lòng chọn lại....")
+        }
+    }while (true);
 </script>
 </body>
 </html>

@@ -45,15 +45,16 @@
         let e = document.getElementById('b').value;
         let f = document.getElementById('c').value;
 
-        if (e == f)  {
-            document.getElementById('kq').innerHTML =d ;
-        }  if (e == 'vnd' && f == 'usd') {
-            let Result = d * 23000;
-            document.getElementById('kq').innerHTML=' ' + Result + ' ' + 'usd';
+        if (e === f) {
+            document.getElementById('kq').innerHTML = d;
         }
-        if (e == 'usd' && f == 'vnd') {
+        if (e === 'vnd' && f === 'usd') {
+            let Result = d * 23000;
+            document.getElementById('kq').innerHTML = ' ' + Result + ' ' + 'usd';
+        }
+        if (e === 'usd' && f === 'vnd') {
             let Result = d / 23000;
-            document.getElementById('kq').innerHTML=' ' + Result + ' ' + 'vnd';
+            document.getElementById('kq').innerHTML = ' ' + Result + ' ' + 'vnd';
         }
 
 

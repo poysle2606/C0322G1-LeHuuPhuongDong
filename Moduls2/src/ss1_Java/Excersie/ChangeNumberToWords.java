@@ -2,7 +2,7 @@ package ss1_Java.Excersie;
 
 import java.util.Scanner;
 
-public class Text_2_Java {
+public class ChangeNumberToWords {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         System.out.println("Enter number to change:");

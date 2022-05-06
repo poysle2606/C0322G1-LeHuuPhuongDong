@@ -2,7 +2,7 @@ package ss1_Java.Excersie;
 
 import java.util.Scanner;
 
-public class Text_3 {
+public class ChangeToMoney {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         double vnd = 23000;

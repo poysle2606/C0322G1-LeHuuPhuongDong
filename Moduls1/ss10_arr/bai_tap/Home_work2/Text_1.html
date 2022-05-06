@@ -13,9 +13,10 @@
         [7, 4, 28, 14],
         [3, 10, 26, 7]
     ];
-    for (let row = 0; row < a.length; row++) {
-        for (let col = 0; col < a[row].length; col++) {
-            document.write('"' + a[row][col] + '"');
+    for (let i in a) {
+          document.write("row " + i + " : ")
+        for (let j in a[i]) {
+            document.write('    ' + a[i][j]);
         }
         document.write("<br>");
     }

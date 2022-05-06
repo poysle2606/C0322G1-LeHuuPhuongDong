@@ -2,9 +2,61 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title></title>
 </head>
 <body>
-$END$
+<script>
+    // let arrayBig = [];
+    // let arrM = [];
+    // let arrN = [];
+    // let sum = 0;
+    //
+    // let inputArrM = parseInt(prompt("Nhập độ dài của mảng m: "));
+    // for (let i = 0; i < inputArrM; i++) {
+    //     arrM[i] = parseInt(prompt("Nhập giá trị: " + "ở index " + i));
+    // }
+    // arrayBig.push(arrM);
+    // let inputArrN = parseInt(prompt("Nhập độ dài của mảng n: "));
+    // for (let i = 0; i < inputArrN; i++) {
+    //     arrN[i] = parseInt(prompt("Nhập giá trị: " + "ở index " + i));
+    // }
+    // arrayBig.push(arrN);
+    // console.log(arrayBig)
+    // for (let i = 0; i < arrayBig.length; i++) {    //đặt vòng for chạy qua mảng lớn.
+    //     for (let j = 0; j < arrayBig[i][j]; j++) { // đặt vòng for chạy tiếp qua từng mảng con của mảng lớn.
+    //        if (arrayBig[i][j] % 2 === 0){   // nếu các phần tử trong mảng con đó chia hết cho 2.
+    //            sum = sum + arrayBig[i][j];  // thì ta cộng chúng lại1
+    //        }
+    //     }
+    // } document.write(sum)
+
+
+    let arrBig = [];
+    let sum = 0;
+    let lenghtN = parseInt(prompt("nhập số hàng: "));    //N là số hàng trong mảng arrBig;
+    let lenghtM = parseInt(prompt("nhập số cột: "));     // M là số cột trong mảng;
+    for (let i = 0; i < lenghtN; i++) {                  // cho vòng for chạy qua sô hàng
+        arrBig[i] = [];                                  // sẽ tạo ra 1 mảng con ở trong mảng arrBig;
+        document.write("[");                             // [ để phân biệt các mảng con với nhau;
+        for (let j = 0; j < lenghtM; j++) {              // cho vòng for chạy qua số cột
+            arrBig[i][j] = parseInt(prompt("Nhập phần tử của mảng: "));
+            document.write(arrBig[i][j] + " ")          // viết ra phần tử của các mảng con;
+        }
+        document.write("]");
+    }
+
+    function total(arr) {
+        for (let i = 0; i < arr.length; i++) {
+            for (let j = 0; j < arr[i].length; j++) {
+                if (arr[i][j] % 2 === 0) {
+                    sum = sum + arr[i][j];
+                }
+            }
+        }  return sum;
+    }
+
+    document.write("<br>" + "Tổng của các số chẵn ở trong mảng là: " + total(arrBig));
+
+</script>
 </body>
 </html>

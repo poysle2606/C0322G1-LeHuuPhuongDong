@@ -2,9 +2,29 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    let point = [];
+    let pointLenght = parseInt(prompt("Số môn bạn cần nhập điểm: "));
+    for (let i = 0; i < pointLenght; i++) {
+        point[i] = parseFloat(prompt("Nhập điểm của bạn vào: "));
+    }
+    document.write("Điểm bạn nhập vào là: " + point + " ");
+
+    function findMax(arr) {
+        let max = arr[0];
+        for (let i = 0; i < arr.length; i++) {
+            if (arr [i] > max) {
+                max = arr[i];
+            }
+        }
+        return max;
+
+    }
+
+    document.write( "<br>" + "Điểm cao nhất của bạn là " + findMax(point));
+</script>
 </body>
 </html>

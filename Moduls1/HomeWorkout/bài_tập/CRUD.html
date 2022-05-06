@@ -2,9 +2,79 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title></title>
+    <style>
+        table, td {
+            border: 1px solid royalblue;
+        }
+        .click  {
+           background-color:lawngreen;
+        }
+        button {
+            border-radius: 10px;
+            background-color: lightgreen;
+            width: auto !important;
+        }
+
+    </style>
 </head>
 <body>
-$END$
+<h3>Add New Product</h3>
+<input type="text" id="txtText">
+<button onclick="created()">Create</button>
+<p id="result"></p>
+<script>
+    let array1 = ["Sony Xia", "Iphone XSMax", "Nokia 1080", "SamSung Galaxy Note10"];
+
+
+    function display(arr) {
+
+        let tab = "<table>\n" +
+            "    <tr>\n" +
+            "        <th colspan='3' > Product Name</th>\n" +
+            "    </tr>\n"
+        for (let i = 0; i < arr.length; i++) {
+            tab = tab + "<tr>\n" +
+                "    <td>" + arr[i] + "</td>\n" +
+                "    <td>" + "<button onclick='update(" + i + ")' class='click' >Update</button>" + "</td>\n" +
+                "    <td>" + "<button onclick='cancel(" + i + ")' class='click' >Delete</button>" + "</td>\n" +
+                "</tr>"
+        }
+        tab += "</table>"
+        document.getElementById("result").innerHTML = tab;
+    }
+
+    display(array1);
+
+    function created() {
+        let inputText = document.getElementById("txtText").value;
+        array1.push(inputText);
+        display(array1);
+    }
+
+    console.log(array1);
+
+    function update(i) {
+        let updateData = confirm("Are you sure update this product? ");
+        if (updateData) {
+            array1[i] = prompt("Enter name to Update: ");
+            alert("Update success");
+        } else {
+            alert("Returned");
+        }
+        display(array1);
+    }
+
+    function cancel(arr) {
+        let choose = confirm("Are you sure delete this product? ");
+        if (choose) {
+            array1.splice(arr, 1);
+            alert("Delete success!");
+        } else {
+            alert("Returned");
+        }
+        display(array1);
+    }
+</script>
 </body>
 </html>

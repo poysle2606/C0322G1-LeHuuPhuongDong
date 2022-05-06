@@ -2,9 +2,61 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    class Circle {
+        constructor(x, y, radius, color) {
+            this.x = x;
+            this.y = y;
+            this.radius = radius;
+            this.color = color;
+        }
+
+        setX(value) {
+            this.x = value;
+        }
+
+        getX() {
+            return this.x;
+        }
+
+        setY(value) {
+            this.y = value;
+        }
+
+        getY() {
+            return this.y;
+        }
+
+        setRadius(value) {
+            this.radius = value;
+        }
+
+        getRadius() {
+            return this.radius;
+        }
+
+        setColor(value) {
+            this.color = value;
+        }
+
+        getColor() {
+            return this.color;
+        }
+    }
+
+    let x = parseInt(prompt("Tạo độ của x: "));
+    let y = parseInt(prompt("Tạo độ của y: "));
+    let radius = parseInt(prompt("Nhập bán kính: "));
+    let color = prompt("Nhập màu sắc: ");
+    let circle = new Circle(x, y, radius, color);
+    document.write("Tọa độ của x là: " + circle.getX() + "<br>");
+    document.write("Tọa độ của y là: " + circle.getY() + "<br>");
+    document.write("Bán kính là: " + circle.getRadius() + "<br>");
+    document.write("Màu sắc của vòng tròn là: " + circle.getColor() + "<br>");
+
+</script>
 </body>
 </html>

@@ -2,9 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+   let numberArr = [8,7,8,8,4,3,1,9,8,9,8,8,9,9];
+   numberArr.sort();
+   console.log(numberArr);
+   let i = numberArr.length;
+   let max2=numberArr[i-2];
+   let max = numberArr[i-1];
+
+
+    while (max===max2){
+        i--;
+        max2 = numberArr[i-2];
+        count ++;
+    }
+document.write(max2);
+</script>
 </body>
 </html>

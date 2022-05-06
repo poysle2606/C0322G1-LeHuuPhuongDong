@@ -2,9 +2,27 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    let h = 5;                         //cho h bằng 5;
+    for (let i = 1; i <= h; i++) {
+        for (let j = h; j > i; j--) {   //vòng for này chạy qua tạo ra 1 tam giác vuông cân ngược;
+            document.write(" &nbsp&nbsp");
+        }
+        for (let k = 1; k <= i * 2 - 1; k++) {     //vòng for này tạo ra các * với công thức là i*2-1;
+            if (i === h ) {
+                //nếu thỏa điều kiện thì * sẽ tạo ra;
+                document.write(" * ");
+            } else {   //nếu k thì tạo ra khoảng trắng.
+                document.write(" &nbsp&nbsp");
+            }
+        }
+        document.write("<br>")
+    }
+
+
+</script>
 </body>
 </html>

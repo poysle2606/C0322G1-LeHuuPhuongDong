@@ -2,9 +2,34 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    let arr = [
+        [12, 3, 1, 6, 7],
+        [8, 9, 22, 33, 67]
+    ]
+    let max = arr[0][0];
+    let min = arr[0][0];
+
+    function findMaxMin(arrMn) {
+
+        for (let i = 0; i < arrMn.length; i++) {
+            for (let j = 0; j < arrMn[i].length; j++) {
+                if (arrMn[i][j] > max) {
+                    max = arrMn[i][j];
+                } else if (arrMn[i][j] < min) {
+                    min = arrMn[i][j];
+                }
+            }
+        }
+        return max + min;
+    }
+
+    findMaxMin(arr);
+    document.write("Max in array is: " + max + "<br>");
+    document.write("Min in array is: " + min);
+</script>
 </body>
 </html>

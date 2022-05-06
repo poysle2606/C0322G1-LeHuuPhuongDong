@@ -23,19 +23,24 @@
     //     return "asfdg"
     // }
     let arr1 = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
-    let arr2 =[" Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
-    let index = -1;
+    let arr2 = [" Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+    let flag = true;
+
     function myFunction(arr1) {
-        for (let i =0 ; i < arr1.length; i++) {
-            if (star === arr1[i]){
+        for (let i = 0; i < arr1.length; i++) {
+            if (star === arr1[i]) {
                 alert(arr2[i]);
-                index = i;
+                flag = false;
+                break;
             }
-        } if (index===-1) {
+        }
+        if (flag === true) {
             alert("Not found")
         }
 
-    } let star = prompt("Enter star name: ");
+    }
+
+    let star = prompt("Enter star name: ");
     myFunction(arr1)
 
 </script>

@@ -2,9 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+
+    let tall = 5;                               //cho chiều cao là 5;
+    for (let i = 1; i <= tall; i++) {          // chạy vòng for chiều cao;
+        for (let k = tall; k > i; k--) {      // chạy tiếp vòng for để tạo ra 1 tam giác cân ngược chiều
+            document.write("&nbsp;&nbsp;");
+        }
+        for (let j = 1; j <= i*2 - 1 ; j++) {   // vòng for này tạo ra hình thù tam giác
+            document.write("*");
+        }
+        document.write("<br>");
+    }
+</script>
 </body>
 </html>
