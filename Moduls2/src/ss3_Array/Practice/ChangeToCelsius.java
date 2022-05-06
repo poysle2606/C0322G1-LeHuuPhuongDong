@@ -25,7 +25,7 @@ public class ChangeToCelsius {
                     cel = scanner.nextDouble();
                     System.out.println("Celsius to Fahrenheit: " + celToFah(cel));
                     break;
-                case 0:
+                case 3:
                     System.out.println("Exited Programing!");
                     System.exit(0);
             }
