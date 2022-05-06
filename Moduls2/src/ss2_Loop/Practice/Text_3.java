@@ -12,6 +12,7 @@ public class Text_3 {
         if (a == 0 || b == 0) {
             System.out.println("No greatest common factor");
         }
+        //hàm Math.abs (giá trị tuyệt đối) để chuyển số thành số dương.
         a = Math.abs(a);
         b = Math.abs(b);
         while (a != b) {
