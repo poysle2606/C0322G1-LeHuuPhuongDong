@@ -20,7 +20,7 @@ public class DisplayPrimeSmaller100 {
                 }
             }
             if (check) {
-                if (n < 100) {
+                if ( n < 100) {
                     System.out.println(n);
                     count++;
                 }
