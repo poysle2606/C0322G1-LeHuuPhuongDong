@@ -47,7 +47,26 @@ public class PrintTypes {
                         }
                         System.out.println(" ");
                     }
-                    break;
+                    for (int i = 0; i < length; i++) {
+                        for (int j = i; j <length ; j++) {
+                            System.out.print("   ");
+                        }
+                        for (int k = 0; k <= i ; k++) {
+                            System.out.print(" * ");
+                        }
+                        System.out.println("   ");
+                    }
+                    System.out.println("\n-------\n");
+                    for (int i = 0; i < length; i++) {
+                        for (int j = 0; j <= i; j++) {
+                            System.out.print("   ");
+                        }
+                        for (int j = i; j <5 ; j++) {
+                            System.out.print(" * ");
+                        }
+                        System.out.println("   ");
+                    }
+                    break; 
                 case 3:
                     //Tam giác vuông cân.
                     System.out.println("Enter height: ");
