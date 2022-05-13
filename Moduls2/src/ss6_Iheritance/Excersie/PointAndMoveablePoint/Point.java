@@ -1,7 +1,7 @@
 package ss6_Iheritance.Excersie.PointAndMoveablePoint;
 
 public class Point {
-    float x = 0.0f, y = 0.0f;
+   private float x = 0.0f, y = 0.0f;
 
     public Point() {
 
@@ -39,10 +39,6 @@ public class Point {
 
     @Override
     public String toString() {
-        return "Point["
-                + x
-                +","
-                + y
-                + "]";
+        return "(" + x + "," + y + ")";
     }
 }

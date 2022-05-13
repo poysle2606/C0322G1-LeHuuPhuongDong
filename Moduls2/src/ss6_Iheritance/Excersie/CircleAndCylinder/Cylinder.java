@@ -1,7 +1,7 @@
 package ss6_Iheritance.Excersie.CircleAndCylinder;
 
 public class Cylinder extends Circle {
-    double height;
+    private double height;
 
     public Cylinder( double height, double radius, String color) {
         super(radius, color);
@@ -23,8 +23,8 @@ public class Cylinder extends Circle {
     @Override
     public String toString() {
         return "Cylinder{" +
-                " radius= " + radius +
-                ", color='" + color + '\'' +
+                " radius= " + getRadius()+
+                ", color='" + getColor() + '\'' +
                 ", height= " + height +
                 '}';
     }

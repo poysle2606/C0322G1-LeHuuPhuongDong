@@ -1,7 +1,7 @@
 package ss6_Iheritance.Excersie.Point2DAndPoint3D;
 
 public class Point3D extends Point2D {
-    float z = 0.0f;
+    private float z = 0.0f;
 
     public Point3D() {
 
@@ -21,24 +21,15 @@ public class Point3D extends Point2D {
     }
 
     public void setXYZ(float x, float y, float z) {
-        this.x = x;
-        this.y = y;
-        this.z = z;
 
     }
 
     public float[] getXYZ() {
-        return new float[]{this.x, this.y, this.z};
+        return new float[]{this.getX(), this.getY(), this.z};
     }
 
     @Override
     public String toString() {
-        return "Point3D["
-                + x
-                + ","
-                + y
-                + ","
-                + z
-                + "]";
+        return "(" + this.getX() + "," + this.getX() + "," + z + ")";
     }
 }
