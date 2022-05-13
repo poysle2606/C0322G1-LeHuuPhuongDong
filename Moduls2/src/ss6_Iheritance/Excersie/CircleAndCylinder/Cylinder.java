@@ -3,7 +3,6 @@ package ss6_Iheritance.Excersie.CircleAndCylinder;
 public class Cylinder extends Circle {
     double height;
 
-
     public Cylinder( double height, double radius, String color) {
         super(radius, color);
         this.height = height;
@@ -18,7 +17,7 @@ public class Cylinder extends Circle {
     }
 
     public double getVolume() {
-        return Math.PI * this.getRadius() * this.getRadius() * this.getHeight();
+        return this.getArea() * this.getHeight();
     }
 
     @Override
