@@ -10,9 +10,9 @@ public class CountString {
         String str = scanner.nextLine();
         char[] str1 = str.toCharArray();
 
-      //  System.out.println(Arrays.toString(str1));
+      // System.out.println(Arrays.toString(str1));
         //hàm to chararay chuyển chuỗi thành mảng;
-        
+
         System.out.println("Enter word to find: ");
         String word = scanner.nextLine();
         char[] word1 = word.toCharArray();

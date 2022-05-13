@@ -3,7 +3,7 @@ package ss7_AbstractAndInterface.Practice.Comparable;
 
 import ss6_Iheritance.Practice.ObjectGeometry.Circle;
 
-public class ComparableCircle extends Circle implements Comparable<ComparableCircle>{
+public class ComparableCircle extends Circle implements Comparable<ComparableCircle> {
     public ComparableCircle() {
     }
 

@@ -9,14 +9,16 @@ public class Fan {
     private boolean on = false;
     private double radius = 5;
     private String color = "Blue";
-// khởi tạo constructor và truyền vào tham số
+
+    // khởi tạo constructor và truyền vào tham số
     public Fan(int speed, boolean off, double radius, String color) {
         this.speed = speed;
         this.on = off;
         this.radius = radius;
         this.color = color;
     }
-// Phương thức khởi tạo không tham số tạo đối tượng fan mặc định
+
+    // Phương thức khởi tạo không tham số tạo đối tượng fan mặc định
     public Fan() {
 
     }
@@ -64,7 +66,8 @@ public class Fan {
     public void setColor(String color) {
         this.color = color;
     }
-// Phương thức toString trả về chuỗi chứa thông tin của quạt
+
+    // Phương thức toString trả về chuỗi chứa thông tin của quạt
     public String toString() {
         if (this.on) {
             return "Speed is: " + this.speed + " color is: " + this.color + " radius is: " + this.radius + " fan is on.";

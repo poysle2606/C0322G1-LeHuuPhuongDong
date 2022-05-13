@@ -1,5 +1,6 @@
 package ss3_Array.Excersie;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class TotalDuongCheo {
@@ -18,6 +19,7 @@ public class TotalDuongCheo {
 
             }
         }
+        System.out.println(Arrays.deepToString(numberArray));
         int total = 0;
         for (int i = 0;  i < numberArray.length; i++) {
             for (int j = 0; j < numberArray[i].length; j++) {

@@ -19,7 +19,7 @@ public class MainOfStopWatch {
         long[] maxNumber = new long[100000];
         StopWatch time = new StopWatch();
         for (int i = 0; i < 100000; i++) {
-            maxNumber[i] = (int) (Math.random() * 10000);
+            maxNumber[i] = (long) (Math.random() * 10000);
         }
 
         time.start();
