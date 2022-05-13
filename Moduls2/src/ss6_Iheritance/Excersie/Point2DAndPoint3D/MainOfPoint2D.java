@@ -6,6 +6,6 @@ public class MainOfPoint2D {
         System.out.println(point2D);
 
         Point2D point2D1 = new Point2D(5, 3);
-        System.out.println( point2D1);
+        System.out.println(point2D1);
     }
 }

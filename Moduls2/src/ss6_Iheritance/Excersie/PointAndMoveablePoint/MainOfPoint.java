@@ -5,7 +5,7 @@ public class MainOfPoint {
         Point point = new Point();
         System.out.println(point);
 
-        Point point1 = new Point(5,7);
+        Point point1 = new Point(5, 7);
         System.out.println(point1);
     }
 }
