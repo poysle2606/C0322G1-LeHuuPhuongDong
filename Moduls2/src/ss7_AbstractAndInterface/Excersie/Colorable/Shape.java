@@ -1,6 +1,6 @@
-package ss7_AbstractAndInterface.Excersie.Resizeable;
+package ss7_AbstractAndInterface.Excersie.Colorable;
 
-public abstract class Shape implements Resizeable {
+public abstract class Shape {
     private String color = "green";
     private boolean filled = true;
 
@@ -36,10 +36,5 @@ public abstract class Shape implements Resizeable {
                 + getColor()
                 + " and "
                 + (isFilled() ? "filled" : "not filled");
-    }
-
-    @Override
-    public void resize(double percent) {
-
     }
 }

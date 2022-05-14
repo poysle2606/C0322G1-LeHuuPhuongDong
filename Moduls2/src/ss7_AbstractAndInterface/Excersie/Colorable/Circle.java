@@ -1,6 +1,6 @@
-package ss7_AbstractAndInterface.Excersie.Resizeable;
+package ss7_AbstractAndInterface.Excersie.Colorable;
 
-public class Circle extends Shape implements Resizeable {
+public class Circle extends Shape {
     private double radius = 1.0;
 
     public Circle() {
@@ -33,13 +33,7 @@ public class Circle extends Shape implements Resizeable {
 
     @Override
     public String toString() {
-        return "Area of Circle is: " + this.getArea();
+        return "Area of Circle: " + this.getArea();
     }
 
-    @Override
-    public void resize(double percent) {
-        this.radius = this.radius * percent;
-
-    }
 }
-

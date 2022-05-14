@@ -1,6 +1,6 @@
-package ss7_AbstractAndInterface.Excersie.Resizeable;
+package ss7_AbstractAndInterface.Excersie.Colorable;
 
-public class Rectangle extends Shape implements Resizeable {
+public class Rectangle extends Shape {
     private double width = 1.0;
     private double length = 1.0;
 
@@ -44,12 +44,7 @@ public class Rectangle extends Shape implements Resizeable {
 
     @Override
     public String toString() {
-        return "Area of Rectangle is: " + this.getArea();
+        return "Area of Rectangle: " + this.getArea();
     }
 
-    @Override
-    public void resize(double percent) {
-        this.length = length * percent;
-        this.width = width * percent;
-    }
 }
