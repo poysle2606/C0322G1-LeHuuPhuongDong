@@ -1,6 +1,6 @@
 package ss7_AbstractAndInterface.Excersie.Colorable;
 
-public class Text_Colorable {
+public class TextColorable {
     public static void main(String[] args) {
         Shape[] shape1 = new Shape[3];
         shape1[0] = new Circle(10);
