@@ -3,6 +3,10 @@ package TryToCRUD.Person;
 public class Teacher extends Person{
     private double salary;
 
+    public Teacher(){
+
+    }
+
     public Teacher(double salary) {
         this.salary = salary;
     }

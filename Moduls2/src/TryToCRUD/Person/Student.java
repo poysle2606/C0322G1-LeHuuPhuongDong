@@ -3,6 +3,10 @@ package TryToCRUD.Person;
 public class Student  extends Person{
     private double point;
 
+    public Student() {
+
+    }
+
     public Student(double point) {
         this.point = point;
     }

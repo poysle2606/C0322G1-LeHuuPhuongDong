@@ -3,8 +3,9 @@ package Nhap;
 
 
 import java.util.Scanner;
-
-public class Circle {
+//tạo lớp abstract và phương thức
+public abstract class Animal {
+    public abstract String makeSound();
 }
 
 

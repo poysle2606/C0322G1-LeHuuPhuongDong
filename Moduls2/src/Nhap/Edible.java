@@ -1,2 +1,5 @@
-package Nhap;public interface Edible {
+package Nhap;
+
+public interface Edible {
+    String howToEat();
 }

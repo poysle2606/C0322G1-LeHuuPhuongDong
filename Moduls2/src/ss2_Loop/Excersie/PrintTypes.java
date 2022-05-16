@@ -5,12 +5,12 @@ import java.util.Scanner;
 public class PrintTypes {
     public static void main(String[] args) {
         int choose = 1;
-        while (choose != 0) {
+        while (true) {
             Scanner inputChoose = new Scanner(System.in);
             System.out.println("MENU:");
             System.out.println("1. Print the rectangle (In hình chữ nhật):");
             System.out.println("2. Print the square triangle (In hình tam giác vuông):");
-            System.out.println("1. Print isosceles triangle (In hình tam giác vuông cân):");
+            System.out.println("3. Print isosceles triangle (In hình tam giác vuông cân):");
             System.out.println("0. Exit programing:");
             choose = inputChoose.nextInt();
             switch (choose) {

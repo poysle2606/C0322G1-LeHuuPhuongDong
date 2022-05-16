@@ -1,4 +1,4 @@
-package TryToCRUD;
+package TryToCRUD.Product;
 
 import java.util.Objects;
 import java.util.Scanner;
@@ -65,9 +65,9 @@ public class MainOfProduct {
 
     public static void delete() {
         System.out.println("Enter Name of product to delete: ");
-        String id = input.nextLine();
+        String name = input.nextLine();
         for (int i = 0; i < products.length; i++) {
-            if (products[i] != null && Objects.equals(products[i].getName(), id)) {
+            if (products[i] != null && Objects.equals(products[i].getName(), name)) {
                 for (int j = i; j < products.length - 1; j++) {
                     products[j] = products[j + 1];
                 }
@@ -81,11 +81,11 @@ public class MainOfProduct {
         String name = input.nextLine();
         boolean flag = false;
         for (Product product : products) {
-            if (product != null && product.toString().contains(name)) {
+            if (product != null && product.getName().contains(name)) {
                 System.out.println(product);
                 flag = true;
-            }
 
+            }
         }
         if (!flag) {
             System.out.println("Sorry I'm not Found!");

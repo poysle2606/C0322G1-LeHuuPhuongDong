@@ -1,2 +1,6 @@
-package Controllers;public class Villa {
+package Controllers;
+
+public class Villa extends Facility{
+
+
 }

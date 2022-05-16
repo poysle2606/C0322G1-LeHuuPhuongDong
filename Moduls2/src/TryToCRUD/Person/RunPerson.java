@@ -1,35 +1,55 @@
 package TryToCRUD.Person;
 
 
+import javax.management.remote.rmi._RMIConnection_Stub;
 import java.util.Arrays;
 import java.util.Scanner;
 
 public class RunPerson {
-    public static Person[] personBig = new Person[200];
-    public static Person[] personTeacher = new Person[100];
-    public static Person[] personStudent = new Person[100];
+    public static Person[] personBig = new Person[100];
     static Scanner input = new Scanner(System.in);
-    static int count;
+    static int countOfTeacher;
+    static int countOfStudent;
 
     static {
-        personTeacher[0] = new Teacher(1, " John", 30, "Men", 6000000);
-        personTeacher[1] = new Teacher(2, " Jax", 27, "Men", 5000000);
-        personStudent[0] = new Student(1, " Austine", 27, "Men", 7.0);
-        personStudent[1] = new Student(2, " Marry", 19, "Women", 8.5);
-        count = 3;
+        personBig[0] = new Teacher(1, " John", 30, "Men", 6000000);
+        personBig[1] = new Teacher(2, " Jax", 27, "Men", 5000000);
+        personBig[2] = new Teacher(3, " Jap", 27, "Men", 5000000);
+        personBig[3] = new Student(1, " Austine", 27, "Men", 7.0);
+        personBig[4] = new Student(2, " Marry", 19, "Women", 8.5);
+        countOfTeacher = 4;
+        countOfStudent = 3;
     }
 
     public static void display() {
-        for (int i = 0; i < personTeacher.length; i++) {
-            personBig[i] = personTeacher[i];
-        }
-        for (int i = 0; i < personStudent.length; i++) {
-            personBig[personTeacher.length + i] = personStudent[i];
-        }
-        for (Person human : personBig) {
-            if (human != null) {
-                System.out.println(human);
-            }
+        System.out.println("Which list you want to display?");
+        System.out.println("1.List Teacher and Student \n" +
+                "2.List Teacher. \n" +
+                "3.List Student.");
+        System.out.println("Your choose is: ");
+        int chooseDisplay = Integer.parseInt(input.nextLine());
+        switch (chooseDisplay) {
+            case 1:
+                System.out.println("List of the Teacher and Student");
+                for (Person total : personBig) {
+                    if (total != null)
+                    System.out.println(total);
+                }
+                break;
+            case 2:
+                System.out.println("This is the Teacher list:");
+                for (Person teacher : personBig) {
+                    if (teacher instanceof Teacher) {
+                        System.out.println(teacher);
+                    }
+                } break;
+            case 3:
+                System.out.println("This is the Student list:");
+                for (Person student : personBig) {
+                    if (student instanceof Student) {
+                        System.out.println(student);
+                    }
+                }  break;
         }
     }
 
@@ -43,7 +63,7 @@ public class RunPerson {
                 System.out.println("Name of Teacher is: ");
                 String name = input.nextLine();
                 System.out.println("ID already available ");
-                int id = count++;
+                int id = countOfTeacher++;
                 System.out.println("Old of Teacher is: ");
                 int old = Integer.parseInt(input.nextLine());
                 System.out.println("Gender is: ");
@@ -51,15 +71,15 @@ public class RunPerson {
                 System.out.println("Salary is: ");
                 double salary = Double.parseDouble(input.nextLine());
                 Teacher teacher = new Teacher(id, name, old, gender, salary);
-                personTeacher[count] = teacher;
-                count++;
+                personBig[countOfTeacher] = teacher;
+                countOfTeacher++;
                 System.out.println("Add new Teacher success!");
                 break;
             case 2:
                 System.out.println("Name of Student is: ");
                 String name1 = input.nextLine();
                 System.out.println("ID already available");
-                int id1 = count++;
+                int id1 = countOfStudent++;
                 System.out.println("Old of Teacher is: ");
                 int old1 = Integer.parseInt(input.nextLine());
                 System.out.println("Gender is: ");
@@ -67,8 +87,8 @@ public class RunPerson {
                 System.out.println("Point is: ");
                 double point = Double.parseDouble(input.nextLine());
                 Student student = new Student(id1, name1, old1, gender1, point);
-                personStudent[count] = student;
-                count++;
+                personBig[countOfStudent] = student;
+                countOfStudent++;
                 System.out.println("Add new Student success!");
                 break;
         }
@@ -86,16 +106,16 @@ public class RunPerson {
                 System.out.println("Enter ID of Teacher to delete:");
                 int numberIdOfTeacher = Integer.parseInt(input.nextLine());
                 boolean flag = false;
-                for (int i = 0; i < personTeacher.length; i++) {
-                    if (personTeacher[i] != null && numberIdOfTeacher == personTeacher[i].getId()) {
-                        for (int j = i; j < personTeacher.length - 1; j++) {
-                            personTeacher[j] = personTeacher[j + 1];
+                for (int i = 0; i < personBig.length; i++) {
+                    if (personBig[i] != null && numberIdOfTeacher == personBig[i].getId()) {
+                        for (int j = i; j < personBig.length - 1; j++) {
+                            personBig[j] = personBig[j + 1];
                             flag = true;
 
                         }
 
                     }
-                    personTeacher[count] = null;
+                    personBig[countOfTeacher] = null;
 
                 }
                 System.out.println("Delete success!");
@@ -108,14 +128,14 @@ public class RunPerson {
                 System.out.println("Enter ID of Student to delete:");
                 int numberIdOfStudent = Integer.parseInt(input.nextLine());
                 boolean flag1 = false;
-                for (int i = 0; i < personStudent.length; i++) {
-                    if (personStudent[i] != null && numberIdOfStudent == personStudent[i].getId()) {
-                        for (int j = i; j < personStudent.length - 1; j++) {
-                            personStudent[j] = personStudent[j + 1];
+                for (int i = 0; i < personBig.length; i++) {
+                    if (personBig[i] != null && numberIdOfStudent == personBig[i].getId()) {
+                        for (int j = i; j < personBig.length - 1; j++) {
+                            personBig[j] = personBig[j + 1];
                             flag1 = true;
                         }
                     }
-                    personStudent[count] = null;
+                    personBig[countOfStudent] = null;
                 }
                 System.out.println("Delete success!");
                 if (!flag1) {
@@ -138,22 +158,22 @@ public class RunPerson {
                 System.out.println("Are you looking for?");
                 String nameToFind = input.nextLine();
                 boolean flagOfTeacher = false;
-                for (Person teacher : personTeacher) {
+                for (Person teacher : personBig) {
                     if (teacher != null && teacher.getName().contains(nameToFind)) {
                         System.out.println(teacher);
                         flagOfTeacher = true;
-                        break;
+
                     }
                 }
                 if (!flagOfTeacher) {
                     System.out.println("Sorry not found Name of Teacher");
-                   break;
                 }
+                break;
             case 2:
                 System.out.println("Are you looking for?:");
                 String nameOfStudent = input.nextLine();
                 boolean flagOfStudent = false;
-                for (Person student : personStudent) {
+                for (Person student : personBig) {
                     if (student != null && student.getName().contains(nameOfStudent)) {
                         System.out.println(student);
                         flagOfStudent = true;

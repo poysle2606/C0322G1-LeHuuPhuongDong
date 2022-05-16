@@ -1,4 +1,4 @@
-package TryToCRUD;
+package TryToCRUD.Product;
 
 public class Product {
     private int id;
