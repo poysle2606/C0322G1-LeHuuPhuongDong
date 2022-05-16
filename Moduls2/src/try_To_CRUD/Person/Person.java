@@ -1,4 +1,4 @@
-package TryToCRUD.Person;
+package try_To_CRUD.Person;
 
 public abstract class Person {
     private int id;

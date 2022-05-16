@@ -1,4 +1,4 @@
-package TryToCRUD.Person;
+package try_To_CRUD.Person;
 
 public class Student  extends Person{
     private double point;

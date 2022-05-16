@@ -1,4 +1,4 @@
-package TryToCRUD.Product;
+package try_To_CRUD.Product;
 
 import java.util.Objects;
 import java.util.Scanner;

@@ -1,8 +1,6 @@
-package TryToCRUD.Person;
+package try_To_CRUD.Person;
 
 
-import javax.management.remote.rmi._RMIConnection_Stub;
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class RunPerson {
@@ -10,6 +8,7 @@ public class RunPerson {
     static Scanner input = new Scanner(System.in);
     static int countOfTeacher;
     static int countOfStudent;
+    static int index;
 
     static {
         personBig[0] = new Teacher(1, " John", 30, "Men", 6000000);
@@ -19,6 +18,7 @@ public class RunPerson {
         personBig[4] = new Student(2, " Marry", 19, "Women", 8.5);
         countOfTeacher = 4;
         countOfStudent = 3;
+        index = 5;
     }
 
     public static void display() {
@@ -33,7 +33,7 @@ public class RunPerson {
                 System.out.println("List of the Teacher and Student");
                 for (Person total : personBig) {
                     if (total != null)
-                    System.out.println(total);
+                        System.out.println(total);
                 }
                 break;
             case 2:
@@ -42,28 +42,33 @@ public class RunPerson {
                     if (teacher instanceof Teacher) {
                         System.out.println(teacher);
                     }
-                } break;
+                }
+                break;
             case 3:
                 System.out.println("This is the Student list:");
                 for (Person student : personBig) {
                     if (student instanceof Student) {
                         System.out.println(student);
                     }
-                }  break;
+                }
+                break;
         }
     }
 
     public static void addPerson() {
-        System.out.println(" You want to add Teacher or Student? \n " +
-                "1. Teacher. \n" +
-                "2. Student.");
-        int numberChoose = Integer.parseInt(input.nextLine());
-        switch (numberChoose) {
+        int numberChooseToAdd;
+        do {
+            System.out.println(" You want to add Teacher or Student? \n " +
+                    "1. Teacher. \n" +
+                    " 2. Student.");
+            numberChooseToAdd = Integer.parseInt(input.nextLine());
+        } while (numberChooseToAdd > 2);
+        switch (numberChooseToAdd) {
             case 1:
                 System.out.println("Name of Teacher is: ");
                 String name = input.nextLine();
                 System.out.println("ID already available ");
-                int id = countOfTeacher++;
+                int id = countOfTeacher;
                 System.out.println("Old of Teacher is: ");
                 int old = Integer.parseInt(input.nextLine());
                 System.out.println("Gender is: ");
@@ -71,37 +76,41 @@ public class RunPerson {
                 System.out.println("Salary is: ");
                 double salary = Double.parseDouble(input.nextLine());
                 Teacher teacher = new Teacher(id, name, old, gender, salary);
-                personBig[countOfTeacher] = teacher;
+                personBig[index] = teacher;
                 countOfTeacher++;
+                index++;
                 System.out.println("Add new Teacher success!");
                 break;
             case 2:
                 System.out.println("Name of Student is: ");
                 String name1 = input.nextLine();
                 System.out.println("ID already available");
-                int id1 = countOfStudent++;
-                System.out.println("Old of Teacher is: ");
+                int id1 = countOfStudent;
+                System.out.println("Old of Student is: ");
                 int old1 = Integer.parseInt(input.nextLine());
                 System.out.println("Gender is: ");
                 String gender1 = input.nextLine();
                 System.out.println("Point is: ");
                 double point = Double.parseDouble(input.nextLine());
                 Student student = new Student(id1, name1, old1, gender1, point);
-                personBig[countOfStudent] = student;
+                personBig[index] = student;
                 countOfStudent++;
+                index++;
                 System.out.println("Add new Student success!");
                 break;
         }
     }
 
     public static void delete() {
-        System.out.println("You need to know ID to delete.");
-        System.out.println("You want to delete Teacher or Student? \n" +
-                "1. Teacher. \n" +
-                "2. Student. \n" +
-                "3.Return");
-        int numberChoose = Integer.parseInt(input.nextLine());
-        switch (numberChoose) {
+        int numberChooseToDelete;
+        do {
+            System.out.println("You need to know ID to delete.");
+            System.out.println("You want to delete Teacher or Student? \n" +
+                    "1. Teacher. \n" +
+                    " 2. Student. \n");
+            numberChooseToDelete = Integer.parseInt(input.nextLine());
+        } while (numberChooseToDelete > 2);
+        switch (numberChooseToDelete) {
             case 1:
                 System.out.println("Enter ID of Teacher to delete:");
                 int numberIdOfTeacher = Integer.parseInt(input.nextLine());
@@ -149,11 +158,10 @@ public class RunPerson {
     public static void search() {
         System.out.println("You want to search name of Teacher or Student: \n" +
                 "1. Teacher. \n" +
-                "2. Student. \n" +
-                "3. Return");
+                "2. Student. \n");
         System.out.println("Your choose is: ");
-        int choose = Integer.parseInt(input.nextLine());
-        switch (choose) {
+        int numberToSearch = Integer.parseInt(input.nextLine());
+        switch (numberToSearch) {
             case 1:
                 System.out.println("Are you looking for?");
                 String nameToFind = input.nextLine();
