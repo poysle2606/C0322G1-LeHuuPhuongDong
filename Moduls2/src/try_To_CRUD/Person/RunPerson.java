@@ -156,11 +156,14 @@ public class RunPerson {
     }
 
     public static void search() {
-        System.out.println("You want to search name of Teacher or Student: \n" +
-                "1. Teacher. \n" +
-                "2. Student. \n");
-        System.out.println("Your choose is: ");
-        int numberToSearch = Integer.parseInt(input.nextLine());
+        int numberToSearch;
+        do {
+            System.out.println("You want to search name of Teacher or Student: \n" +
+                    "1. Teacher. \n" +
+                    "2. Student. \n");
+            System.out.println("Your choose is: ");
+            numberToSearch = Integer.parseInt(input.nextLine());
+        } while (numberToSearch > 2);
         switch (numberToSearch) {
             case 1:
                 System.out.println("Are you looking for?");
