@@ -1,6 +1,4 @@
-package controllers.models;
-
-import controllers.models.Facility;
+package furama_resort.models;
 
 public class House extends Facility {
     private String roomStandard;

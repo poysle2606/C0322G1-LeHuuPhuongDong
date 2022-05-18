@@ -1,4 +1,4 @@
-package controllers.models;
+package furama_resort.models;
 
 public abstract class Facility {
     private String nameService;
