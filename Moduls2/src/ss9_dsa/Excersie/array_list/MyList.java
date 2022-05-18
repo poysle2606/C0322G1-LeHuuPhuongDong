@@ -13,11 +13,7 @@ public class MyList<E> {
 
     public MyList(int capacity) {
         if (capacity > 0) {
-            System.out.println("Khởi tạo thành công với kích thước là : " + capacity);
             elements = new Object[capacity];
-        } else {
-            System.out.println("Lỗi tham số truyền vào");
-            throw new IllegalArgumentException("capacity : " + capacity);
         }
     }
 
@@ -25,16 +21,11 @@ public class MyList<E> {
         if (minCapacity >= 0) {
             int newSize = this.elements.length + minCapacity;
             elements = Arrays.copyOf(elements, newSize);
-            System.out.println("Khởi tạo thành công với kích thước là : " + elements.length);
-        } else {
-            throw new IllegalArgumentException("minCapacity : " + minCapacity);
         }
     }
 
     public void add(E e, int index) {
-        if (index > elements.length) {
-            throw new IllegalArgumentException("Lỗi index : " + index);
-        } else if (elements.length == index + 1) {
+        if (elements.length == index + 1) {
             ensureCapacity(1);
         }
         if (elements[index] == null) {
