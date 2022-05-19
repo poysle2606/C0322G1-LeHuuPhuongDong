@@ -1,4 +1,4 @@
-package ss6_Iheritance.Practice.ObjectGeometry;
+package ss6_iheritance.Practice.ObjectGeometry;
 
 public class MainOfSquare {
     public static void main(String[] args) {
