@@ -17,19 +17,15 @@ public class RingLink {
             queue.add(words);
             stack.push(words);
         }
-        boolean flag = false;
-        while (true) {
-            if (stack.pop().equals(queue.poll())) {
-                flag = true;
-            }
-            if (flag) {
-                System.out.println("Not true");
-                break;
-            } else {
-                System.out.println("This is Palindrome.");
-                break;
-            }
-        }
 
+        boolean flag = false;
+        if (stack.pop().equals(queue.poll())) {
+            flag = true;
+        }
+        if (flag) {
+            System.out.println("Not true");
+        } else {
+            System.out.println("This is Palindrome.");
+        }
     }
 }

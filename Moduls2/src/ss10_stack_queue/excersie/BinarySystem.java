@@ -14,7 +14,6 @@ public class BinarySystem {
             numberStack.push(hold);
             number = number / 2;
         }
-
         System.out.println(numberStack);
     }
 }

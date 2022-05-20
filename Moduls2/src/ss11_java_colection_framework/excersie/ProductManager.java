@@ -15,7 +15,8 @@ public class ProductManager {
         listProduct.add(new Product(3, "Iphone11 Pro", 400, 6, "Apple"));
         listProduct.add(new Product(4, "Iphone11 ProMax", 3500, 7, "Apple"));
         listProduct.add(new Product(5, "Iphone 12", 400, 8, "Apple"));
-        count = 6;
+        listProduct.add(new Product(6, "Iphone 12", 400, 8, "Apple"));
+        count = 7;
     }
 
     public static void addProduct() {
@@ -142,9 +143,12 @@ public class ProductManager {
                     switch (chooseSort) {
                         case 1:
                             sortAcendingProduct();
+                            break;
                         case 2:
                             sortDecendingProduct();
                     }
+                default:
+                    System.out.println("Please enter again.");
             }
         } while (true);
     }
