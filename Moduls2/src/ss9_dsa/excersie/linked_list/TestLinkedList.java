@@ -1,4 +1,4 @@
-package ss9_dsa.Excersie.linked_list;
+package ss9_dsa.excersie.linked_list;
 
 import java.util.LinkedList;
 

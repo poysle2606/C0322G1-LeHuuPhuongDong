@@ -1,4 +1,4 @@
-package ss6_Iheritance.Excersie.PointAndMoveablePoint;
+package ss6_iheritance.excersie.PointAndMoveablePoint;
 
 public class MainOfPoint {
     public static void main(String[] args) {

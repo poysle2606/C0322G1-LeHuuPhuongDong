@@ -1,4 +1,4 @@
-package ss6_Iheritance.Excersie.CircleAndCylinder;
+package ss6_iheritance.excersie.CircleAndCylinder;
 
 public class MainOfCylinder {
     public static void main(String[] args) {

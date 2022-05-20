@@ -1,10 +1,8 @@
-package ss8_CleanCode.Practice.RefactoringValuable;
+package ss8_clean_code.practice.RefactoringValuable;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import ss6_Iheritance.Excersie.CircleAndCylinder.Cylinder;
-
-import static org.junit.jupiter.api.Assertions.*;
+import ss6_iheritance.excersie.CircleAndCylinder.Cylinder;
 
 class CylinderTest {
 

@@ -1,4 +1,4 @@
-package ss8_CleanCode.Practice.RefactoringConstant;
+package ss8_clean_code.practice.RefactoringConstant;
 
 public class Calculator {
     public static int calculate(int firstOperand, int secondOperand, char oprerand) {

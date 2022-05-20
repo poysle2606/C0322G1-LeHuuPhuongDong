@@ -1,4 +1,4 @@
-package ss6_Iheritance.Excersie.Point2DAndPoint3D;
+package ss6_iheritance.excersie.Point2DAndPoint3D;
 
 public class Point2D {
     private float x = 0.0f, y = 0.0f;

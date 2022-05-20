@@ -1,4 +1,4 @@
 package furama_resort.services;
 
-public interface FacilityServices {
+public interface FacilityService extends Services{
 }

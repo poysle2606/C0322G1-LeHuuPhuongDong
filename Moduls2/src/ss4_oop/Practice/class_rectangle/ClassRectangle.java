@@ -1,4 +1,4 @@
-package ss4_oop.Practice.ClassRectangle;
+package ss4_oop.Practice.class_rectangle;
 
 public class ClassRectangle {
     double width, height;

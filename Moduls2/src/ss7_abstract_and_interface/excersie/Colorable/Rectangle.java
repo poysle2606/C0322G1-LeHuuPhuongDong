@@ -1,4 +1,4 @@
-package ss7_AbstractAndInterface.Excersie.Colorable;
+package ss7_abstract_and_interface.excersie.Colorable;
 
 public class Rectangle extends Shape {
     private double width = 1.0;

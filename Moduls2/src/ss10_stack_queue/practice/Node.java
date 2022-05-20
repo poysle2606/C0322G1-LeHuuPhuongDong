@@ -1,4 +1,4 @@
-package ss10_stack_queue.Practice;
+package ss10_stack_queue.practice;
 
 public class Node {
     public int key;

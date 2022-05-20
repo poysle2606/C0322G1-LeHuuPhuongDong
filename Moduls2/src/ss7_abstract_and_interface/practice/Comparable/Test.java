@@ -1,4 +1,4 @@
-package ss7_AbstractAndInterface.Practice.Comparable;
+package ss7_abstract_and_interface.practice.Comparable;
 
 import java.util.Arrays;
 

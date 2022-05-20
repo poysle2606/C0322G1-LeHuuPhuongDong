@@ -1,6 +1,5 @@
 package ss11_java_colection_framework.excersie;
 
-import java.util.Comparator;
 
 public class Product implements Comparable<Product> {
     private int id;

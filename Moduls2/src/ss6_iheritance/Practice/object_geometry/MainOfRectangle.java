@@ -1,4 +1,4 @@
-package ss6_iheritance.Practice.ObjectGeometry;
+package ss6_iheritance.Practice.object_geometry;
 
 public class MainOfRectangle {
     public static void main(String[] args) {

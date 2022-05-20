@@ -1,4 +1,4 @@
-package ss8_CleanCode.Excersie;
+package ss8_clean_code.excersie;
 
 public class TennisGame {
     public static String getScore(String firstPlayer, String secondPlayer, int score1, int score2) {

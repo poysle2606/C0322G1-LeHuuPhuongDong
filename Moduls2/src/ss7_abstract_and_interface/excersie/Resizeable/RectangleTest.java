@@ -1,4 +1,4 @@
-package ss7_AbstractAndInterface.Excersie.Resizeable;
+package ss7_abstract_and_interface.excersie.Resizeable;
 
 public class RectangleTest {
     public static void main(String[] args) {

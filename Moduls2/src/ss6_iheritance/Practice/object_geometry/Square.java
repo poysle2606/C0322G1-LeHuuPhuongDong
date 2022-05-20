@@ -1,4 +1,4 @@
-package ss6_iheritance.Practice.ObjectGeometry;
+package ss6_iheritance.Practice.object_geometry;
 
 public class Square extends Rectangle {
     public Square() {

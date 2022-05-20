@@ -1,4 +1,4 @@
-package ss8_CleanCode.Practice.RefactoringValuable;
+package ss8_clean_code.practice.RefactoringValuable;
 
 public class FizzBuzz {
     public static String fizzBuzz(int number){

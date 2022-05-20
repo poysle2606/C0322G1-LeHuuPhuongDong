@@ -1,4 +1,4 @@
-package ss5_AccessModifier.Excersie.Student;
+package ss5_access_modifier.excersie.Student;
 
 public class Student {
     private String name = " John";

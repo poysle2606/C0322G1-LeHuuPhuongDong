@@ -1,4 +1,4 @@
-package ss10_stack_queue.Practice;
+package ss10_stack_queue.practice;
 
 public class LinkedListQueueClient {
     public static void main(String[] args) {

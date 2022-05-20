@@ -1,4 +1,4 @@
-package ss5_AccessModifier.Practice.StaticMethod;
+package ss5_access_modifier.practice.StaticMethod;
 
 public class Student {
     private final int rollno;

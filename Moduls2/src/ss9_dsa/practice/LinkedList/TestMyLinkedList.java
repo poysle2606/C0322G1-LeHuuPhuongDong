@@ -1,4 +1,4 @@
-package ss9_DSA.Practice.LinkedList;
+package ss9_dsa.practice.LinkedList;
 
 public class TestMyLinkedList {
     public static void main(String[] args) {

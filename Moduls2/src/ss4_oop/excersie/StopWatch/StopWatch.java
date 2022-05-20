@@ -1,4 +1,4 @@
-package ss4_OOP.Excersie.StopWatch;
+package ss4_oop.excersie.StopWatch;
 
 public class StopWatch {
     private long startTime, endTime;

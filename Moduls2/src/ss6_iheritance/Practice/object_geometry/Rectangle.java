@@ -1,4 +1,4 @@
-package ss6_iheritance.Practice.ObjectGeometry;
+package ss6_iheritance.Practice.object_geometry;
 
 public class Rectangle extends Shape{
     double width = 1.0, length = 1.0;

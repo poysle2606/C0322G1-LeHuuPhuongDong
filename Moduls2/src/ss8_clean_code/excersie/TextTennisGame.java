@@ -1,4 +1,4 @@
-package ss8_CleanCode.Excersie;
+package ss8_clean_code.excersie;
 
 import org.junit.Test;
 import org.junit.runners.Parameterized;

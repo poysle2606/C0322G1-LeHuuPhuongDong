@@ -1,4 +1,4 @@
-package ss7_AbstractAndInterface.Excersie.Colorable;
+package ss7_abstract_and_interface.excersie.Colorable;
 
 public class Circle extends Shape {
     private double radius = 1.0;

@@ -1,4 +1,4 @@
-package ss4_OOP.Excersie.Fan;
+package ss4_oop.excersie.Fan;
 
 public class Fan {
     //Trường dữ liệu khởi tạo hằng và gán giá trị cho nó

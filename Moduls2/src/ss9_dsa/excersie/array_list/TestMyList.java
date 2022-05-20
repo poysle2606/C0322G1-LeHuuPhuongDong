@@ -1,6 +1,4 @@
-package ss9_dsa.Excersie.array_list;
-
-import java.util.ArrayList;
+package ss9_dsa.excersie.array_list;
 
 public class TestMyList {
     public static void main(String[] args) {

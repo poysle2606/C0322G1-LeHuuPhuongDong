@@ -1,4 +1,4 @@
-package controllers;
+package furama_resort.controllers;
 
 import java.util.Scanner;
 

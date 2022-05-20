@@ -1,4 +1,4 @@
-package ss1_Java.Practice;
+package ss1_java.Practice;
 
 public class Text_2 {
     public static void main(String[] args) {

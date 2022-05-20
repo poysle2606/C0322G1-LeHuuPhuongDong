@@ -1,6 +1,4 @@
-package ss9_DSA.Practice.LinkedList;
-
-import javax.xml.soap.Node;
+package ss9_dsa.practice.LinkedList;
 
 public class MyLinkedList {
     private Node head;
@@ -10,7 +8,7 @@ public class MyLinkedList {
         head = new Node(data);
     }
 
-    private class Node {
+    public class Node {
         private Node next;
         private Object data;
 
@@ -42,16 +40,18 @@ public class MyLinkedList {
         head.next = temp;
         numNodes++;
     }
-    public Node get(int index){
-        Node temp=head;
-        for(int i=0; i<index; i++) {
+
+    public Node get(int index) {
+        Node temp = head;
+        for (int i = 0; i < index; i++) {
             temp = temp.next;
         }
         return temp;
     }
+
     public void printList() {
         Node temp = head;
-        while(temp != null) {
+        while (temp != null) {
             System.out.println(temp.data);
             temp = temp.next;
         }

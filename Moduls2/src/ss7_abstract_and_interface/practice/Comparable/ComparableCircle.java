@@ -1,7 +1,7 @@
-package ss7_AbstractAndInterface.Practice.Comparable;
+package ss7_abstract_and_interface.practice.Comparable;
 
 
-import ss6_Iheritance.Practice.ObjectGeometry.Circle;
+import ss6_iheritance.Practice.object_geometry.Circle;
 
 public class ComparableCircle extends Circle implements Comparable<ComparableCircle> {
     public ComparableCircle() {

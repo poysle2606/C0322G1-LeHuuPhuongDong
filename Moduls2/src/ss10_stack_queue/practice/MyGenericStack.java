@@ -1,4 +1,4 @@
-package ss10_stack_queue.Practice;
+package ss10_stack_queue.practice;
 
 import java.util.EmptyStackException;
 import java.util.LinkedList;

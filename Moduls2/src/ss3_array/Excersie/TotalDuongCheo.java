@@ -1,4 +1,4 @@
-package ss3_Array.Excersie;
+package ss3_array.Excersie;
 
 import java.util.Arrays;
 import java.util.Scanner;

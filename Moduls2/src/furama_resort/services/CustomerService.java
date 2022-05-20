@@ -1,2 +1,4 @@
-package furama_resort.services;public interface CustomerService {
+package furama_resort.services;
+
+public interface CustomerService extends Services{
 }

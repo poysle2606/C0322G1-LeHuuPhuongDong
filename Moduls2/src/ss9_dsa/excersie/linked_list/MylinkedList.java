@@ -1,9 +1,4 @@
-package ss9_dsa.Excersie.linked_list;
-
-import ss9_dsa.Practice.LinkedList.MyLinkedList;
-
-import javax.xml.soap.Node;
-import java.util.Arrays;
+package ss9_dsa.excersie.linked_list;
 
 public class MylinkedList<E> {
     private Node head;

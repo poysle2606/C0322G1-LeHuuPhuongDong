@@ -1,4 +1,4 @@
-package ss6_Iheritance.Excersie.Point2DAndPoint3D;
+package ss6_iheritance.excersie.Point2DAndPoint3D;
 
 public class MainOfPoint2D {
     public static void main(String[] args) {

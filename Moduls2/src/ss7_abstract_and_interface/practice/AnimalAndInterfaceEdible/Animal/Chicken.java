@@ -1,4 +1,4 @@
-package ss7_AbstractAndInterface.Practice.AnimalAndInterfaceEdible.Animal;
+package ss7_abstract_and_interface.practice.AnimalAndInterfaceEdible.Animal;
 
 public class Chicken extends Animal implements Edible{
     @Override

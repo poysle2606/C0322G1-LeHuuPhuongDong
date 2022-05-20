@@ -1,4 +1,4 @@
-package ss6_Iheritance.Excersie.PointAndMoveablePoint;
+package ss6_iheritance.excersie.PointAndMoveablePoint;
 
 public class Point {
     private float x = 0.0f, y = 0.0f;

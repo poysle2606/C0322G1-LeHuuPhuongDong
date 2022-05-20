@@ -1,4 +1,4 @@
-package ss7_AbstractAndInterface.Practice.AnimalAndInterfaceEdible.Animal;
+package ss7_abstract_and_interface.practice.AnimalAndInterfaceEdible.Animal;
 
 public class Main {
     public static void main(String[] args) {

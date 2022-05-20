@@ -1,4 +1,4 @@
-package ss6_Iheritance.Excersie.PointAndMoveablePoint;
+package ss6_iheritance.excersie.PointAndMoveablePoint;
 
 public class MovablePoint extends Point {
     private float xSpeed = 0.0f;

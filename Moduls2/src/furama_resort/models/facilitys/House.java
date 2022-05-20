@@ -1,4 +1,4 @@
-package furama_resort.models;
+package furama_resort.models.facilitys;
 
 public class House extends Facility {
     private String roomStandard;

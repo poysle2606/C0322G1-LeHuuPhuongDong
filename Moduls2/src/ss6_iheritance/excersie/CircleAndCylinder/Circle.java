@@ -1,4 +1,4 @@
-package ss6_Iheritance.Excersie.CircleAndCylinder;
+package ss6_iheritance.excersie.CircleAndCylinder;
 
 public class Circle {
     private double radius;

@@ -1,4 +1,4 @@
-package ss3_Array.Practice;
+package ss3_array.Practice;
 
 public class FindMin {
     public static void main(String[] args) {

@@ -1,6 +1,4 @@
-package ss4_OOP.Excersie.Fan;
-
-import java.util.Scanner;
+package ss4_oop.excersie.Fan;
 
 public class MainOfFan {
     public static void main(String[] args) {

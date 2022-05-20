@@ -1,4 +1,4 @@
-package ss5_AccessModifier.Practice.Car;
+package ss5_access_modifier.practice.Car;
 
 public class Car {
     private String name;
