@@ -1,0 +1,139 @@
+package furama_resort.services;
+
+import furama_resort.controllers.FuramaControllers;
+import furama_resort.models.persons.Customer;
+import furama_resort.models.persons.Employee;
+import furama_resort.models.persons.Person;
+import javafx.scene.transform.Scale;
+
+import java.util.LinkedList;
+import java.util.Scanner;
+
+public class CustomerServiceImpl extends Customer implements ContactService {
+    static LinkedList<Person> list = new LinkedList<>();
+    static Scanner input = new Scanner(System.in);
+    static int countCode;
+
+    static {
+        list.add(new Customer(1001, "Nguyễn Văn A", 34, "Nam", 1234, 94737734, "nguyenvanA@gmail.com", "Diamon", "113 Nguyễn Lương Bằng"));
+        list.add(new Customer(1002, "Nguyễn Văn B", 30, "Nữ", 1235, 94737734, "nguyenvanB@gmail.com", "Silver", "112 Nguyễn Lương Bằng"));
+        list.add(new Customer(1003, "Nguyễn Văn C", 24, "Nam", 1236, 94737734, "nguyenvanC@gmail.com", "Platinum", "116 Nguyễn Lương Bằng"));
+        list.add(new Customer(1004, "Nguyễn Văn D", 46, "Nữ", 1237, 94737734, "nguyenvanD@gmail.com", "Gold", "118 Nguyễn Lương Bằng"));
+        countCode = 1005;
+    }
+
+    public String typeCustomer() {
+        do {
+            System.out.println("1.Diamond.\n" +
+                    "2.Platinum.\n" +
+                    "3.Gold.\n" +
+                    "4.Silver.\n" +
+                    "5.Member.");
+            System.out.println("Enter type of customer: ");
+            int chooseType = Integer.parseInt(input.nextLine());
+            switch (chooseType) {
+                case 1:
+                    return "Diamond";
+                case 2:
+                    return "Platinum";
+                case 3:
+                    return "Gold";
+                case 4:
+                    return "Sivler";
+                case 5:
+                    return "Member";
+                default:
+                    System.out.println("If you entered it wrong, please re-enter it.");
+            }
+        } while (true);
+    }
+
+    @Override
+    public void display() {
+        for (Person customer : list) {
+            System.out.println(customer);
+        }
+
+    }
+
+    @Override
+    public void addPerson() {
+        System.out.println("Employee Code is auto increase!");
+        int code = countCode++;
+        System.out.println("Enter name to ");
+        String name = input.nextLine();
+        System.out.println("Date of customer: ");
+        int date = Integer.parseInt(input.nextLine());
+        System.out.println("Gender of customer is: ");
+        String gender = input.nextLine();
+        System.out.println("CMND of customer is: ");
+        int cmnd = Integer.parseInt(input.nextLine());
+        System.out.println("Number phone of customer is: ");
+        long numberPhone = Integer.parseInt(input.nextLine());
+        System.out.println("Email is: ");
+        String email = input.nextLine();
+        System.out.println("Enter type of Customer: ");
+        String typeCustomer = typeCustomer();
+        System.out.println("Address of customer is: ");
+        String address = input.nextLine();
+        list.add(new Customer(code, name, date, gender, cmnd, numberPhone, email,typeCustomer , address));
+        countCode++;
+        System.out.println("Add customer success!");
+    }
+
+    @Override
+    public void deletePerson() {
+
+    }
+
+    @Override
+    public void updatePerson() {
+        System.out.println("You need CODE CUSTOMER to update \n" +
+                "1.I known \n" +
+                "2.I will show listing for you search CUSTOMER CODE.");
+        int codeCustomer = Integer.parseInt(input.nextLine());
+        switch (codeCustomer) {
+            case 1:
+                System.out.println("Enter code in here:");
+                int code = Integer.parseInt(input.nextLine());
+                Customer customer = new Customer();
+                for (int i = 0; i < list.size(); i++) {
+                    if (code == list.get(i).getCode()) {
+                        list.set(i, customer);
+                        System.out.println("Enter name to update: ");
+                        String nameToUpdate = input.nextLine();
+                        System.out.println("Date of customer: ");
+                        int dateToUpdate = Integer.parseInt(input.nextLine());
+                        System.out.println("Gender of customer is: ");
+                        String genderToUpdate = input.nextLine();
+                        System.out.println("CMND of customer is: ");
+                        int idToUpdate = Integer.parseInt(input.nextLine());
+                        System.out.println("Number phone of customer is: ");
+                        long numberPhoneToUpdate = Integer.parseInt(input.nextLine());
+                        System.out.println("Email is: ");
+                        String emailToUpdate = input.nextLine();
+                        System.out.println("Enter type of Customer:");
+                        String updateType = typeCustomer();
+                        System.out.println("Address to change");
+                        String addressUpdate = input.nextLine();
+                        System.out.println("Update success!");
+                        customer.setCode(code);
+                        customer.setName(nameToUpdate);
+                        customer.setOld(dateToUpdate);
+                        customer.setId(idToUpdate);
+                        customer.setGender(genderToUpdate);
+                        customer.setNumberPhone(numberPhoneToUpdate);
+                        customer.setEmail(emailToUpdate);
+                        customer.setTypeCustomer(updateType);
+                        customer.setAddress(addressUpdate);
+                        System.out.println("Update success.");
+                    }
+                }
+                break;
+            case 2:
+                display();
+        }
+
+
+    }
+}
