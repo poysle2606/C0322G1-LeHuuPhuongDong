@@ -1,5 +1,7 @@
 package furama_resort.models.facilitys;
 
+import java.util.Scanner;
+
 public abstract class Facility {
     private String nameService;
     private double area;
@@ -44,7 +46,32 @@ public abstract class Facility {
     }
 
     public String getRentalType() {
-        return rentalType;
+        Scanner input = new Scanner(System.in);
+        System.out.println("What do you want choose rental type?: ");
+        do {
+            System.out.println("1.Year.\n" +
+                    "2.Month.\n" +
+                    "3.Day.\n" +
+                    "4.Hour.");
+            System.out.println("Enter in here: ");
+            int choose = Integer.parseInt(input.nextLine());
+            switch (choose) {
+                case 1:
+                    return "Year";
+                case 2:
+                    return "Month";
+                case 3:
+                    return "Day";
+                case 4:
+                    return "Hour";
+                default:
+                    System.out.println("Enter again: ");
+            }
+        } while (true);
+    }
+
+    public String getRentalType2() {
+        return getRentalType();
     }
 
     public void setRentalType(String rentalType) {

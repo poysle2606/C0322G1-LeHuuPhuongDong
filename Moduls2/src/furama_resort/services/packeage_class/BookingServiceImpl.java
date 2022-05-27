@@ -1,6 +1,8 @@
-package furama_resort.services;
+package furama_resort.services.packeage_class;
 
-public class BookingServiceImpl implements BookingService{
+import furama_resort.services.package_impl.BookingService;
+
+public class BookingServiceImpl implements BookingService {
     @Override
     public void display() {
 

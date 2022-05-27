@@ -12,7 +12,6 @@ public class FindMinInArray {
         for (int i = 0; i < size; i++) {
             System.out.println("Enter element at index: " + i);
             numberArray[i] = scanner.nextInt();
-
         }
         System.out.println( "Array is: "+ Arrays.toString(numberArray));
 

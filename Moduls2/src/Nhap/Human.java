@@ -1,2 +1,6 @@
-package Nhap;public class Human {
+package Nhap;
+
+public interface Human {
+    void eat();
+    void walk();
 }

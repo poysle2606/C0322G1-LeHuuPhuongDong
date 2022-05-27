@@ -1,4 +1,4 @@
-package furama_resort.services;
+package furama_resort.services.package_impl;
 
 public interface Services {
     void display();

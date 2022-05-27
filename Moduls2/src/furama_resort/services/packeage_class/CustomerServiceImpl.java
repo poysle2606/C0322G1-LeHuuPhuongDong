@@ -1,10 +1,8 @@
-package furama_resort.services;
+package furama_resort.services.packeage_class;
 
-import furama_resort.controllers.FuramaControllers;
 import furama_resort.models.persons.Customer;
-import furama_resort.models.persons.Employee;
 import furama_resort.models.persons.Person;
-import javafx.scene.transform.Scale;
+import furama_resort.services.package_impl.ContactService;
 
 import java.util.LinkedList;
 import java.util.Scanner;

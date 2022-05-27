@@ -6,14 +6,14 @@ public abstract class Person {
     private int old;
     private String gender;
     private int id;
-    private int numberPhone;
+    private long numberPhone;
     private String email;
 
     public Person() {
 
     }
 
-    public Person(int code,String name, int old, String gender, int id, int numberPhone, String email) {
+    public Person(int code,String name, int old, String gender, int id, long numberPhone, String email) {
         this.code = code;
         this.name = name;
         this.old = old;
@@ -71,24 +71,24 @@ public abstract class Person {
         this.id = id;
     }
 
-    public int getNumberPhone() {
+    public long getNumberPhone(long numberPhoneToUpdate) {
         return numberPhone;
     }
 
-    public void setNumberPhone(int numberPhone) {
+    public void setNumberPhone(long numberPhone) {
         this.numberPhone = numberPhone;
     }
 
     @Override
     public String toString() {
-        return "Person{" +
-                "code= " + code +
-                "name='" + name + '\'' +
-                ", old=" + old +
-                ", gender='" + gender + '\'' +
-                ", id=" + id +
-                ", numberPhone=" + numberPhone +
-                ", email is: " + email +
-                '}';
+        return " have" +
+                " code is: " + code +
+                " name is: " + name +
+                ", old= " + old +
+                ", gender is:" + gender +
+                ", id= " + id +
+                ", numberPhone= " + numberPhone +
+                ", email is: " + email;
     }
+
 }

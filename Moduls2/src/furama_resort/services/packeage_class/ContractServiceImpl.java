@@ -1,6 +1,8 @@
-package furama_resort.services;
+package furama_resort.services.packeage_class;
 
-public class ContractServiceImpl implements ContactService{
+import furama_resort.services.package_impl.ContactService;
+
+public class ContractServiceImpl implements ContactService {
     @Override
     public void display() {
 

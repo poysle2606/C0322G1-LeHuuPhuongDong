@@ -1,8 +1,8 @@
-package furama_resort.services;
+package furama_resort.services.packeage_class;
 
-import furama_resort.controllers.FuramaControllers;
 import furama_resort.models.persons.Employee;
 import furama_resort.models.persons.Person;
+import furama_resort.services.package_impl.EmployeeService;
 
 import java.util.ArrayList;
 import java.util.Scanner;
