@@ -45,19 +45,25 @@ public class FuramaControllers {
     }
 
     public static void main(String[] args) {
+
         do {
-            System.out.println("We will start the program now! \n" +
-                    "1. Start program. \n" +
-                    "2.End program.");
-            int chooseStarOrEnd = Integer.parseInt(input.nextLine());
-            switch (chooseStarOrEnd) {
-                case 1:
-                    System.out.println("Started!");
-                    displayMainMenu();
-                    break;
-                case 2:
-                    System.exit(0);
+            try {
+                System.out.println("We will start the program now! \n" +
+                        "1. Start program. \n" +
+                        "2.End program.");
+                int chooseStarOrEnd = Integer.parseInt(input.nextLine());
+                switch (chooseStarOrEnd) {
+                    case 1:
+                        System.out.println("Started!");
+                        displayMainMenu();
+                        break;
+                    case 2:
+                        System.exit(0);
+                }
+            } catch (NumberFormatException e) {
+                System.err.println("Input is Not Numeric.");
             }
         } while (true);
+
     }
 }

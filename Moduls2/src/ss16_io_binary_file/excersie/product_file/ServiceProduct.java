@@ -18,8 +18,6 @@ public class ServiceProduct {
 
     public static void addProduct() {
         try {
-            Utils.readFileProduct(link);
-
             int code = list.size() + 1;
             System.out.println("Enter name of Product to add: ");
             String name = input.nextLine();

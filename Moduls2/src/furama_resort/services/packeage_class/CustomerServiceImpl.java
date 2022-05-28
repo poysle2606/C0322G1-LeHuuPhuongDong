@@ -74,7 +74,7 @@ public class CustomerServiceImpl extends Customer implements ContactService {
         String typeCustomer = typeCustomer();
         System.out.println("Address of customer is: ");
         String address = input.nextLine();
-        list.add(new Customer(code, name, date, gender, cmnd, numberPhone, email,typeCustomer , address));
+        list.add(new Customer(code, name, date, gender, cmnd, numberPhone, email, typeCustomer, address));
         countCode++;
         System.out.println("Add customer success!");
     }
@@ -93,40 +93,45 @@ public class CustomerServiceImpl extends Customer implements ContactService {
         switch (codeCustomer) {
             case 1:
                 System.out.println("Enter code in here:");
-                int code = Integer.parseInt(input.nextLine());
-                Customer customer = new Customer();
-                for (int i = 0; i < list.size(); i++) {
-                    if (code == list.get(i).getCode()) {
-                        list.set(i, customer);
-                        System.out.println("Enter name to update: ");
-                        String nameToUpdate = input.nextLine();
-                        System.out.println("Date of customer: ");
-                        int dateToUpdate = Integer.parseInt(input.nextLine());
-                        System.out.println("Gender of customer is: ");
-                        String genderToUpdate = input.nextLine();
-                        System.out.println("CMND of customer is: ");
-                        int idToUpdate = Integer.parseInt(input.nextLine());
-                        System.out.println("Number phone of customer is: ");
-                        long numberPhoneToUpdate = Integer.parseInt(input.nextLine());
-                        System.out.println("Email is: ");
-                        String emailToUpdate = input.nextLine();
-                        System.out.println("Enter type of Customer:");
-                        String updateType = typeCustomer();
-                        System.out.println("Address to change");
-                        String addressUpdate = input.nextLine();
-                        System.out.println("Update success!");
-                        customer.setCode(code);
-                        customer.setName(nameToUpdate);
-                        customer.setOld(dateToUpdate);
-                        customer.setId(idToUpdate);
-                        customer.setGender(genderToUpdate);
-                        customer.setNumberPhone(numberPhoneToUpdate);
-                        customer.setEmail(emailToUpdate);
-                        customer.setTypeCustomer(updateType);
-                        customer.setAddress(addressUpdate);
-                        System.out.println("Update success.");
+                    int code = Integer.parseInt(input.nextLine());
+                    Customer customer = new Customer();
+                    boolean flag = false;
+                    for (int i = 0; i < list.size(); i++) {
+                        if (code == list.get(i).getCode()) {
+                            list.set(i, customer);
+                            System.out.println("Enter name to update: ");
+                            String nameToUpdate = input.nextLine();
+                            System.out.println("Date of customer: ");
+                            int dateToUpdate = Integer.parseInt(input.nextLine());
+                            System.out.println("Gender of customer is: ");
+                            String genderToUpdate = input.nextLine();
+                            System.out.println("CMND of customer is: ");
+                            int idToUpdate = Integer.parseInt(input.nextLine());
+                            System.out.println("Number phone of customer is: ");
+                            long numberPhoneToUpdate = Integer.parseInt(input.nextLine());
+                            System.out.println("Email is: ");
+                            String emailToUpdate = input.nextLine();
+                            System.out.println("Enter type of Customer:");
+                            String updateType = typeCustomer();
+                            System.out.println("Address to change");
+                            String addressUpdate = input.nextLine();
+                            System.out.println("Update success!");
+                            customer.setCode(code);
+                            customer.setName(nameToUpdate);
+                            customer.setOld(dateToUpdate);
+                            customer.setId(idToUpdate);
+                            customer.setGender(genderToUpdate);
+                            customer.setNumberPhone(numberPhoneToUpdate);
+                            customer.setEmail(emailToUpdate);
+                            customer.setTypeCustomer(updateType);
+                            customer.setAddress(addressUpdate);
+                            System.out.println("Update success.");
+                            flag = true;
+                        }
                     }
-                }
+                    if (!flag) {
+                        System.out.println("I not found the code of Customer");
+                    }
                 break;
             case 2:
                 display();

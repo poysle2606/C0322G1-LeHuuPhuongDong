@@ -8,16 +8,17 @@ import java.util.Scanner;
 
 public class AllMethod {
     static Scanner input = new Scanner(System.in);
+
     public static void menuEmployee() {
-        int numberOfCase1;
         do {
+            try {
             System.out.println("--------------------");
             System.out.println("1.Display list employees. \n" +
                     "2.Add new employee. \n" +
                     "3.Edit employee. \n" +
                     "4.Return main Menu.");
             System.out.println("Enter number: ");
-            numberOfCase1 = Integer.parseInt(input.nextLine());
+           int numberOfCase1 = Integer.parseInt(input.nextLine());
             EmployeeServiceImpl employee = new EmployeeServiceImpl();
             switch (numberOfCase1) {
                 case 1:
@@ -30,47 +31,50 @@ public class AllMethod {
                     employee.updatePerson();
                     break;
                 case 4:
-                   FuramaControllers.displayMainMenu();
-                    break;
+                   return;
             }
-        } while (numberOfCase1 >= 5);
+        } catch (NumberFormatException e) {
+                System.err.println("Input is Not Numeric.");}
+        } while (true);
     }
 
     public static void menuCustomer() {
-        int numberOfCase2;
         do {
-            System.out.println("1.Display list customers \n" +
-                    "2.Add new customers. \n" +
-                    "3.Edit customers. \n" +
-                    "4.Return main Menu.");
-            System.out.println("Enter number: ");
-            numberOfCase2 = Integer.parseInt(input.nextLine());
-            CustomerServiceImpl customer = new CustomerServiceImpl();
-            switch (numberOfCase2) {
-                case 1:
-                    customer.display();
-                    break;
-                case 2:
-                    customer.addPerson();
-                    break;
-                case 3:
-                    customer.updatePerson();
-                case 4:
-                   FuramaControllers.displayMainMenu();
-                    break;
+            try {
+                System.out.println("1.Display list customers \n" +
+                        "2.Add new customers. \n" +
+                        "3.Edit customers. \n" +
+                        "4.Return main Menu.");
+                System.out.println("Enter number: ");
+               int numberOfCase2 = Integer.parseInt(input.nextLine());
+                CustomerServiceImpl customer = new CustomerServiceImpl();
+                switch (numberOfCase2) {
+                    case 1:
+                        customer.display();
+                        break;
+                    case 2:
+                        customer.addPerson();
+                        break;
+                    case 3:
+                        customer.updatePerson();
+                    case 4:
+                       return;
+                }
+            } catch (NumberFormatException e) {
+                System.err.println("Input is Not Numeric.");
             }
-        } while (numberOfCase2 >= 5);
+        } while (true);
     }
 
     public static void menuFacility() {
-        int numberOfCase3;
         do {
+            try {
             System.out.println("1.Display list facility. \n" +
                     "2.Add new facility. \n" +
                     "3.Edit facility. \n" +
                     "4.Return main Menu.");
             System.out.println("Enter number: ");
-            numberOfCase3 = Integer.parseInt(input.nextLine());
+           int numberOfCase3 = Integer.parseInt(input.nextLine());
             FacilityServiceImpl facility = new FacilityServiceImpl();
             switch (numberOfCase3) {
                 case 1:
@@ -103,15 +107,16 @@ public class AllMethod {
                 case 3:
                     break;
                 case 4:
-                    FuramaControllers.displayMainMenu();
-                    break;
+                  return;
             }
-        } while (numberOfCase3 >= 5);
+        } catch (NumberFormatException e) {
+                System.err.println("Input is Not Numeric.");}
+        }while (true);
     }
 
     public static void menuBooking() {
-        int numberOfCase4;
         do {
+            try {
             System.out.println("1.Add new booking. \n" +
                     "2.Display list booking. \n" +
                     "3.Create new contracts. \n" +
@@ -119,7 +124,7 @@ public class AllMethod {
                     "5.Edit contracts. \n" +
                     "6.Return main Menu.");
             System.out.println("Enter number: ");
-            numberOfCase4 = Integer.parseInt(input.nextLine());
+             int numberOfCase4 = Integer.parseInt(input.nextLine());
             switch (numberOfCase4) {
                 case 1:
                 case 2:
@@ -127,20 +132,21 @@ public class AllMethod {
                 case 4:
                 case 5:
                 case 6:
-                   FuramaControllers.displayMainMenu();
-                    break;
+                    return;
             }
-        } while (numberOfCase4 >= 7);
+        } catch (NumberFormatException e) {
+                System.err.println("Input is Not Numeric.");}
+        } while (true);
     }
 
     public static void promotionManager() {
-        int numberOfCase5;
         do {
+            try {
             System.out.println("1.Display list customers use service. \n" +
                     "2.Display list customers get voucher. \n" +
                     "3.Return main Menu.");
             System.out.println("Enter number: ");
-            numberOfCase5 = Integer.parseInt(input.nextLine());
+            int numberOfCase5 = Integer.parseInt(input.nextLine());
             switch (numberOfCase5) {
                 case 1:
                 case 2:
@@ -148,6 +154,8 @@ public class AllMethod {
                     FuramaControllers.displayMainMenu();
                     break;
             }
-        } while (numberOfCase5 >= 4);
+        } catch (NumberFormatException e) {
+                System.err.println("Input is Not Numeric.");}
+        } while (true);
     }
 }

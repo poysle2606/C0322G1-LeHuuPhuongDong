@@ -1,7 +1,6 @@
 package ss16_io_binary_file.excersie.copy_file_binary;
 
 import java.io.*;
-import java.util.Scanner;
 
 public class CopyBinaryFile {
     private static void copyFileUsingStream(File source, File dest) throws IOException {
@@ -23,9 +22,9 @@ public class CopyBinaryFile {
 
     public static void main(String[] args) {
 
-        String sourcePath = "src/ss16_io_binary_file/practice/acb.csv";
+        String sourcePath = "src/ss16_io_binary_file/practice/source_file.csv";
 
-        String destPath = "src/ss16_io_binary_file/practice/acbd.csv";
+        String destPath = "src/ss16_io_binary_file/practice/copy_file.csv";
 
         File sourceFile = new File(sourcePath);
         File destFile = new File(destPath);
