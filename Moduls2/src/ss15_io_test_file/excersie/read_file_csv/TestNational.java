@@ -13,7 +13,7 @@ public class TestNational {
         List<National> list = new ArrayList<>();
         String line = null;
         try {
-            FileReader fileReader = new FileReader("D:\\C0322G1-LeHuuPhuongDong\\Moduls2\\src\\ss15_io_test_file\\excersie\\read_file_csv\\input_csv");
+            FileReader fileReader = new FileReader("D:\\C0322G1-LeHuuPhuongDong\\Moduls2\\src\\ss15_io_test_file\\excersie\\read_file_csv\\input.csv");
             BufferedReader bufferedReader = new BufferedReader(fileReader);
             while ((line = bufferedReader.readLine()) != null) {
                 String[] arr = line.split(",");

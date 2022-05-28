@@ -10,7 +10,7 @@ public class MainNational {
         BufferedReader br = null;
         try {
             String line;
-            br = new BufferedReader(new FileReader("D:\\C0322G1-LeHuuPhuongDong\\Moduls2\\src\\ss15_io_test_file\\excersie\\read_file_csv\\input_csv"));
+            br = new BufferedReader(new FileReader("D:\\C0322G1-LeHuuPhuongDong\\Moduls2\\src\\ss15_io_test_file\\excersie\\read_file_csv\\input.csv"));
 
             while ((line = br.readLine()) != null) {
                 printCountry(parseCsvLine(line));
