@@ -8,10 +8,9 @@ public class ServiceProduct {
     static Scanner input = new Scanner(System.in);
     static List<ProductBinaryFile> list = new LinkedList<>();
     static String link = "src/ss16_io_binary_file/excersie/product_file/binary.csv";
-    static int count = 1;
 
     public static void displayMenu() {
-        Utils.readFileProduct(link);
+        list = Utils.readFileProduct(link);
         for (ProductBinaryFile item : list) {
             System.out.println(item);
         }
@@ -19,7 +18,9 @@ public class ServiceProduct {
 
     public static void addProduct() {
         try {
-            int code = count++;
+            Utils.readFileProduct(link);
+
+            int code = list.size() + 1;
             System.out.println("Enter name of Product to add: ");
             String name = input.nextLine();
             System.out.println("Enter production to add: ");
@@ -29,14 +30,13 @@ public class ServiceProduct {
             list.add(new ProductBinaryFile(code, name, production, price));
             System.out.println("Add product success.");
             Utils.writeFileProduct(link, list);
-            displayMenu();
         } catch (NumberFormatException e) {
             System.err.println("Bạn nhập sai định dạng số.");
         }
     }
 
     public static void searchProduct() {
-        System.out.println("You need known Name to delete!:");
+        System.out.println("You need known Name to search!:");
         String name = input.nextLine();
         boolean flag = false;
         for (ProductBinaryFile item1 : list) {
