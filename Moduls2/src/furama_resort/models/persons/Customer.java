@@ -1,7 +1,5 @@
 package furama_resort.models.persons;
 
-import furama_resort.controllers.FuramaControllers;
-
 import java.util.Scanner;
 
 public class Customer extends Person {

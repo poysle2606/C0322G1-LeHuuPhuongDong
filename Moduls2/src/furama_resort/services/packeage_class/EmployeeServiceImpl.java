@@ -39,7 +39,7 @@ public class EmployeeServiceImpl implements EmployeeService {
                 case 4:
                     return "After University";
                 default:
-                    System.out.println("If you entered it wrong, please re-enter it.");
+                    System.err.println("Bạn nhập sai vui lòng nhập lại.");
             }
         } while (true);
     }
@@ -68,7 +68,7 @@ public class EmployeeServiceImpl implements EmployeeService {
                 case 6:
                     return "CEO";
                 default:
-                    System.out.println("If you entered it wrong, please re-enter it.");
+                    System.err.println("Bạn nhập sai vui lòng nhập lại.");
                     break;
             }
         } while (true);

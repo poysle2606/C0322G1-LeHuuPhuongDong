@@ -25,6 +25,21 @@ public class FacilityServiceImpl implements FacilityService{
     }
 
     @Override
+    public void addPerson() {
+
+    }
+
+    @Override
+    public void deletePerson() {
+
+    }
+
+    @Override
+    public void updatePerson() {
+
+    }
+
+    @Override
     public void addNew() {
 
     }

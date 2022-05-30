@@ -1,24 +1,29 @@
 package furama_resort.models;
 
+import furama_resort.models.facilitys.Facility;
+import furama_resort.models.persons.Customer;
+
 public class Booking {
     private int codeBooking;
-    private int startDay;
-    private int endDay;
-    private int codeCustomer;
-    private String nameService;
-    private String typeService;
+    private String startDay;
+    private String endDay;
+    private int idCustomer;
+    private String nameFacility;
+    private String facility;
+
+    public Booking(int codeBooking, String startDay, String endDay,
+                   int idCustomer, String nameFacility, String facility) {
+        this.codeBooking = codeBooking;
+        this.startDay = startDay;
+        this.endDay = endDay;
+        this.idCustomer = idCustomer;
+        this.nameFacility = nameFacility;
+        this.facility = facility;
+    }
 
     public Booking() {
     }
 
-    public Booking(int codeBooking, int startDay, int endDay, int codeCustomer, String nameService, String typeService) {
-        this.codeBooking = codeBooking;
-        this.startDay = startDay;
-        this.endDay = endDay;
-        this.codeCustomer = codeCustomer;
-        this.nameService = nameService;
-        this.typeService = typeService;
-    }
 
     public int getCodeBooking() {
         return codeBooking;
@@ -28,55 +33,56 @@ public class Booking {
         this.codeBooking = codeBooking;
     }
 
-    public int getStartDay() {
+    public String getStartDay() {
         return startDay;
     }
 
-    public void setStartDay(int startDay) {
+    public void setStartDay(String startDay) {
         this.startDay = startDay;
     }
 
-    public int getEndDay() {
+    public String getEndDay() {
         return endDay;
     }
 
-    public void setEndDay(int endDay) {
+    public void setEndDay(String endDay) {
         this.endDay = endDay;
     }
 
-    public int getCodeCustomer() {
-        return codeCustomer;
+    public int getIdCustomer() {
+        return idCustomer;
     }
 
-    public void setCodeCustomer(int codeCustomer) {
-        this.codeCustomer = codeCustomer;
+    public void setIdCustomer(int idCustomer) {
+        this.idCustomer = idCustomer;
     }
 
-    public String getNameService() {
-        return nameService;
+    public String getNameFacility() {
+        return nameFacility;
     }
 
-    public void setNameService(String nameService) {
-        this.nameService = nameService;
+    public void setNameFacility(String nameFacility) {
+        this.nameFacility = nameFacility;
     }
 
-    public String getTypeService() {
-        return typeService;
+    public String getFacility() {
+        return facility;
     }
 
-    public void setTypeService(String typeService) {
-        this.typeService = typeService;
+    public void setFacility(String facility) {
+        this.facility = facility;
     }
 
     @Override
     public String toString() {
         return "Booking{" +
                 "codeBooking=" + codeBooking +
-                ", startDay=" + startDay +
-                ", endDay=" + endDay +
-                ", codeCustomer=" + codeCustomer +
-                ", nameService='" + nameService + '\'' +
-                ", typeService='" + typeService + '\'' +
+                ", startDay='" + startDay + '\'' +
+                ", endDay='" + endDay + '\'' +
+                ", idCustomer=" + idCustomer +
+                ", nameFacility='" + nameFacility + '\'' +
+                ", facility='" + facility + '\'' +
                 '}';
     }
+
 }

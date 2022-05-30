@@ -1,6 +1,6 @@
 package furama_resort.services.package_impl;
 
-public interface FacilityService {
+public interface FacilityService extends Services {
     void display();
     void addNew();
     void listToUpdate();

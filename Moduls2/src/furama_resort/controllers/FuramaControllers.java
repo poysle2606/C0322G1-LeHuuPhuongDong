@@ -20,27 +20,33 @@ public class FuramaControllers {
     }
 
     public static void mainMenu() {
-        int chooseMainMenu = Integer.parseInt(input.nextLine());
-        switch (chooseMainMenu) {
-            case 1:
-                AllMethod.menuEmployee();
-                break;
-            case 2:
-                AllMethod.menuCustomer();
-                break;
-            case 3:
-                AllMethod.menuFacility();
-                break;
-            case 4:
-                AllMethod.menuBooking();
-                break;
-            case 5:
-                AllMethod.promotionManager();
-                break;
-            case 6:
-                System.out.println("Exit program.");
-                System.exit(0);
-                break;
+        try {
+            int chooseMainMenu = Integer.parseInt(input.nextLine());
+            switch (chooseMainMenu) {
+                case 1:
+                    AllMethod.menuEmployee();
+                    break;
+                case 2:
+                    AllMethod.menuCustomer();
+                    break;
+                case 3:
+                    AllMethod.menuFacility();
+                    break;
+                case 4:
+                    AllMethod.menuBooking();
+                    break;
+                case 5:
+                    AllMethod.promotionManager();
+                    break;
+                case 6:
+                    System.out.println("Exit program.");
+                    System.exit(0);
+                    break;
+                default:
+                    System.err.println("Bạn chỉ được nhập từ 1 - 6.");
+            }
+        } catch (Exception e) {
+            System.err.println("Bạn nhập sai định dạng số.");
         }
     }
 
@@ -59,9 +65,12 @@ public class FuramaControllers {
                         break;
                     case 2:
                         System.exit(0);
+                    default:
+                        System.err.println("Bạn chỉ được nhập từ 1 -2.");
                 }
+
             } catch (NumberFormatException e) {
-                System.err.println("Input is Not Numeric.");
+                System.err.println("Bạn nhập sai định dạng số.");
             }
         } while (true);
 
