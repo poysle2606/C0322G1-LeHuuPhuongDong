@@ -3,7 +3,7 @@ package furama_resort.models.persons;
 public abstract class Person {
     private int code;
     private String name;
-    private int old;
+    private String old;
     private String gender;
     private int id;
     private long numberPhone;
@@ -13,7 +13,7 @@ public abstract class Person {
 
     }
 
-    public Person(int code,String name, int old, String gender, int id, long numberPhone, String email) {
+    public Person(int code,String name, String old, String gender, int id, long numberPhone, String email) {
         this.code = code;
         this.name = name;
         this.old = old;
@@ -22,6 +22,7 @@ public abstract class Person {
         this.numberPhone = numberPhone;
         this.email = email;
     }
+    public abstract String getInfo();
 
     public int getCode() {
         return code;
@@ -47,11 +48,11 @@ public abstract class Person {
         this.name = name;
     }
 
-    public int getOld() {
+    public String getOld() {
         return old;
     }
 
-    public void setOld(int old) {
+    public void setOld(String old) {
         this.old = old;
     }
 
@@ -71,7 +72,7 @@ public abstract class Person {
         this.id = id;
     }
 
-    public long getNumberPhone(long numberPhoneToUpdate) {
+    public long getNumberPhone() {
         return numberPhone;
     }
 

@@ -3,16 +3,12 @@ package furama_resort.models;
 public class Contract {
     private int codeContract;
     private int codeBooking;
-    private int firstMoney;
-    private int totalMoney;
+    private double firstMoney;
+    private double totalMoney;
     private int idCustomer;
 
-    public Contract() {
-
-    }
-
-    public Contract(int codeContract, int codeBooking, int firstMoney,
-                    int totalMoney, int idCustomer) {
+    public Contract(int codeContract, int codeBooking, double firstMoney,
+                    double totalMoney, int idCustomer) {
         this.codeContract = codeContract;
         this.codeBooking = codeBooking;
         this.firstMoney = firstMoney;
@@ -36,19 +32,19 @@ public class Contract {
         this.codeBooking = codeBooking;
     }
 
-    public int getFirstMoney() {
+    public double getFirstMoney() {
         return firstMoney;
     }
 
-    public void setFirstMoney(int firstMoney) {
+    public void setFirstMoney(double firstMoney) {
         this.firstMoney = firstMoney;
     }
 
-    public int getTotalMoney() {
+    public double getTotalMoney() {
         return totalMoney;
     }
 
-    public void setTotalMoney(int totalMoney) {
+    public void setTotalMoney(double totalMoney) {
         this.totalMoney = totalMoney;
     }
 
@@ -62,12 +58,11 @@ public class Contract {
 
     @Override
     public String toString() {
-        return "Contract{" +
-                "codeContract=" + codeContract +
-                ", codeBooking=" + codeBooking +
-                ", firstMoney=" + firstMoney +
-                ", totalMoney=" + totalMoney +
-                ", idCustomer=" + idCustomer +
-                '}';
+        return "Contract have " +
+                "codeContract= " + codeContract +
+                ", codeBooking= " + codeBooking +
+                ", firstMoney= " + firstMoney +
+                ", totalMoney= " + totalMoney +
+                ", idCustomer= " + idCustomer;
     }
 }

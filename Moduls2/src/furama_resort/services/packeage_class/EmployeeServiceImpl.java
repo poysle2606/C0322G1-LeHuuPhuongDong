@@ -3,22 +3,21 @@ package furama_resort.services.packeage_class;
 import furama_resort.models.persons.Employee;
 import furama_resort.models.persons.Person;
 import furama_resort.services.package_impl.EmployeeService;
+import furama_resort.services.utils.ReadAndWrite;
+import furama_resort.services.utils.RegexData;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class EmployeeServiceImpl implements EmployeeService {
-    static ArrayList<Person> arrayEmployee = new ArrayList<>();
     static Scanner input = new Scanner(System.in);
-    static int countCode;
+    private final String REGEX_ID = "^[0-9]{3}$";
+    private final String REGEX_AGE = "^(0?[1-9]|[12][0-9]|3[01])[\\/\\-](0?[1-9]|1[012])[\\/\\-]\\d{4}$";
 
-    static {
-        arrayEmployee.add(new Employee(100, "Dong", 25, "Men", 1001, 383178456, "dongle2606@gmail.com", "Intermediate", "Truong phong", 6000000));
-        arrayEmployee.add(new Employee(101, "Duc", 24, "Woman", 1002, 383178456, "ducga113@gmail.com", "University", "Pho Truong phong", 5500000));
-        arrayEmployee.add(new Employee(102, "Huy", 26, "Woman", 1003, 383178456, "huyhaihuoc@gmail.com", "Colleges", "To Truong", 5000000));
-        arrayEmployee.add(new Employee(103, "Khan", 28, "Men", 1004, 383178456, "khanpro@gmail.com", "University", "Nhan vien", 4000000));
-        countCode = 104;
-    }
+    List<Employee> arrayEmployee = new ArrayList<>();
+    String link = "D:\\C0322G1-LeHuuPhuongDong\\Moduls2\\src\\furama_resort\\files\\employee.csv";
+
 
     public String level() {
         do {
@@ -39,7 +38,7 @@ public class EmployeeServiceImpl implements EmployeeService {
                 case 4:
                     return "After University";
                 default:
-                    System.err.println("Bạn nhập sai vui lòng nhập lại.");
+                    System.err.println("You entered it wrong, please re-enter.");
             }
         } while (true);
     }
@@ -68,7 +67,7 @@ public class EmployeeServiceImpl implements EmployeeService {
                 case 6:
                     return "CEO";
                 default:
-                    System.err.println("Bạn nhập sai vui lòng nhập lại.");
+                    System.err.println("You entered it wrong, please re-enter.");
                     break;
             }
         } while (true);
@@ -76,7 +75,14 @@ public class EmployeeServiceImpl implements EmployeeService {
 
     @Override
     public void display() {
-        for (Person person :
+        List<String[]> list = ReadAndWrite.readFile(link);
+        for (String[] item : list) {
+            Employee employee = new Employee(Integer.parseInt(item[0]), item[1], item[2],
+                    item[3], Integer.parseInt(item[4]), Long.parseLong(item[5]),
+                    item[6], item[7], item[8], Integer.parseInt(item[9]));
+            arrayEmployee.add(employee);
+        }
+        for (Employee person :
                 arrayEmployee) {
             System.out.println(person);
         }
@@ -84,12 +90,18 @@ public class EmployeeServiceImpl implements EmployeeService {
 
     @Override
     public void addPerson() {
-        System.out.println("Employee Code is auto increase!");
-        int code = countCode++;
+        List<String[]> list = ReadAndWrite.readFile(link);
+        for (String[] item : list) {
+            Employee employee = new Employee(Integer.parseInt(item[0]), item[1], item[2],
+                    item[3], Integer.parseInt(item[4]), Long.parseLong(item[5]),
+                    item[6], item[7], item[8], Integer.parseInt(item[9]));
+            arrayEmployee.add(employee);
+        }
+        int code = Integer.parseInt(idEmployee());
         System.out.println("Enter name to add: ");
         String name = input.nextLine();
         System.out.println("Date of employee: ");
-        int date = Integer.parseInt(input.nextLine());
+        String date = RegexData.regexAge(input.nextLine(), REGEX_AGE);
         System.out.println("Gender of employee is: ");
         String gender = input.nextLine();
         System.out.println("CMND of employee is: ");
@@ -104,9 +116,100 @@ public class EmployeeServiceImpl implements EmployeeService {
         String position = position();
         System.out.println("Salary of employee is: ");
         int salary = Integer.parseInt(input.nextLine());
-        arrayEmployee.add(new Employee(code, name, date, gender, cmnd, numberPhone, email, level, position, salary));
-        countCode++;
+        Employee e = new Employee(code, name, date, gender, cmnd, numberPhone, email, level, position, salary);
+        arrayEmployee.add(e);
+
+        String str = "";
+        for (Employee employee : arrayEmployee) {
+            str += employee.getInfo() + "," + employee.getLevel() + "," + employee.getPosition() + "," + employee.getSalary() + "\n";
+
+        }
+
+        ReadAndWrite.writeFile(link, str);
         System.out.println("Add employee success!");
+    }
+
+    @Override
+    public void updatePerson() {
+        System.out.println("You need CODE EMPLOYEE to update \n" +
+                "1.I known \n" +
+                "2.I will show listing for you search Employee CODE.");
+        int knowCode = Integer.parseInt(input.nextLine());
+        switch (knowCode) {
+            case 1:
+                System.out.println("Enter code in here:");
+                boolean flag = false;
+                int code = Integer.parseInt(input.nextLine());
+                Employee employee = new Employee();
+
+                List<String[]> list = ReadAndWrite.readFile(link);
+                for (String[] item : list) {
+                    Employee employee1 = new Employee(Integer.parseInt(item[0]), item[1], item[2],
+                            item[3], Integer.parseInt(item[4]), Long.parseLong(item[5]),
+                            item[6], item[7], item[8], Integer.parseInt(item[9]));
+                    arrayEmployee.add(employee1);
+                }
+
+                for (int i = 0; i < arrayEmployee.size(); i++) {
+                    if (code == arrayEmployee.get(i).getCode()) {
+                        arrayEmployee.set(i, employee);
+                        System.out.println("Enter name to update: ");
+                        String nameToUpdate = input.nextLine();
+                        System.out.println("Date of employee: ");
+                        String dateToUpdate = input.nextLine();
+                        System.out.println("Gender of employee is: ");
+                        String genderToUpdate = input.nextLine();
+                        System.out.println("CMND of employee is: ");
+                        int idToUpdate = Integer.parseInt(input.nextLine());
+                        System.out.println("Number phone of employee is: ");
+                        long numberPhoneToUpdate = Integer.parseInt(input.nextLine());
+                        System.out.println("Email is: ");
+                        String emailToUpdate = input.nextLine();
+                        System.out.println("Level of employee: ");
+                        String levelToUpdate = level();
+                        System.out.println("Position of employee is: ");
+                        String positionToUpdate = position();
+                        System.out.println("Salary of employee is: ");
+                        int salaryToUpdate = Integer.parseInt(input.nextLine());
+                        employee.setCode(code);
+                        employee.setName(nameToUpdate);
+                        employee.setOld(dateToUpdate);
+                        employee.setGender(genderToUpdate);
+                        employee.setId(idToUpdate);
+                        employee.setNumberPhone(numberPhoneToUpdate);
+                        employee.setEmail(emailToUpdate);
+                        employee.setLevel(levelToUpdate);
+                        employee.setPosition(positionToUpdate);
+                        employee.setSalary(salaryToUpdate);
+                        String line = "";
+                        for (int j = 0; j < arrayEmployee.size(); j++) {
+                            line += arrayEmployee.get(j).getCode() + "," + arrayEmployee.get(j).getName() + "," + arrayEmployee.get(j).getOld()
+                                    + "," + arrayEmployee.get(j).getGender() + "," + arrayEmployee.get(j).getId() + "," + arrayEmployee.get(j).getNumberPhone()
+                                    + "," + arrayEmployee.get(j).getEmail() + "," + arrayEmployee.get(j).getLevel() + "," + arrayEmployee.get(j).getPosition()
+                                    + "," + arrayEmployee.get(j).getSalary() + "\n";
+                        }
+                        ReadAndWrite.writeFile(link, line);
+                        System.out.println("Update success!");
+                        flag = true;
+
+                    }
+                }
+                if (!flag) {
+                    System.out.println("I NOT found code of this Employee.");
+                }
+                break;
+            case 2:
+                display();
+                break;
+            default:
+                System.err.println("You entered it wrong, please re-enter");
+        }
+
+    }
+
+    public String idEmployee() {
+        System.out.println("Enter id of Employee.");
+        return RegexData.regexStr(input.nextLine(), REGEX_ID, "Input in the form XXX is 3 positive integers");
     }
 
     @Override
@@ -133,55 +236,4 @@ public class EmployeeServiceImpl implements EmployeeService {
 //     }
     }
 
-    @Override
-    public void updatePerson() {
-        System.out.println("You need CODE EMPLOYEE to update \n" +
-                "1.I known \n" +
-                "2.I will show listing for you search Employee CODE.");
-        int knowCode = Integer.parseInt(input.nextLine());
-        switch (knowCode) {
-            case 1:
-                System.out.println("Enter code in here:");
-                int code = Integer.parseInt(input.nextLine());
-                Employee employee = new Employee();
-                for (int i = 0; i < arrayEmployee.size(); i++) {
-                    if (code == arrayEmployee.get(i).getCode()) {
-                        arrayEmployee.set(i, employee);
-                        System.out.println("Enter name to update: ");
-                        String nameToUpdate = input.nextLine();
-                        System.out.println("Date of employee: ");
-                        int dateToUpdate = Integer.parseInt(input.nextLine());
-                        System.out.println("Gender of employee is: ");
-                        String genderToUpdate = input.nextLine();
-                        System.out.println("CMND of employee is: ");
-                        int idToUpdate = Integer.parseInt(input.nextLine());
-                        System.out.println("Number phone of employee is: ");
-                        long numberPhoneToUpdate = Integer.parseInt(input.nextLine());
-                        System.out.println("Email is: ");
-                        String emailToUpdate = input.nextLine();
-                        System.out.println("Level of employee: ");
-                        String levelToUpdate = level();
-                        System.out.println("Position of employee is: ");
-                        String positionToUpdate = position();
-                        System.out.println("Salary of employee is: ");
-                        int salaryToUpdate = Integer.parseInt(input.nextLine());
-                        employee.setCode(code);
-                        employee.setName(nameToUpdate);
-                        employee.setOld(dateToUpdate);
-                        employee.setGender(genderToUpdate);
-                        employee.setId(idToUpdate);
-                        employee.setNumberPhone(numberPhoneToUpdate);
-                        employee.setEmail(emailToUpdate);
-                        employee.setLevel(levelToUpdate);
-                        employee.setPosition(positionToUpdate);
-                        employee.setSalary(salaryToUpdate);
-                        System.out.println("Update success!");
-                    }
-                }
-                break;
-            case 2:
-                display();
-        }
-
-    }
 }

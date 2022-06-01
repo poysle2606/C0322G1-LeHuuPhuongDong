@@ -3,6 +3,7 @@ package furama_resort.models.facilitys;
 import java.util.Scanner;
 
 public abstract class Facility {
+    private String idService;
     private String nameService;
     private double area;
     private double price;
@@ -11,6 +12,24 @@ public abstract class Facility {
 
     public Facility() {
 
+    }
+
+    public Facility(String idService, String nameService, double area, double price, int maximumOfPeople,
+                    String rentalType) {
+        this.idService = idService;
+        this.nameService = nameService;
+        this.area = area;
+        this.price = price;
+        this.maximumOfPeople = maximumOfPeople;
+        this.rentalType = rentalType;
+    }
+
+    public String getIdService() {
+        return idService;
+    }
+
+    public void setIdService(String idService) {
+        this.idService = idService;
     }
 
     public String getNameService() {
@@ -88,12 +107,12 @@ public abstract class Facility {
 
     @Override
     public String toString() {
-        return "Included Facility: " +
-                "Name of Service= '" + nameService + '\'' +
-                ", area= " + area +
-                ", price= " + price +
-                ", maximum of People= " + maximumOfPeople +
-                ", rental type= '" + rentalType + '\'';
-
+        return "Facility have " +
+                "idService='" + idService +
+                ", nameService='" + nameService +
+                ", area=" + area +
+                ", price=" + price +
+                ", maximumOfPeople=" + maximumOfPeople +
+                ", rentalType='" + rentalType;
     }
 }

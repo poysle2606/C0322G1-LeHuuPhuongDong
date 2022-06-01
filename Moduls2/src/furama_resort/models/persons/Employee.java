@@ -8,13 +8,25 @@ public class Employee extends Person {
     public Employee() {
     }
 
+    @Override
+    public String getInfo() {
+        return String.format("%s,%s,%s,%s,%s,%s,%s",
+                super.getCode(),
+                super.getName(),
+                super.getOld(),
+                super.getGender(),
+                super.getId(),
+                super.getNumberPhone(),
+                super.getEmail());
+    }
+
     public Employee(String level, String position, int salary) {
         this.level = level;
         this.position = position;
         this.salary = salary;
     }
 
-    public Employee(int code, String name, int old, String gender, int id, long numberPhone,
+    public Employee(int code, String name, String old, String gender, int id, long numberPhone,
                     String email, String level, String position, int salary) {
         super(code, name, old, gender, id, numberPhone, email);
         this.level = level;

@@ -20,59 +20,34 @@ public class FuramaControllers {
     }
 
     public static void mainMenu() {
+        int chooseMainMenu = 0;
         try {
-            int chooseMainMenu = Integer.parseInt(input.nextLine());
-            switch (chooseMainMenu) {
-                case 1:
-                    AllMethod.menuEmployee();
-                    break;
-                case 2:
-                    AllMethod.menuCustomer();
-                    break;
-                case 3:
-                    AllMethod.menuFacility();
-                    break;
-                case 4:
-                    AllMethod.menuBooking();
-                    break;
-                case 5:
-                    AllMethod.promotionManager();
-                    break;
-                case 6:
-                    System.out.println("Exit program.");
-                    System.exit(0);
-                    break;
-                default:
-                    System.err.println("Bạn chỉ được nhập từ 1 - 6.");
-            }
+            chooseMainMenu = Integer.parseInt(input.nextLine());
         } catch (Exception e) {
-            System.err.println("Bạn nhập sai định dạng số.");
+            System.err.println("You can't enter Alphabet.");
         }
-    }
-
-    public static void main(String[] args) {
-
-        do {
-            try {
-                System.out.println("We will start the program now! \n" +
-                        "1. Start program. \n" +
-                        "2.End program.");
-                int chooseStarOrEnd = Integer.parseInt(input.nextLine());
-                switch (chooseStarOrEnd) {
-                    case 1:
-                        System.out.println("Started!");
-                        displayMainMenu();
-                        break;
-                    case 2:
-                        System.exit(0);
-                    default:
-                        System.err.println("Bạn chỉ được nhập từ 1 -2.");
-                }
-
-            } catch (NumberFormatException e) {
-                System.err.println("Bạn nhập sai định dạng số.");
-            }
-        } while (true);
-
+        switch (chooseMainMenu) {
+            case 1:
+                AllMethod.menuEmployee();
+                break;
+            case 2:
+                AllMethod.menuCustomer();
+                break;
+            case 3:
+                AllMethod.menuFacility();
+                break;
+            case 4:
+                AllMethod.menuBooking();
+                break;
+            case 5:
+                AllMethod.promotionManager();
+                break;
+            case 6:
+                System.out.println("Exit program.");
+                System.exit(0);
+                break;
+            default:
+                System.err.println("You can enter number 1 - 6.");
+        }
     }
 }

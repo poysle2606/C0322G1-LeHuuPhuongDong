@@ -75,14 +75,14 @@ public class Booking {
 
     @Override
     public String toString() {
-        return "Booking{" +
-                "codeBooking=" + codeBooking +
-                ", startDay='" + startDay + '\'' +
-                ", endDay='" + endDay + '\'' +
-                ", idCustomer=" + idCustomer +
-                ", nameFacility='" + nameFacility + '\'' +
-                ", facility='" + facility + '\'' +
-                '}';
+        return "Booking List have " +
+                "codeBooking= " + codeBooking +
+                ", startDay is " + startDay +
+                ", endDay is " + endDay +
+                ", idCustomer= " + idCustomer +
+                ", nameFacility is " + nameFacility +
+                ", facility is " + facility;
+
     }
 
 }
