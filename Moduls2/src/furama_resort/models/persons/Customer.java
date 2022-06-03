@@ -11,14 +11,16 @@ public class Customer extends Person {
 
     @Override
     public String getInfo() {
-        return String.format("%s,%s,%s,%s,%s,%s,%s",
+        return String.format("%s,%s,%s,%s,%s,%s,%s,%s,%s",
                 super.getCode(),
                 super.getName(),
                 super.getOld(),
                 super.getGender(),
                 super.getId(),
                 super.getNumberPhone(),
-                super.getEmail());
+                super.getEmail(),
+                getTypeCustomer(),
+                getAddress());
     }
 
     public Customer(String typeCustomer, String address) {

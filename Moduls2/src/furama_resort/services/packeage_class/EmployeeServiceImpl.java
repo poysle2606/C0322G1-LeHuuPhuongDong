@@ -16,7 +16,7 @@ public class EmployeeServiceImpl implements EmployeeService {
     private final String REGEX_AGE = "^(0?[1-9]|[12][0-9]|3[01])[\\/\\-](0?[1-9]|1[012])[\\/\\-]\\d{4}$";
 
     List<Employee> arrayEmployee = new ArrayList<>();
-    String link = "D:\\C0322G1-LeHuuPhuongDong\\Moduls2\\src\\furama_resort\\files\\employee.csv";
+   private final String LINK = "D:\\C0322G1-LeHuuPhuongDong\\Moduls2\\src\\furama_resort\\files\\employee.csv";
 
 
     public String level() {
@@ -27,7 +27,9 @@ public class EmployeeServiceImpl implements EmployeeService {
                     "4.After University.\n" +
                     "5.Return main Menu");
             System.out.println("Enter level: ");
+
             int level = Integer.parseInt(input.nextLine());
+
             switch (level) {
                 case 1:
                     return "Intermediate";
@@ -52,7 +54,9 @@ public class EmployeeServiceImpl implements EmployeeService {
                     "5.Manage. \n" +
                     "6.CEO.");
             System.out.println("Choose is here:");
+
             int choosePosition = Integer.parseInt(input.nextLine());
+
             switch (choosePosition) {
                 case 1:
                     return "Receptionist";
@@ -75,13 +79,15 @@ public class EmployeeServiceImpl implements EmployeeService {
 
     @Override
     public void display() {
-        List<String[]> list = ReadAndWrite.readFile(link);
+        List<String[]> list = ReadAndWrite.readFile(LINK);
+
         for (String[] item : list) {
             Employee employee = new Employee(Integer.parseInt(item[0]), item[1], item[2],
                     item[3], Integer.parseInt(item[4]), Long.parseLong(item[5]),
                     item[6], item[7], item[8], Integer.parseInt(item[9]));
             arrayEmployee.add(employee);
         }
+
         for (Employee person :
                 arrayEmployee) {
             System.out.println(person);
@@ -89,61 +95,80 @@ public class EmployeeServiceImpl implements EmployeeService {
     }
 
     @Override
-    public void addPerson() {
-        List<String[]> list = ReadAndWrite.readFile(link);
+    public void add() {
+        List<String[]> list = ReadAndWrite.readFile(LINK);
+
         for (String[] item : list) {
             Employee employee = new Employee(Integer.parseInt(item[0]), item[1], item[2],
                     item[3], Integer.parseInt(item[4]), Long.parseLong(item[5]),
                     item[6], item[7], item[8], Integer.parseInt(item[9]));
             arrayEmployee.add(employee);
         }
+
         int code = Integer.parseInt(idEmployee());
+
         System.out.println("Enter name to add: ");
         String name = input.nextLine();
+
         System.out.println("Date of employee: ");
         String date = RegexData.regexAge(input.nextLine(), REGEX_AGE);
+
         System.out.println("Gender of employee is: ");
         String gender = input.nextLine();
+
         System.out.println("CMND of employee is: ");
         int cmnd = Integer.parseInt(input.nextLine());
+
         System.out.println("Number phone of employee is: ");
         long numberPhone = Integer.parseInt(input.nextLine());
+
         System.out.println("Email is: ");
         String email = input.nextLine();
+
         System.out.println("Level of employee: ");
         String level = level();
+
         System.out.println("Position of employee is: ");
         String position = position();
         System.out.println("Salary of employee is: ");
+
         int salary = Integer.parseInt(input.nextLine());
+
         Employee e = new Employee(code, name, date, gender, cmnd, numberPhone, email, level, position, salary);
         arrayEmployee.add(e);
 
         String str = "";
-        for (Employee employee : arrayEmployee) {
-            str += employee.getInfo() + "," + employee.getLevel() + "," + employee.getPosition() + "," + employee.getSalary() + "\n";
 
+        for (Employee employee : arrayEmployee) {
+            str += employee.getInfo() + "\n";
         }
 
-        ReadAndWrite.writeFile(link, str);
+        ReadAndWrite.writeFile(LINK, str);
+
         System.out.println("Add employee success!");
     }
 
     @Override
-    public void updatePerson() {
+    public void update() {
         System.out.println("You need CODE EMPLOYEE to update \n" +
                 "1.I known \n" +
                 "2.I will show listing for you search Employee CODE.");
+
         int knowCode = Integer.parseInt(input.nextLine());
+
         switch (knowCode) {
             case 1:
                 System.out.println("Enter code in here:");
+
                 boolean flag = false;
+
                 int code = Integer.parseInt(input.nextLine());
+
                 Employee employee = new Employee();
 
-                List<String[]> list = ReadAndWrite.readFile(link);
+                List<String[]> list = ReadAndWrite.readFile(LINK);
                 for (String[] item : list) {
+
                     Employee employee1 = new Employee(Integer.parseInt(item[0]), item[1], item[2],
                             item[3], Integer.parseInt(item[4]), Long.parseLong(item[5]),
                             item[6], item[7], item[8], Integer.parseInt(item[9]));
@@ -153,24 +178,34 @@ public class EmployeeServiceImpl implements EmployeeService {
                 for (int i = 0; i < arrayEmployee.size(); i++) {
                     if (code == arrayEmployee.get(i).getCode()) {
                         arrayEmployee.set(i, employee);
+
                         System.out.println("Enter name to update: ");
                         String nameToUpdate = input.nextLine();
+
                         System.out.println("Date of employee: ");
                         String dateToUpdate = input.nextLine();
+
                         System.out.println("Gender of employee is: ");
                         String genderToUpdate = input.nextLine();
+
                         System.out.println("CMND of employee is: ");
                         int idToUpdate = Integer.parseInt(input.nextLine());
+
                         System.out.println("Number phone of employee is: ");
                         long numberPhoneToUpdate = Integer.parseInt(input.nextLine());
+
                         System.out.println("Email is: ");
                         String emailToUpdate = input.nextLine();
+
                         System.out.println("Level of employee: ");
                         String levelToUpdate = level();
+
                         System.out.println("Position of employee is: ");
                         String positionToUpdate = position();
+
                         System.out.println("Salary of employee is: ");
                         int salaryToUpdate = Integer.parseInt(input.nextLine());
+
                         employee.setCode(code);
                         employee.setName(nameToUpdate);
                         employee.setOld(dateToUpdate);
@@ -181,15 +216,19 @@ public class EmployeeServiceImpl implements EmployeeService {
                         employee.setLevel(levelToUpdate);
                         employee.setPosition(positionToUpdate);
                         employee.setSalary(salaryToUpdate);
+
                         String line = "";
+
                         for (int j = 0; j < arrayEmployee.size(); j++) {
                             line += arrayEmployee.get(j).getCode() + "," + arrayEmployee.get(j).getName() + "," + arrayEmployee.get(j).getOld()
                                     + "," + arrayEmployee.get(j).getGender() + "," + arrayEmployee.get(j).getId() + "," + arrayEmployee.get(j).getNumberPhone()
                                     + "," + arrayEmployee.get(j).getEmail() + "," + arrayEmployee.get(j).getLevel() + "," + arrayEmployee.get(j).getPosition()
                                     + "," + arrayEmployee.get(j).getSalary() + "\n";
                         }
-                        ReadAndWrite.writeFile(link, line);
+                        ReadAndWrite.writeFile(LINK, line);
+
                         System.out.println("Update success!");
+
                         flag = true;
 
                     }
@@ -212,8 +251,7 @@ public class EmployeeServiceImpl implements EmployeeService {
         return RegexData.regexStr(input.nextLine(), REGEX_ID, "Input in the form XXX is 3 positive integers");
     }
 
-    @Override
-    public void deletePerson() {
+ // public void delete() {
 //        System.out.println("You need CODE EMPLOYEE to delete \n" +
 //                "1.I known \n" +
 //                "2.I need return.");
@@ -234,6 +272,6 @@ public class EmployeeServiceImpl implements EmployeeService {
 //            case 2:
 //                display();
 //     }
-    }
+   // }
 
 }

@@ -1,11 +1,11 @@
 package furama_resort.services.package_impl;
 
+import java.util.zip.DataFormatException;
+
 public interface Services {
     void display();
 
-    void addPerson();
+    void add() throws DataFormatException;
 
-    void deletePerson();
-
-    void updatePerson();
+    void update();
 }

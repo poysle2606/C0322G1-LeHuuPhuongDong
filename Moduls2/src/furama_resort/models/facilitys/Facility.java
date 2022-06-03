@@ -24,6 +24,8 @@ public abstract class Facility {
         this.rentalType = rentalType;
     }
 
+    public abstract String information();
+
     public String getIdService() {
         return idService;
     }
@@ -64,33 +66,39 @@ public abstract class Facility {
         this.maximumOfPeople = maximumOfPeople;
     }
 
+    public String getRentalType2() {
+        return rentalType;
+    }
+
     public String getRentalType() {
+
         Scanner input = new Scanner(System.in);
-        System.out.println("What do you want choose rental type?: ");
         do {
+            System.out.println("What do you want choose rental type?: ");
             System.out.println("1.Year.\n" +
                     "2.Month.\n" +
                     "3.Day.\n" +
                     "4.Hour.");
             System.out.println("Enter in here: ");
-            int choose = Integer.parseInt(input.nextLine());
-            switch (choose) {
-                case 1:
-                    return "Year";
-                case 2:
-                    return "Month";
-                case 3:
-                    return "Day";
-                case 4:
-                    return "Hour";
-                default:
-                    System.out.println("Enter again: ");
+            try {
+                int choose = Integer.parseInt(input.nextLine());
+                switch (choose) {
+                    case 1:
+                        return "Year";
+                    case 2:
+                        return "Month";
+                    case 3:
+                        return "Day";
+                    case 4:
+                        return "Hour";
+                    default:
+                        System.out.println("Enter again: ");
+                }
+            } catch (NumberFormatException e) {
+                System.err.println("You entered it wrong, please re-enter");
             }
         } while (true);
-    }
 
-    public String getRentalType2() {
-        return getRentalType();
     }
 
     public void setRentalType(String rentalType) {

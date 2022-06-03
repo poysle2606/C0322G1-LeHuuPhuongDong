@@ -8,10 +8,23 @@ public class House extends Facility {
 
     }
 
-    public House(String nameService, double area, double price,
+    @Override
+    public String information() {
+        return String.format("%s,%s,%s,%s,%s,%s,%s,%s",
+                super.getIdService(),
+                super.getNameService(),
+                super.getArea(),
+                super.getPrice(),
+                super.getMaximumOfPeople(),
+                super.getRentalType2(),
+                getRoomStandard(),
+                getNumberFloorOfHouse());
+    }
+
+    public House(String idService,String nameService, double area, double price,
                  int maximumOfPeople, String rentalType,
                  String roomStandard, int numberFloorOfHouse) {
-        super(nameService, area, price, maximumOfPeople, rentalType);
+        super(idService,nameService, area, price, maximumOfPeople, rentalType);
         this.roomStandard = roomStandard;
         this.numberFloorOfHouse = numberFloorOfHouse;
     }

@@ -59,7 +59,6 @@ public abstract class Person {
     public String getGender() {
         return gender;
     }
-
     public void setGender(String gender) {
         this.gender = gender;
     }

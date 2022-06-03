@@ -7,13 +7,25 @@ public class Room extends Facility {
 
     }
 
+    @Override
+    public String information() {
+        return String.format("%s,%s,%s,%s,%s,%s,%s",
+                super.getIdService(),
+                super.getNameService(),
+                super.getArea(),
+                super.getPrice(),
+                super.getMaximumOfPeople(),
+                super.getRentalType2(),
+                getServiceFree());
+    }
+
     public Room(String serviceFree) {
         this.serviceFree = serviceFree;
     }
 
-    public Room(String nameService, double area, double price, int maximumOfPeople,
+    public Room(String idService,String nameService, double area, double price, int maximumOfPeople,
                 String rentalType, String serviceFree) {
-        super(nameService, area, price, maximumOfPeople, rentalType);
+        super(idService,nameService, area, price, maximumOfPeople, rentalType);
         this.serviceFree = serviceFree;
     }
 

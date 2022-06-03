@@ -1,6 +1,7 @@
 package furama_resort.controllers;
 
 import java.util.Scanner;
+import java.util.zip.DataFormatException;
 
 public class FuramaControllers {
     static Scanner input = new Scanner(System.in);

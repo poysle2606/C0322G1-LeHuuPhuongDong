@@ -4,155 +4,215 @@ import furama_resort.models.facilitys.Facility;
 import furama_resort.models.facilitys.House;
 import furama_resort.models.facilitys.Room;
 import furama_resort.models.facilitys.Villa;
+import furama_resort.services.utils.ReadAndWrite;
+import furama_resort.services.utils.RegexExceptions;
 import furama_resort.services.package_impl.FacilityService;
-import furama_resort.services.utils.RegexData;
 
 import java.util.LinkedHashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
 
 public class FacilityServiceImpl implements FacilityService {
     static Map<Facility, Integer> facilityIntegerMap = new LinkedHashMap<>();
+
     static Scanner input = new Scanner(System.in);
-    private static final String REGEX_ID = "^[SV]+[VL|HO|RO][-][0-9]{4}$";
-    private static final String REGEX_ROOM = "^[SV]+[RO][-][0-9]{4}$";
-    private static final String REGEX_HOUSE = "^[SV]+[HO][-][0-9]{4}$";
-    private static final String REGEX_NAME = "^[A-Z][a-z]{0,5}$";
-    private static final String REGEX_AREA = "^[0-9]{2}+$";
-    private static final String REGEX_AMOUNT = "^[0-9]+$";
-    private static final String REGEX_PEOPLE = "^(([1-9])|(20))$";
+
+    private static final String LINK_VILLA = "D:\\C0322G1-LeHuuPhuongDong\\Moduls2\\src\\furama_resort\\files\\villa.csv";
+    private static final String LINK_HOUSE = "D:\\C0322G1-LeHuuPhuongDong\\Moduls2\\src\\furama_resort\\files\\house.csv";
+    private static final String LINK_ROOM = "D:\\C0322G1-LeHuuPhuongDong\\Moduls2\\src\\furama_resort\\files\\room.csv";
 
     @Override
     public void display() {
+        facilityIntegerMap.clear();
+
+        readVilla();
+        readHouse();
+        readRoom();
+
+        if (facilityIntegerMap.isEmpty()) {
+            System.err.println("The list is empty and needs to be added");
+        }
+
         for (Map.Entry<Facility, Integer> item :
                 facilityIntegerMap.entrySet()) {
             System.out.println("Service " + item.getKey() + "\n" + " number standard: " + item.getValue());
         }
     }
 
+    public void maintenance() {
+
+        readVilla();
+        readHouse();
+        readRoom();
+
+        for (Map.Entry<Facility, Integer> item :
+                facilityIntegerMap.entrySet()) {
+            if (item.getValue() >= 5) {
+                System.err.println("----Service needed Maintenance---- \n" +
+                        item.getKey() + "," + item.getValue());
+            }
+        }
+    }
+
     @Override
     public void addNewVilla() {
-        String idService = regexId();
-        String nameService = regexName();
-        double area = Double.parseDouble(regexArea());
-        double price = Double.parseDouble(regexAmount());
-        int people = Integer.parseInt(regexPeople());
-        String standard = regexRoomStandard();
+        facilityIntegerMap.clear();
+
+        readVilla();
+
+        String idService = RegexExceptions.regexId();
+
+        String nameService = RegexExceptions.regexName();
+
+        double area = Double.parseDouble(RegexExceptions.regexArea());
+
+        double price = Double.parseDouble(RegexExceptions.regexAmount());
+
+        int people = Integer.parseInt(RegexExceptions.regexPeople());
+
+        String standard = RegexExceptions.regexRoomStandard();
+
         System.out.println("Enter rental type : ");
         Villa villa = new Villa();
-        String rentalType = villa.getRentalType2();
-        double pool = Double.parseDouble(regexArea());
-        int floor = Integer.parseInt(regexArea());
+        String rentalType = villa.getRentalType();
+
+        double pool = Double.parseDouble(RegexExceptions.regexArea());
+
+        int floor = Integer.parseInt(RegexExceptions.regexFloor());
+
         Villa villa1 = new Villa(idService, nameService, area, price, people, rentalType, standard, pool, floor);
-        facilityIntegerMap.put(villa1, 0);
+        facilityIntegerMap.put(villa1, 5);
+
+        String line = "";
+        for (Map.Entry<Facility, Integer> villa2 : facilityIntegerMap.entrySet()) {
+            line += villa2.getKey().information() + "," + villa2.getValue() + "\n";
+
+        }
+        ReadAndWrite.writeFile(LINK_VILLA, line);
+
         System.out.println("Add NEW Villa success!");
     }
 
     @Override
     public void addNewHouse() {
-        String nameService = nameHouse();
-        double area = Double.parseDouble(regexArea());
-        double price = Double.parseDouble(regexAmount());
-        int people = Integer.parseInt(regexPeople());
-        String standard = regexRoomStandard();
+        facilityIntegerMap.clear();
+
+        readHouse();
+
+        String idService = RegexExceptions.idHouse();
+
+        String nameService = RegexExceptions.regexName();
+
+        double area = Double.parseDouble(RegexExceptions.regexArea());
+
+        double price = Double.parseDouble(RegexExceptions.regexAmount());
+
+        int people = Integer.parseInt(RegexExceptions.regexPeople());
+
+        String standard = RegexExceptions.regexRoomStandard();
+
         System.out.println("Enter rental type : ");
         House house = new House();
-        String rentalType = house.getRentalType2();
-        int floor = Integer.parseInt(regexFloor());
-        House house1 = new House(nameService, area, price, people, rentalType, standard, floor);
+        String rentalType = house.getRentalType();
+        int floor = Integer.parseInt(RegexExceptions.regexFloor());
+
+        House house1 = new House(idService, nameService, area, price, people, rentalType, standard, floor);
         facilityIntegerMap.put(house1, 0);
+
+        String line = "";
+        for (Map.Entry<Facility, Integer> house2 : facilityIntegerMap.entrySet()) {
+            line += house2.getKey().information() + "," + house2.getValue() + "\n";
+        }
+        ReadAndWrite.writeFile(LINK_HOUSE, line);
+
         System.out.println("Add NEW House success!");
 
     }
 
     @Override
     public void addNewRoom() {
-        String nameService = nameRoom();
-        double area = Double.parseDouble(regexArea());
-        double price = Double.parseDouble(regexAmount());
-        int people = Integer.parseInt(regexPeople());
+        facilityIntegerMap.clear();
+        readRoom();
+        String idService = RegexExceptions.idRoom();
+
+        String nameService = RegexExceptions.regexName();
+
+        double area = Double.parseDouble(RegexExceptions.regexArea());
+
+        double price = Double.parseDouble(RegexExceptions.regexAmount());
+
+        int people = Integer.parseInt(RegexExceptions.regexPeople());
+
         System.out.println("Enter rental type : ");
         Room room = new Room();
-        String rentalType = room.getRentalType2();
+        String rentalType = room.getRentalType();
+
         System.out.println("Service free: ");
         String service = input.nextLine();
-        Room room1 = new Room(nameService, area, price, people, rentalType, service);
+
+        Room room1 = new Room(idService, nameService, area, price, people, rentalType, service);
         facilityIntegerMap.put(room1, 0);
+
+        String line = "";
+        for (Map.Entry<Facility, Integer> room2 : facilityIntegerMap.entrySet()) {
+            line += room2.getKey().information() + "," + room2.getValue() + "\n";
+        }
+        ReadAndWrite.writeFile(LINK_ROOM, line);
+
         System.out.println("Add NEW Room success!");
     }
 
-    public static String regexId() {
-        System.out.println("Enter ID of service:");
-        return RegexData.regexStr(input.nextLine(), REGEX_ID, "You must enter the Form SVXX-YYYY. \n" +
-                " XX has Name of service (Villa - VL or House - HO or ROOM - RO). YYYY has number 0-9. ");
+    private static void readVilla() {
+        /**
+         * Villa
+         */
+        List<String[]> list1 = ReadAndWrite.readFile(LINK_VILLA);
+
+        for (String[] item : list1) {
+            Villa villa = new Villa(item[0], item[1], Double.parseDouble(item[2]),
+                    Double.parseDouble(item[3]), Integer.parseInt(item[4]), item[5],
+                    item[6], Double.parseDouble(item[7]), Integer.parseInt(item[8]));
+            facilityIntegerMap.put(villa, 5);
+        }
     }
 
-    public static String regexName() {
-        System.out.println("Name of service: ");
-        return RegexData.regexStr(input.nextLine(), REGEX_NAME, "\n" +
-                "Name service must capitalize the first character," +
-                " the following characters are normal characters");
+    private static void readHouse() {
+        /**
+         * House
+         */
+        List<String[]> list2 = ReadAndWrite.readFile(LINK_HOUSE);
+
+        for (String[] item2 : list2) {
+            House house = new House(item2[0], item2[1], Double.parseDouble(item2[2]),
+                    Double.parseDouble(item2[3]), Integer.parseInt(item2[4]), item2[5],
+                    item2[6], Integer.parseInt(item2[7]));
+            facilityIntegerMap.put(house, 0);
+        }
     }
 
-    public static String regexArea() {
-        System.out.println("Enter area Pool: ");
-        return RegexData.regexStr(input.nextLine(), REGEX_AREA, " \n" +
-                "Pool area must be more than 30 m^2. ");
-    }
+    private static void readRoom() {
 
-    public static String regexAmount() {
-        System.out.println("Enter price: ");
-        return RegexData.regexStr(input.nextLine(), REGEX_AMOUNT,
-                "Only positive Integers can be entered");
-    }
+        /**
+         * Room
+         */
+        List<String[]> list3 = ReadAndWrite.readFile(LINK_ROOM);
 
-    public static String regexPeople() {
-        System.out.println("Enter max People: ");
-        return RegexData.regexStr(input.nextLine(), REGEX_PEOPLE, "Enter < 20 People.");
-    }
-
-    public static String regexRoomStandard() {
-        System.out.println("Enter room standard: ");
-        return RegexData.regexStr(input.nextLine(), REGEX_NAME, "\n" +
-                "Standard room must capitalize the first character," +
-                " the following characters are normal characters");
-    }
-
-    public static String regexFloor() {
-        System.out.println("Enter number Floor: ");
-        return RegexData.regexStr(input.nextLine(), REGEX_AMOUNT,
-                "Only positive Integers can be entered");
-    }
-
-    public static String nameHouse() {
-        System.out.println("Enter name of service:");
-        return RegexData.regexStr(input.nextLine(), REGEX_HOUSE, "You must enter the Form SVXX-YYYY. \n" +
-                " XX has Name of service (Villa - VL or House - HO or ROOM - RO). YYYY has number 0-9. ");
-    }
-
-    public static String nameRoom() {
-        System.out.println("Enter name of service:");
-        return RegexData.regexStr(input.nextLine(), REGEX_ROOM, "You must enter the Form SVXX-YYYY. \n" +
-                " XX has Name of service (Villa - VL or House - HO or ROOM - RO). YYYY has number 0-9. ");
-    }
-
-    @Override
-    public void addPerson() {
+        for (String[] item3 : list3) {
+            Room room = new Room(item3[0], item3[1], Double.parseDouble(item3[2]),
+                    Double.parseDouble(item3[3]), Integer.parseInt(item3[4]), item3[5], item3[6]);
+            facilityIntegerMap.put(room, 0);
+        }
 
     }
 
     @Override
-    public void deletePerson() {
+    public void add() {
 
     }
 
     @Override
-    public void updatePerson() {
-
-    }
-
-    @Override
-    public void addNew() {
+    public void update() {
 
     }
 

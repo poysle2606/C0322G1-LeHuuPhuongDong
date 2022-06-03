@@ -3,6 +3,7 @@ package furama_resort.controllers;
 import furama_resort.services.packeage_class.*;
 
 import java.util.Scanner;
+import java.util.zip.DataFormatException;
 
 public class AllMethod {
     static Scanner input = new Scanner(System.in);
@@ -27,10 +28,10 @@ public class AllMethod {
                     employee.display();
                     break;
                 case 2:
-                    employee.addPerson();
+                    employee.add();
                     break;
                 case 3:
-                    employee.updatePerson();
+                    employee.update();
                     break;
                 case 4:
                     return;
@@ -60,10 +61,10 @@ public class AllMethod {
                     customer.display();
                     break;
                 case 2:
-                    customer.addPerson();
+                    customer.add();
                     break;
                 case 3:
-                    customer.updatePerson();
+                    customer.update();
                     break;
                 case 4:
                     return;
@@ -79,51 +80,53 @@ public class AllMethod {
             int numberOfCase3 = 0;
             System.out.println("1.Display list facility. \n" +
                     "2.Add new facility. \n" +
-                    "3.Edit facility. \n" +
+                    "3.Display list facility maintenance. \n" +
                     "4.Return main Menu.");
             System.out.println("Enter number: ");
             try {
                 numberOfCase3 = Integer.parseInt(input.nextLine());
+                FacilityServiceImpl facility = new FacilityServiceImpl();
+                switch (numberOfCase3) {
+                    case 1:
+                        facility.display();
+                        break;
+                    case 2:
+                        System.out.println("You wanna add new facility? \n" +
+                                "1.Add new Villa. \n" +
+                                "2.Add new House. \n" +
+                                "3.Add new Room. \n" +
+                                "4.Back to Menu.");
+                        System.out.println("Please enter here: ");
+                        int numberAdd = Integer.parseInt(input.nextLine());
+                        switch (numberAdd) {
+                            case 1:
+                                facility.addNewVilla();
+                                break;
+                            case 2:
+                                facility.addNewHouse();
+                                break;
+                            case 3:
+                                facility.addNewRoom();
+                                break;
+                            case 4:
+                                menuFacility();
+                                break;
+                            default:
+                                System.err.println("You can input number 1 - 4.");
+                        }
+                        break;
+                    case 3:
+                        facility.maintenance();
+                        break;
+                    case 4:
+                        return;
+                    default:
+                        System.err.println("You can input number 1 - 4.");
+                }
             } catch (NumberFormatException e) {
                 System.err.println("You can't enter Alphabet.");
             }
-            FacilityServiceImpl facility = new FacilityServiceImpl();
-            switch (numberOfCase3) {
-                case 1:
-                    facility.display();
-                    break;
-                case 2:
-                    System.out.println("You wanna add new facility? \n" +
-                            "1.Add new Villa. \n" +
-                            "2.Add new House. \n" +
-                            "3.Add new Room. \n" +
-                            "4.Back to Menu.");
-                    System.out.println("Please enter here: ");
-                    int numberAdd = Integer.parseInt(input.nextLine());
-                    switch (numberAdd) {
-                        case 1:
-                            facility.addNewVilla();
-                            break;
-                        case 2:
-                            facility.addNewHouse();
-                            break;
-                        case 3:
-                            facility.addNewRoom();
-                            break;
-                        case 4:
-                            menuFacility();
-                            break;
-                        default:
-                            System.err.println("You can input number 1 - 4.");
-                    }
-                    break;
-                case 3:
-                    break;
-                case 4:
-                    return;
-                default:
-                    System.err.println("You can input number 1 - 4.");
-            }
+
         } while (true);
     }
 
@@ -139,28 +142,30 @@ public class AllMethod {
             System.out.println("Enter number: ");
             try {
                 numberOfCase4 = Integer.parseInt(input.nextLine());
+
+                BookingServiceImpl booking = new BookingServiceImpl();
+                ContractServiceImpl contract = new ContractServiceImpl();
+                switch (numberOfCase4) {
+                    case 1:
+                        booking.add();
+                        break;
+                    case 2:
+                        booking.display();
+                        break;
+                    case 3:
+                        contract.add();
+                        break;
+                    case 4:
+                        contract.display();
+                        break;
+                    case 5:
+                    case 6:
+                        return;
+                }
             } catch (NumberFormatException e) {
                 System.err.println("You can't enter Alphabet.");
             }
-            BookingServiceImpl booking = new BookingServiceImpl();
-            ContractServiceImpl contract = new ContractServiceImpl();
-            switch (numberOfCase4) {
-                case 1:
-                    booking.addPerson();
-                    break;
-                case 2:
-                    booking.display();
-                    break;
-                case 3:
-                    contract.addPerson();
-                    break;
-                case 4:
-                    contract.display();
-                    break;
-                case 5:
-                case 6:
-                    return;
-            }
+
         } while (true);
     }
 

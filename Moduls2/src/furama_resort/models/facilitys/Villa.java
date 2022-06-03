@@ -9,6 +9,20 @@ public class Villa extends Facility {
 
     }
 
+    @Override
+    public String information() {
+        return String.format("%s,%s,%s,%s,%s,%s,%s,%s,%s",
+                super.getIdService(),
+                super.getNameService(),
+                super.getArea(),
+                super.getPrice(),
+                super.getMaximumOfPeople(),
+                super.getRentalType2(),
+                getRoomStandard(),
+                getAreaPool(),
+                getNumberFloor());
+    }
+
     public Villa(String idService, String nameService, double area, double price, int maximumOfPeople,
                  String rentalType, String roomStandard, double areaPool, int numberFloor) {
         super(idService, nameService, area, price, maximumOfPeople, rentalType);

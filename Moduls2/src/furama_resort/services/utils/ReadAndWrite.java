@@ -21,7 +21,7 @@ public class  ReadAndWrite {
         String line = null;
         try (FileReader fr = new FileReader(filePath);
              BufferedReader br = new BufferedReader(fr)) {
-            while ((line = br.readLine()) != null&&!line.equals("")) {
+            while ((line = br.readLine()) != null) {
                 String[] arr = line.split(",");
                 list.add(arr);
             }
