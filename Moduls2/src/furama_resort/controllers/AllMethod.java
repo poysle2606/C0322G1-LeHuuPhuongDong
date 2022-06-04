@@ -3,7 +3,6 @@ package furama_resort.controllers;
 import furama_resort.services.packeage_class.*;
 
 import java.util.Scanner;
-import java.util.zip.DataFormatException;
 
 public class AllMethod {
     static Scanner input = new Scanner(System.in);
@@ -187,6 +186,26 @@ public class AllMethod {
                 case 3:
                     FuramaControllers.displayMainMenu();
                     break;
+            }
+
+        } while (true);
+    }
+    public static String getGender() {
+        do {
+            System.out.println("Enter your gender: \n" +
+                    "1. Men. \n" +
+                    "2. Woman. \n" +
+                    "3. LGBT.");
+            int choose = Integer.parseInt(input.nextLine());
+            switch (choose) {
+                case 1:
+                    return "Men";
+                case 2:
+                    return "Woman";
+                case 3:
+                    return "LGBT";
+                default:
+                    System.out.println("If you entered it wrong, please re-enter it.");
             }
 
         } while (true);

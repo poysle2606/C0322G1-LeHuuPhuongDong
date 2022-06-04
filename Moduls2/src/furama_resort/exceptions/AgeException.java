@@ -1,6 +1,4 @@
-package furama_resort.services.utils;
-
-import furama_resort.services.utils.RegexData;
+package furama_resort.exceptions;
 
 public class AgeException extends Exception{
     public AgeException(String message) {

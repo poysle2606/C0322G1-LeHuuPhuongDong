@@ -9,6 +9,7 @@ import furama_resort.models.persons.Customer;
 import furama_resort.services.package_impl.BookingService;
 import furama_resort.services.utils.BookingComparator;
 import furama_resort.services.utils.ReadAndWrite;
+import furama_resort.services.utils.RegexExceptions;
 
 import java.util.*;
 
@@ -64,10 +65,10 @@ public class BookingServiceImpl implements BookingService {
         Facility facility = chooseFacility();
 
         System.out.println("Ngày bắt đầu thuê: ");
-        String starDay = input.nextLine();
+        String starDay = RegexExceptions.getRegexAge();
 
         System.out.println("Ngày kết thúc thuê: ");
-        String endDay = input.nextLine();
+        String endDay = RegexExceptions.getRegexAge();
 
         System.out.println("Chọn tên dịch vụ:");
         String bookingFacility = facility();
@@ -125,25 +126,26 @@ public class BookingServiceImpl implements BookingService {
         int check = -1;
 
         do {
-            try{
-            System.out.println("Nhập mã khách hàng: ");
+            try {
+                System.out.println("Nhập mã khách hàng: ");
 
-            int idCustomer = Integer.parseInt(input.nextLine());
+                int idCustomer = Integer.parseInt(input.nextLine());
 
-            for (int i = 0; i < customerList.size(); i++) {
-                if (idCustomer == customerList.get(i).getCode()) {
-                    check = 1;
-                    return customerList.get(i);
+                for (int i = 0; i < customerList.size(); i++) {
+                    if (idCustomer == customerList.get(i).getCode()) {
+                        check = 1;
+                        return customerList.get(i);
+                    }
+
                 }
-
-            }
-            if (check == -1) {
-                System.out.println("Không tìm thấy mã khách hàng.");
-            }
-        } catch (NumberFormatException e) {
+                if (check == -1) {
+                    System.out.println("Không tìm thấy mã khách hàng.");
+                }
+            } catch (NumberFormatException e) {
                 System.err.println("vui lòng không nhập chữ.");
             }
-    }  while (true);}
+        } while (true);
+    }
 
     public static Facility chooseFacility() {
         readHouse();

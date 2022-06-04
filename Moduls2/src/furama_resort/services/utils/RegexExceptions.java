@@ -1,7 +1,5 @@
 package furama_resort.services.utils;
 
-import org.omg.CORBA.PUBLIC_MEMBER;
-
 import java.util.Scanner;
 
 public class RegexExceptions {
@@ -17,6 +15,10 @@ public class RegexExceptions {
             "(?:1[6-9]|[2-9]\\d)?(?:0[48]|[2468][048]|[13579][26])|(?:(?:16|[2468][048]|[3579][26])00))))$|^" +
             "(?:0?[1-9]|1\\d|2[0-8])(\\/|-|\\.)(?:(?:0?[1-9])|(?:1[0-2]))\\4(?:(?:1[6-9]|[2-9]\\d)?\\d{2})$";
     private static Scanner input = new Scanner(System.in);
+
+    public static String getRegexAge() {
+        return RegexData.regexStr(input.nextLine(), REGEX_AGE, "You must enter the form dd/MM/yyyy.");
+    }
 
     public static String idHouse() {
         System.out.println("Enter ID of service:");
@@ -72,6 +74,11 @@ public class RegexExceptions {
         System.out.println("Enter number Floor: ");
         return RegexData.regexStr(input.nextLine(), REGEX_AMOUNT,
                 "Only positive Integers can be entered");
+    }
+
+    public static String inputIdVilla() {
+        System.out.println("Nhập id, mã dịch vụ: ");
+        return RegexDataFile.regexStr(REGEX_ID);
     }
 
 }

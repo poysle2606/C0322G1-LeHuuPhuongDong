@@ -1,9 +1,11 @@
 package furama_resort.services.packeage_class;
 
+import furama_resort.controllers.AllMethod;
 import furama_resort.models.persons.Customer;
 import furama_resort.models.persons.Person;
 import furama_resort.services.package_impl.ContactService;
 import furama_resort.services.utils.ReadAndWrite;
+
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Scanner;
@@ -37,12 +39,12 @@ public class CustomerServiceImpl extends Customer implements ContactService {
         List<String[]> listCustomer = ReadAndWrite.readFile(link);
 
         list.clear();
-
         for (String[] item : listCustomer) {
             Customer customer = new Customer(Integer.parseInt(item[0]), item[1], item[2], item[3],
                     Integer.parseInt(item[4]), Long.parseLong(item[5]), item[6], item[7], item[8]);
             list.add(customer);
         }
+
         System.out.println("Customer Code is auto increase!");
         int code = list.size() + 1001;
 
@@ -53,7 +55,7 @@ public class CustomerServiceImpl extends Customer implements ContactService {
         String date = input.nextLine();
 
         System.out.println("Gender of customer is: ");
-        String gender = input.nextLine();
+        String gender = AllMethod.getGender();
 
         System.out.println("CMND of customer is: ");
         int cmnd = Integer.parseInt(input.nextLine());
@@ -121,7 +123,7 @@ public class CustomerServiceImpl extends Customer implements ContactService {
                         String dateToUpdate = input.nextLine();
 
                         System.out.println("Gender of customer is: ");
-                        String genderToUpdate = input.nextLine();
+                        String genderToUpdate = AllMethod.getGender();
 
                         System.out.println("CMND of customer is: ");
                         int idToUpdate = Integer.parseInt(input.nextLine());
@@ -152,7 +154,7 @@ public class CustomerServiceImpl extends Customer implements ContactService {
 
                         for (int j = 0; j < list.size(); j++) {
                             str += list.get(j).getCode() + "," + list.get(j).getName() + "," + list.get(j).getOld()
-                                    + "," + list.get(j).getGender() + "," + list.get(j).getId() +  "," + list.get(j).getNumberPhone()
+                                    + "," + list.get(j).getGender() + "," + list.get(j).getId() + "," + list.get(j).getNumberPhone()
                                     + "," + list.get(j).getEmail() + "," + list.get(j).getTypeCustomer() + "," + list.get(j).getAddress() + "\n";
                         }
                         ReadAndWrite.writeFile(link, str);
@@ -201,4 +203,6 @@ public class CustomerServiceImpl extends Customer implements ContactService {
             }
         } while (true);
     }
+
+
 }

@@ -13,7 +13,7 @@ public abstract class Person {
 
     }
 
-    public Person(int code,String name, String old, String gender, int id, long numberPhone, String email) {
+    public Person(int code, String name, String old, String gender, int id, long numberPhone, String email) {
         this.code = code;
         this.name = name;
         this.old = old;
@@ -22,6 +22,7 @@ public abstract class Person {
         this.numberPhone = numberPhone;
         this.email = email;
     }
+
     public abstract String getInfo();
 
     public int getCode() {
@@ -59,6 +60,7 @@ public abstract class Person {
     public String getGender() {
         return gender;
     }
+
     public void setGender(String gender) {
         this.gender = gender;
     }

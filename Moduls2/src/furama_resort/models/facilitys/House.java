@@ -21,10 +21,10 @@ public class House extends Facility {
                 getNumberFloorOfHouse());
     }
 
-    public House(String idService,String nameService, double area, double price,
+    public House(String idService, String nameService, double area, double price,
                  int maximumOfPeople, String rentalType,
                  String roomStandard, int numberFloorOfHouse) {
-        super(idService,nameService, area, price, maximumOfPeople, rentalType);
+        super(idService, nameService, area, price, maximumOfPeople, rentalType);
         this.roomStandard = roomStandard;
         this.numberFloorOfHouse = numberFloorOfHouse;
     }

@@ -1,8 +1,5 @@
 package furama_resort.models;
 
-import furama_resort.models.facilitys.Facility;
-import furama_resort.models.persons.Customer;
-
 public class Booking {
     private int codeBooking;
     private String startDay;
@@ -23,7 +20,6 @@ public class Booking {
 
     public Booking() {
     }
-
 
     public int getCodeBooking() {
         return codeBooking;

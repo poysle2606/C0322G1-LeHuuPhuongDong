@@ -6,7 +6,7 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class  ReadAndWrite {
+public class ReadAndWrite {
     public static void writeFile(String filePath, String line) {
         try (FileWriter fw = new FileWriter(filePath);
              BufferedWriter bw = new BufferedWriter(fw)) {
@@ -27,7 +27,7 @@ public class  ReadAndWrite {
             }
         } catch (FileNotFoundException e) {
             e.printStackTrace();
-        } catch (IOException e)  {
+        } catch (IOException e) {
             e.printStackTrace();
         }
         return list;

@@ -46,7 +46,7 @@ public class ContractServiceImpl implements ContactService {
             System.out.println("Tổng số tiền phải trả là: ");
             double totalMoney = Double.parseDouble(input.nextLine());
 
-            Contract contract = new Contract(id,codeBooking, moneyPre, totalMoney, customer);
+            Contract contract = new Contract(id, codeBooking, moneyPre, totalMoney, customer);
             contractList.add(contract);
 
             System.out.println("Tạo hợp đồng thành công " + contract);
