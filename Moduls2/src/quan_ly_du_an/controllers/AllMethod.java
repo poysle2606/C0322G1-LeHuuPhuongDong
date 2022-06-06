@@ -1,8 +1,8 @@
 package quan_ly_du_an.controllers;
 
-import quan_ly_du_an.person.PatientNormal;
 import quan_ly_du_an.services.services_class.PatientNormalImpl;
 import quan_ly_du_an.services.services_class.PatientVipImpl;
+
 
 import java.util.Scanner;
 
@@ -39,6 +39,8 @@ public class AllMethod {
     }
 
     public static void displayPatient() {
+
+
         do {
             System.out.println("Bạn muốn hiển thị danh sách theo dạng? \n" +
                     "1. Danh sách bệnh án của bệnh nhân thường. \n" +
@@ -63,6 +65,7 @@ public class AllMethod {
 
                 }
             } catch (NumberFormatException e) {
+                e.printStackTrace();
                 System.err.println("Vui lòng đừng nhập chữ. xin nhập lại.");
             }
         } while (true);
@@ -84,6 +87,7 @@ public class AllMethod {
                         normal.delete();
                         break;
                     case 2:
+                        vip.delete();
                         break;
                     case 3:
                         return;

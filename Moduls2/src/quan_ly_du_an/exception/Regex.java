@@ -26,12 +26,6 @@ public class Regex {
 
     }
 
-    public static boolean formatMoney(String str) {
-        final String VALID_BA = "^[0-9]{8}$";
-        Pattern pattern = Pattern.compile(VALID_BA);
-        return pattern.matcher(str).matches();
-
-    }
 
 
 }

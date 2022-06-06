@@ -18,25 +18,26 @@ public class AllMethod {
             int numberOfCase1 = 0;
             try {
                 numberOfCase1 = Integer.parseInt(input.nextLine());
+                EmployeeServiceImpl employee = new EmployeeServiceImpl();
+                switch (numberOfCase1) {
+                    case 1:
+                        employee.display();
+                        break;
+                    case 2:
+                        employee.add();
+                        break;
+                    case 3:
+                        employee.update();
+                        break;
+                    case 4:
+                        return;
+                    default:
+                        System.err.println("You can enter number 1 - 4.");
+                }
             } catch (NumberFormatException e) {
                 System.err.println("You can't enter Alphabet.");
             }
-            EmployeeServiceImpl employee = new EmployeeServiceImpl();
-            switch (numberOfCase1) {
-                case 1:
-                    employee.display();
-                    break;
-                case 2:
-                    employee.add();
-                    break;
-                case 3:
-                    employee.update();
-                    break;
-                case 4:
-                    return;
-                default:
-                    System.err.println("You can enter number 1 - 4.");
-            }
+
         } while (true);
     }
 

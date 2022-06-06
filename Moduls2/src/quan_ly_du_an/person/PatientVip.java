@@ -5,13 +5,13 @@ import java.util.Scanner;
 
 public class PatientVip extends Patient {
     private String vip;
-    private LocalDate vipDate;
+    private String vipDate;
 
     public PatientVip() {
     }
 
     public PatientVip(int numericalOder, String patient, String sicker, String name, String startDay,
-                      String endDay, String reason, String vip, LocalDate vipDate) {
+                      String endDay, String reason, String vip, String vipDate) {
         super(numericalOder, patient, sicker, name, startDay, endDay, reason);
         this.vip = vip;
         this.vipDate = vipDate;
@@ -29,11 +29,11 @@ public class PatientVip extends Patient {
         this.vip = vip;
     }
 
-    public LocalDate getVipDate() {
+    public String getVipDate() {
         return vipDate;
     }
 
-    public void setVipDate(LocalDate vipDate) {
+    public void setVipDate(String vipDate) {
         this.vipDate = vipDate;
     }
 
