@@ -105,13 +105,13 @@ public class ProductServices implements ProductImpl {
 
         System.out.println("Số lượng sản phẩm: ");
         int product = Integer.parseInt(input.nextLine());
-        if (product <= 0 ) {
+        if (product <= 0) {
             System.err.println("Nhập số lượng sản phẩm sai");
         }
 
         System.out.println("Giá của sản phẩm: ");
         int price = Integer.parseInt(input.nextLine());
-        if (price <= 0 ) {
+        if (price <= 0) {
             System.err.println("Nhập giá của sản phẩm sai");
         }
 
