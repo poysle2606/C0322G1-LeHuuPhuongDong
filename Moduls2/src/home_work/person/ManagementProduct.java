@@ -1,37 +1,37 @@
 package home_work.person;
 
 public class ManagementProduct extends Person {
-    private String product;
-    private String priceProduct;
+    private int product;
+    private double priceProduct;
 
     public ManagementProduct() {
     }
 
-    public ManagementProduct(String product, String priceProduct) {
+    public ManagementProduct(int product, double priceProduct) {
         this.product = product;
         this.priceProduct = priceProduct;
     }
 
     public ManagementProduct(int id, String codePerson, String name, String birthDay,
-                             String address, String product, String priceProduct) {
+                             String address, int product, double priceProduct) {
         super(id, codePerson, name, birthDay, address);
         this.product = product;
         this.priceProduct = priceProduct;
     }
 
-    public String getProduct() {
+    public int getProduct() {
         return product;
     }
 
-    public void setProduct(String product) {
+    public void setProduct(int product) {
         this.product = product;
     }
 
-    public String getPriceProduct() {
+    public double getPriceProduct() {
         return priceProduct;
     }
 
-    public void setPriceProduct(String priceProduct) {
+    public void setPriceProduct(double priceProduct) {
         this.priceProduct = priceProduct;
     }
 

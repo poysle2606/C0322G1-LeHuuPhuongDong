@@ -33,10 +33,9 @@ public class ProductServices implements ProductImpl {
         for (String[] item : list) {
             ManagementProduct staff = new ManagementProduct(Integer.parseInt(item[0]),
                     item[1], item[2], item[3], item[4],
-                    item[5], item[6]);
+                    Integer.parseInt(item[5]), Double.parseDouble(item[6]));
             productList.add(staff);
         }
-
         if (productList.isEmpty()) {
             System.err.println("Danh sách rỗng cần thêm mới để hiển thị.");
         }
@@ -56,7 +55,7 @@ public class ProductServices implements ProductImpl {
         for (String[] item : list) {
             ManagementProduct staff = new ManagementProduct(Integer.parseInt(item[0]),
                     item[1], item[2], item[3], item[4],
-                    item[5], item[6]);
+                    Integer.parseInt(item[5]), Double.parseDouble(item[6]));
             productList.add(staff);
         }
 
@@ -104,44 +103,17 @@ public class ProductServices implements ProductImpl {
         System.out.println("Địa chỉ của nhân viên: ");
         String address = input.nextLine();
 
-        String product;
-        do {
-            try {
-                System.out.println("Số sản phẩm của nhân viên: ");
+        System.out.println("Số lượng sản phẩm: ");
+        int product = Integer.parseInt(input.nextLine());
+        if (product <= 0 ) {
+            System.err.println("Nhập số lượng sản phẩm sai");
+        }
 
-                product = input.nextLine();
-
-                if (RegexOfEmployee.formatPositive(product)) {
-                    break;
-                } else {
-                    throw new PositiveNumberExceptions("Bạn nhập sai định dạng.");
-                }
-
-            } catch (PositiveNumberExceptions e) {
-                e.printStackTrace();
-            }
-
-        } while (true);
-
-
-        String price;
-        do {
-            try {
-                System.out.println("Giá của mỗi sản phẩm: ");
-
-                price = input.nextLine();
-
-                if (RegexOfEmployee.formatPositive(price)) {
-                    break;
-                } else {
-                    throw new PositiveNumberExceptions("Bạn nhập sai định dạng.");
-                }
-
-            } catch (PositiveNumberExceptions e) {
-                e.printStackTrace();
-            }
-
-        } while (true);
+        System.out.println("Giá của sản phẩm: ");
+        int price = Integer.parseInt(input.nextLine());
+        if (price <= 0 ) {
+            System.err.println("Nhập giá của sản phẩm sai");
+        }
 
         ManagementProduct staff = new ManagementProduct(id, codeEmpl, name, birthDay, address, product, price);
         productList.add(staff);
@@ -164,7 +136,7 @@ public class ProductServices implements ProductImpl {
         for (String[] item : list) {
             ManagementProduct staff = new ManagementProduct(Integer.parseInt(item[0]),
                     item[1], item[2], item[3], item[4],
-                    item[5], item[6]);
+                    Integer.parseInt(item[5]), Double.parseDouble(item[6]));
             productList.add(staff);
         }
 
@@ -256,7 +228,7 @@ public class ProductServices implements ProductImpl {
         for (String[] item : list) {
             ManagementProduct staff = new ManagementProduct(Integer.parseInt(item[0]),
                     item[1], item[2], item[3], item[4],
-                    item[5], item[6]);
+                    Integer.parseInt(item[5]), Double.parseDouble(item[6]));
             productList.add(staff);
         }
 
