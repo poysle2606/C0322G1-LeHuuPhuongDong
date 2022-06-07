@@ -128,8 +128,8 @@ public class EmployeeServiceImpl implements EmployeeService {
 
         System.out.println("Position of employee is: ");
         String position = position();
-        System.out.println("Salary of employee is: ");
 
+        System.out.println("Salary of employee is: ");
         int salary = Integer.parseInt(input.nextLine());
 
         Employee e = new Employee(code, name, date, gender, cmnd, numberPhone, email, level, position, salary);

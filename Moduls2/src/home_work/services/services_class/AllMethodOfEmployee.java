@@ -1,7 +1,9 @@
-package home_work.controllers;
+package home_work.services.services_class;
 
+import home_work.person.ManagementStaff;
 import home_work.services.services_class.ProductServices;
 import home_work.services.services_class.StaffServices;
+import quan_ly_du_an.files_data.ReadAndWrite;
 
 import java.util.Scanner;
 
@@ -9,19 +11,22 @@ public class AllMethodOfEmployee {
 
     static Scanner input = new Scanner(System.in);
 
+    static final String LINK_TOTAL = "src/home_work/files/employee.csv";
+
+    static StaffServices staff = new StaffServices();
+
+    static ProductServices product = new ProductServices();
+
     public static void display() {
         do {
             System.out.println("Bạn muốn hiển thị danh sách của: \n" +
                     "1.Nhân viên quản lý. \n" +
                     "2.Nhân viên sản xuất. \n" +
-                    "3.Trở lại. \n" +
+                    "3.Tất cả Nhân viên. \n" +
+                    "4.Trở lại. \n" +
                     "Chọn chức năng.");
             try {
                 int choose = Integer.parseInt(input.nextLine());
-
-                StaffServices staff = new StaffServices();
-
-                ProductServices product = new ProductServices();
 
                 switch (choose) {
                     case 1:
@@ -31,6 +36,10 @@ public class AllMethodOfEmployee {
                         product.display();
                         break;
                     case 3:
+                        staff.display();
+                        product.display();
+                        break;
+                    case 4:
                         return;
                     default:
                         System.err.println("Bạn chọn không đúng chức năng.");
@@ -50,10 +59,6 @@ public class AllMethodOfEmployee {
                     "Chọn chức năng.");
             try {
                 int choose = Integer.parseInt(input.nextLine());
-
-                StaffServices staff = new StaffServices();
-
-                ProductServices product = new ProductServices();
 
                 switch (choose) {
                     case 1:

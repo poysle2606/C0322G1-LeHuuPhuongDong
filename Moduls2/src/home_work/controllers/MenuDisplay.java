@@ -1,5 +1,7 @@
 package home_work.controllers;
 
+import home_work.services.services_class.AllMethodOfEmployee;
+
 import java.util.Scanner;
 
 public class MenuDisplay {

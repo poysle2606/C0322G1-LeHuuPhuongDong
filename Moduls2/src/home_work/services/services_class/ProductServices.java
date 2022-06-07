@@ -3,7 +3,6 @@ package home_work.services.services_class;
 import home_work.person.ManagementProduct;
 import home_work.services.impl_class.ProductImpl;
 import home_work.untils.NotFoundEmployeeException;
-import home_work.untils.PositiveNumberExceptions;
 import home_work.untils.RegexOfEmployee;
 import quan_ly_du_an.exception.CodePatientException;
 import quan_ly_du_an.files_data.ReadAndWrite;
@@ -19,7 +18,7 @@ public class ProductServices implements ProductImpl {
 
     public static final String REGEX_BIRTHDAY = "^(0?[1-9]|[12][0-9]|3[01])[\\/\\-](0?[1-9]|1[012])[\\/\\-]\\d{4}$";
 
-    static final String LINK_STAFF = "src/home_work/files/product.csv";
+    static final String LINK_STAFF = "src/home_work/files/employee.csv";
 
     List<ManagementProduct> productList = new LinkedList<>();
 
@@ -31,17 +30,16 @@ public class ProductServices implements ProductImpl {
         list = ReadAndWrite.readFile(LINK_STAFF);
 
         for (String[] item : list) {
-            ManagementProduct staff = new ManagementProduct(Integer.parseInt(item[0]),
+            ManagementProduct product = new ManagementProduct(Integer.parseInt(item[0]),
                     item[1], item[2], item[3], item[4],
                     Integer.parseInt(item[5]), Double.parseDouble(item[6]));
-            productList.add(staff);
+            productList.add(product);
+            if(item[1].contains("PRODUCT")){
+                System.out.println(product);
+            }
         }
         if (productList.isEmpty()) {
             System.err.println("Danh sách rỗng cần thêm mới để hiển thị.");
-        }
-
-        for (ManagementProduct product : productList) {
-            System.out.println(product);
         }
 
     }
@@ -279,7 +277,7 @@ public class ProductServices implements ProductImpl {
         boolean flag = false;
 
         for (ManagementProduct managementProduct : productList) {
-            if (managementProduct.getName().contains(name)) {
+            if (managementProduct.getName().equals(name)) {
                 flag = true;
                 System.out.println(managementProduct);
             }
@@ -299,7 +297,7 @@ public class ProductServices implements ProductImpl {
         boolean flag = false;
 
         for (ManagementProduct managementProduct : productList) {
-            if (managementProduct.getCodePerson().contains(code)) {
+            if (managementProduct.getCodePerson().equals(code)) {
                 flag = true;
                 System.out.println(managementProduct);
             }
@@ -320,7 +318,7 @@ public class ProductServices implements ProductImpl {
         boolean flag = false;
 
         for (ManagementProduct managementProduct : productList) {
-            if (managementProduct.getBirthDay().contains(day)) {
+            if (managementProduct.getBirthDay().equals(day)) {
                 flag = true;
                 System.out.println(managementProduct);
             }
@@ -339,7 +337,7 @@ public class ProductServices implements ProductImpl {
         boolean flag = false;
 
         for (ManagementProduct managementProduct : productList) {
-            if (managementProduct.getAddress().contains(address)) {
+            if (managementProduct.getAddress().equals(address)) {
                 flag = true;
                 System.out.println(managementProduct);
             }

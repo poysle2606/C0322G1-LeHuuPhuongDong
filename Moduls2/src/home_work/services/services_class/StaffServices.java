@@ -19,7 +19,7 @@ public class StaffServices implements StaffImpl {
 
     public static final String REGEX_BIRTHDAY = "^(0?[1-9]|[12][0-9]|3[01])[\\/\\-](0?[1-9]|1[012])[\\/\\-]\\d{4}$";
 
-    static final String LINK_STAFF = "src/home_work/files/staff.csv";
+    static final String LINK_STAFF = "src/home_work/files/employee.csv";
 
     List<ManagementStaff> staffList = new LinkedList<>();
 
@@ -30,19 +30,20 @@ public class StaffServices implements StaffImpl {
 
         list = ReadAndWrite.readFile(LINK_STAFF);
 
+        staffList.clear();
+
         for (String[] item : list) {
             ManagementStaff staff = new ManagementStaff(Integer.parseInt(item[0]),
                     item[1], item[2], item[3], item[4],
                     item[5], item[6]);
             staffList.add(staff);
+            if (item[1].contains("STAFF")) {
+                System.out.println(staff);
+            }
         }
 
         if (staffList.isEmpty()) {
             System.err.println("Danh sách rỗng cần thêm mới để hiển thị.");
-        }
-
-        for (ManagementStaff staff : staffList) {
-            System.out.println(staff);
         }
 
     }
@@ -303,7 +304,7 @@ public class StaffServices implements StaffImpl {
         boolean flag = false;
 
         for (ManagementStaff managementStaff : staffList) {
-            if (managementStaff.getName().contains(name)) {
+            if (managementStaff.getName().equals(name)) {
 
                 flag = true;
 
@@ -325,7 +326,7 @@ public class StaffServices implements StaffImpl {
         boolean flag = false;
 
         for (ManagementStaff managementStaff : staffList) {
-            if (managementStaff.getCodePerson().contains(code)) {
+            if (managementStaff.getCodePerson().equals(code)) {
 
                 flag = true;
 
@@ -348,7 +349,7 @@ public class StaffServices implements StaffImpl {
         boolean flag = false;
 
         for (int i = 0; i < staffList.size(); i++) {
-            if (staffList.get(i).getBirthDay().contains(day)) {
+            if (staffList.get(i).getBirthDay().equals(day)) {
 
                 flag = true;
 
@@ -369,7 +370,7 @@ public class StaffServices implements StaffImpl {
         boolean flag = false;
 
         for (int i = 0; i < staffList.size(); i++) {
-            if (staffList.get(i).getAddress().contains(address)) {
+            if (staffList.get(i).getAddress().equals(address)) {
 
                 flag = true;
 
